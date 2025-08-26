@@ -1,0 +1,135 @@
+<div class="div-aHome">
+    <a class="aHome" routerLink="/orquestador" routerLinkActive='active' (click)="mostrarLoaderPagina=true" >Home</a>
+</div>
+
+<div class="div-titulo-boton">
+  <div class="div-titulo-linea">
+    <div class="div-titulo-h2-p">
+        <h2 class="h2-titulo">{{ sessionNombreProducto }}</h2>
+        <p class="p-titulo">{{ sessionNomenclaturaProducto }}</p>
+    </div>
+    <div class="linea-titulo"></div>
+  </div>
+  
+  <button matTooltip="Crear una webview para {{sessionNombreProducto}}" (click)="mostrarLoaderPagina=true" matTooltipPosition="below"  [routerLink]="['/orquestador/crear_editar', idProducto]" class="btn-agregar-webview">+ Crear Webview</button>
+</div>
+
+<div class="div-input-buscar-webview">
+    <i class="i-icono-buscar-webview">
+        <img src="./assets/img/magnifying-glass-solid.svg" width="10px" height="10px" alt="icono">
+    </i>
+    <input class="input-buscar-webview" type="text" placeholder="Busca el webview que estás intentando agregar" (input)="filtrarWebviews($event)">
+
+</div>
+
+<div class="div-p-titulo-listado-webview">
+    <p class="p-titulo-listado-webviews">Listado de WebViews</p>
+</div>
+
+<div class="div-table-webviews">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Webviews actuales</th>
+                <th>Menú</th>
+                <th>Principal</th>
+                <th>Fecha de creación</th>
+                <th>Fecha de actualización</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngIf="webviews.length === 0">
+                <td colspan="7" class="text-center">El producto {{ sessionNombreProducto }} no contiene WebViews</td>
+            </tr>
+            <tr *ngFor="let webview of (filtro ? webviewsFiltrados : webviews)">
+                <td>{{ webview.Id }}</td>
+                <td>{{ webview.Nombre }}</td>
+                <td>{{ webview.Menu == 1 ? "Si" : "No" }}</td>
+                <td>{{ webview.Principal == 1 ? "PRINCIPAL" : "-" }}</td>
+                <td>{{ webview.Create.split(" ")[0] }}</td>
+                <td>{{ webview.Update.split(" ")[0] }}</td>
+                <td class="td-iconos-espacio">
+                    <i class="i-icono-editar-usuario cursor"
+                        matTooltip="Editar {{webview.Nombre}}"
+                        matTooltipPosition="below" 
+                        [routerLink]="['/orquestador/crear_editar', idProducto, webview.Id]">
+                        <img src="./assets/img/pen-to-square-regular.svg" width="20px" height="20px" alt="icono">
+                    </i>
+                    <i 
+                        (click)="abrirModalEliminar(webview);" 
+                        matTooltip="Eliminar {{webview.Nombre}}"
+                        matTooltipPosition="below" 
+                        class="i-icono-eliminar-usuario cursor"
+                        *ngIf="esAdministrador()"
+                    >
+                        <img src="./assets/img/trash-can-regular.svg" width="20px" height="20px" alt="icono">
+                    </i>    
+                </td>
+            </tr>
+        </tbody>
+    </table>    
+</div>
+
+<!-- Modal eliminar webviews -->
+<div class="modal-contenedor-eliminar" [class.show]="modalVisibleEliminar">
+
+    <form [formGroup]="formEliminarWebview" (ngSubmit)="eliminarWebview( webviewSeleccionado?.Id )">
+
+        <div class="modal-contenido-eliminar-webview">
+
+            <div class="div-i-icono-cerrar-eliminar-webview">
+                <i (click)="cerrarModalEliminar();" class="i-icono-cerrar-eliminar-webview cursor">
+                    <img src="./assets/img/xmark-solid.svg" width="10px" height="10px" alt="icono">
+                </i>
+            </div>
+      
+            <div class="div-i-icono-advertencia-eliminar-webview">
+                <i class="i-icono-advertencia-eliminar-webview">
+                    <img src="./assets/img/triangle-exclamation-solid.svg" width="46px" height="40px" alt="icono">
+                </i>
+            </div>
+      
+            <div>
+                
+                <h2 class="h2-titulo-eliminar-webview">Eliminar la webView "{{ webviewSeleccionado?.Nombre }}"</h2>
+                <p class="p-descripcion-eliminar-webview">Aviso Importante: La acción de eliminación afectará de manera recursiva a todos los elementos hijos asociados a la webview. Esta operación no se puede deshacer.</p>
+                <input (paste)="onPaste($event)"  class="input-nombre-webview-eliminar" type="text" placeholder="Ingrese el nombre para confirmar eliminación" formControlName="nombreEliminarWebview" [ngClass]="{'texto-error-rojo borde-error-rojo': nombreEliminarWebview?.invalid && (nombreEliminarWebview?.dirty || nombreEliminarWebview?.touched)}">
+                <div class="mensaje-error-usuario" *ngIf="nombreEliminarWebview?.invalid && (nombreEliminarWebview?.dirty || nombreEliminarWebview?.touched || buscando)" >
+                    <div *ngIf="nombreEliminarWebview?.errors?.['required']" >El nombre es requerido</div>
+                    <div *ngIf="nombreEliminarWebview?.errors?.['pattern']" >Ingrese solo letras y espacios</div>
+                </div>
+
+            </div>
+            
+            <div class="div-btn-eliminar-webview">
+                <button 
+                    type="submit"  
+                    class="btn-eliminar-webview"
+                    [disabled]="formEliminarWebview.invalid || buscando">
+                    Eliminar permanentemente
+                    <span *ngIf="buscando" class="loader"></span> 
+                </button>
+            </div> 
+      
+        </div>
+
+    </form>
+
+</div>
+
+<!-- Icon Cargar -->
+<div id="loaderModal" *ngIf="mostrarLoaderPagina">
+    <span class="loaderDosCirculos"></span>
+</div> 
+ <!-- Fin Icon Cargar -->
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+// crear en el servidor
+docker run -dp 5055:3030 -dit --name orquestador -v /home/ubuntu/images/volumenes/backend_orquestador:/app/Backend/env -v /home/ubuntu/images/volumenes/frontend_orquestaodor:/app/Frontend/dist/orquestador/browser/assets orquestador:1.2.12 && docker logs orquestador -f
+
+
+//como crear con windows
+docker run -dp 3030:3030 -dit --name orquestador -v C:/Users/eacdv/Desktop/MoneyThor/Backend/env:/app/Backend/env -v C:/Users/eacdv/Desktop/MoneyThor/Frontend/dist/orquestador/browser/assets:/app/Frontend/dist/orquestador/browser/assets orquestador:1.2.12 && docker logs orquestador -f

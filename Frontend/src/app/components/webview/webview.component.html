@@ -1,0 +1,69 @@
+<div class="cuerpoCompleto">
+
+    <!--Pablo-->
+    <div class="encabezado" style="display:none">
+        <div class="div-ancho-encabezado" id="encabezado-webview">
+            <div #encabezadoWebview class="encabezado-texto-webview">
+            </div>
+            <div #encabezadoImagenWebview class="encabezado-imagen-webview">
+            </div>
+        </div>
+    </div>
+    <!--Fin Pablo-->
+
+    <div  class="menu-webview" style="display:none" >
+        <ul #menuWebview class="menu" >
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js" integrity="sha512-hUhvpC5f8cgc04OZb55j0KNGh4eh7dLxd/dPSJ5VyzqDWxsayYbojWyl5Tkcgrmb/RVKCRJI1jNlRbVP4WWC4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <div #contWebView class="cont-webviews" id="cont-webviews">
+    </div>
+
+</div>
+
+<!--MODAL DE LOS CONSEJOS DE LOS TIPS-->
+<div class="ocultar" >
+    <div class="content-modalTips">
+        <div #contTips class="contBodyTips">
+
+        </div>
+    </div>
+</div>
+
+
+<!--Modal para mostrar mensajes emergentes-->
+<div class="modalMensajes" *ngIf="showModalMensaje">
+    <div class="contModalMensajes">
+        <div class="mensajeModal">
+            <h3>{{ModalTitulo}}</h3>
+            {{ModalMensaje}}
+        </div>
+        <div class="botoncerrar">
+            <button (click)="showModalMensaje=false">Cerrar</button>
+        </div>
+    </div>
+</div>
+
+
+
+<!--Moda de error del tip-->
+<div class="errorTip" *ngIf="errorServicio">
+    <div class="imgerror"></div>
+    <!--img src="../../../assets/img/error-imagen.png" alt=""-->
+</div>
+
+
+<!--Moda de error del tip-->
+<div class="errorTip" *ngIf="errorServicioToken">
+    <div class="imgerrorToken"></div>
+    <!--img src="../../../assets/img/error-imagen.png" alt=""-->
+</div>
+
+
+<!-- Icon Cargar -->
+<div id="loaderModal" *ngIf="mostrarLoaderPagina">
+    <span class="loaderDosCirculos"></span>
+</div>
+ <!-- Fin Icon Cargar -->

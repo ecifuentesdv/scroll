@@ -1,0 +1,54 @@
+<div class="div-aHome">
+    <a class="aHome" routerLink="/orquestador" routerLinkActive='active'>Home</a>
+</div>
+
+<div class="div-titulo-boton">
+    <div class="div-titulo-linea">
+        <h2 class="h2-titulo">Logs</h2>
+        <div class="linea-titulo"></div>
+    </div>
+</div>
+
+<div class="div-input-buscar-usuario">
+    <i class="i-icono-buscar-usuario">
+        <img src="./assets/img/magnifying-glass-solid.svg" width="10px" height="10px" alt="icono">
+    </i>
+    <input class="input-buscar-usuario" type="text" placeholder="Buscar" (input)="filtrar($event)">
+</div>
+
+<div class="div-p-titulo-listado-usuarios">
+    <p class="p-titulo-listado-usuarios">Listado de logs</p>
+</div>
+
+<div class="div-table-usuarios">
+    <table>
+        <thead>
+            <tr>
+                <th>Accion</th>
+                <th>Description</th>
+                <th>Fecha</th>
+
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngIf="logs.length === 0">
+                <td colspan="4" class="text-center">No se han encontrado logs</td>
+            </tr>
+
+            <tr *ngFor="let log of (filtro ? logsFiltrados : logs)">
+            <!--<tr *ngFor="let usuario of usuarios">-->
+                <td>{{ log.Nombre }}</td>
+                <td>{{ log.Descripcion }}</td>
+                <td>{{ log.Create }}</td>
+            </tr>
+        </tbody>
+    </table>    
+</div>
+
+
+
+<!-- Icon Cargar -->
+<div id="loaderModal" *ngIf="mostrarLoaderPagina">
+    <span class="loaderDosCirculos"></span>
+</div> 
+ <!-- Fin Icon Cargar -->

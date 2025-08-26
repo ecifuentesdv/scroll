@@ -1,0 +1,58 @@
+#########################################################################################################
+
+
+FROM node:18
+LABEL version="1.0.0"
+LABEL descripcion="Backend del orquestador de moneythor"
+
+# Instalar Redis
+RUN apt-get update && apt-get install -y redis-server
+
+# Crear directorio de trabajo
+WORKDIR /app
+
+# Crear un directorio para Redis donde el usuario node pueda escribir
+RUN mkdir -p /app/redis-data
+
+# Copiar archivos del proyecto
+COPY package.json package-lock.json ./
+COPY . .
+
+# Instalar dependencias y limpiar cache
+RUN npm install && npm cache clean --force
+
+# Copiar como propietario node
+COPY --chown=node:node . .
+
+# Cambiar permisos del directorio de Redis
+RUN chown -R node:node /app/redis-data
+
+# Cambiar al usuario node
+USER node
+
+# Exponer el puerto del backend
+EXPOSE 3030
+
+# Comando para iniciar Redis y el backend
+CMD redis-server --dir /app/redis-data --daemonize yes && node /app/app.js
+
+
+
+
+
+#########################################################################################################
+
+docker run -dp 3030:3030 -dit --name orquestador -v C:/wamp64/www/trabajo/proyectos/moneyThor/Desarrollo/Orquestador/Backend/env:/app/Backend/env orquestador:1.5.0 && docker logs orquestador -f 
+
+docker run -dp 5055:3030 -dit --name orquestador -v /home/ubuntu/images/volumenes/backend_orquestador:/app/Backend/env -v /home/ubuntu/images/volumenes/frontend_orquestaodor:/app/Frontend/orquestador/dist/orquestador/browser/assets orquestador:1.5.0 && docker logs orquestador -f 
+
+ docker run -dp 5055:3030 -dit --name orquestador -v C:/wamp64/www/trabajo/proyectos/moneyThor/Desarrollo/Orquestador/Backend/env:/app/Backend/env -v C:/wamp64/www/trabajo/proyectos/moneyThor/Desarrollo/Orquestador/Frontend/orquestador/src/assets:
+ /app/Frontend/orquestador/dist/orquestador/browser/assets 
+ orquestador:1.5.0 && docker logs orquestador -f 
+
+
+ docker run -dp 3030:3030 -dit --name orquestador -v /c/wamp64/www/trabajo/proyectos/moneyThor/Desarrollo/Orquestador/Backend/env:/app/Backend/env -v /c/wamp64/www/trabajo/proyectos/moneyThor/Desarrollo/Orquestador/Frontend/orquestador/dist/orquestador/browser/assets:/app/Frontend/orquestador/dist/orquestador/browser/assets orquestador:1.2.0 && docker logs orquestador -f
+
+
+
+ docker run -dp 5055:3030 -dit --name orquestador -v /home/ubuntu/images/volumenes/backend_orquestador:/app/Backend/env -v /home/ubuntu/images/volumenes/frontend_orquestaodor:/app/Frontend/orquestador/dist/orquestador/browser/assets orquestador:1.2.4 && docker logs orquestador -f

@@ -1,0 +1,36 @@
+<h3 class="upper text-center mb-2 primary">Iniciar Sesión</h3>
+
+<form class="login-form" [formGroup]="login" (ngSubmit)="ingresar()">
+
+  <mat-form-field class="w-full" appearance="fill">
+    <mat-label>Correo electrónico</mat-label>
+    <input matInput placeholder="usuario@bi.com.gt" formControlName="usuario">
+  </mat-form-field>
+  <div class="mensaje-error" *ngIf="usuario?.invalid && (usuario?.dirty || usuario?.touched || submitted)" >
+    <div *ngIf="usuario?.errors?.['required']" >El correo es requerido</div>
+    <div *ngIf="usuario?.errors?.['email']" >Ingrese un correo válido</div>
+    <div *ngIf="usuario?.errors?.['minlength']" >El correo debe de contener un mínimo de 8 caracteres</div>
+    <div *ngIf="usuario?.errors?.['maxlength']" >El correo debe de contener un máximo de 30 caracteres</div>
+  </div>
+
+  <mat-form-field class="w-full" appearance="fill">
+    <mat-label>Contraseña</mat-label>
+    <input matInput type="password" formControlName="password">
+  </mat-form-field>
+  <div class="mensaje-error" *ngIf="password?.invalid && (password?.dirty || password?.touched || submitted)" >
+    <div *ngIf="password?.errors?.['required']" >La contraseña es requerida</div>
+    <div *ngIf="password?.errors?.['pattern']" >La contraseña debe tener entre 8 y 16 caracteres que incluya al menos una letra mayúscula, una letra minúscula, un número y un carácter especial (por ejemplo: !&#64;#$%^&*()_+?¿'-/).</div>
+  </div>
+
+  <p class="flex justify-between mb-2 mt-1">
+    <a class="primary link" routerLink="validar-correo" routerLinkActive='active' style="font: normal normal normal 10px/14px Bi NeoIndustrial; color: #003865;
+    letter-spacing: -0.3px;">¿Has olvidado tu contraseña?</a>
+  </p>
+
+  <p class="btn-center bt-3">
+    <button class="custom-raised-button " mat-raised-button color="primary" type="submit" [disabled]="login.invalid || buscando">
+      Ingresar <span *ngIf="buscando" class="loader"></span> 
+    </button>
+  </p>
+
+</form>

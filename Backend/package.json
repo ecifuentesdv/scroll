@@ -1,0 +1,29 @@
+{
+  "name": "modelo",
+  "version": "1.0.0",
+  "description": "API Rest de Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "Axel Páez",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-useragent": "^1.0.15",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.1",
+    "moment": "^2.29.4",
+    "mssql": "^11.0.1",
+    "node-cron": "^4.0.5",
+    "nodemailer": "^6.10.0",
+    "nodemon": "^3.1.9",
+    "puppeteer": "^24.5.0",
+    "update": "^0.7.4",
+    "xml2js": "^0.6.2"
+  }
+}

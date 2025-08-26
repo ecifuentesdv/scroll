@@ -1,0 +1,339 @@
+<div class="div-aProducto">
+    <a class="aProducto" routerLink="/orquestador/webviews/{{idProducto}}" (click)="mostrarLoaderPagina=true" routerLinkActive='active'>{{ nombreProducto }}</a> 
+</div>
+
+<form [formGroup]="formAgregarWebView">
+
+    <div class="div-titulo-linea">
+        <div class="div-titulo">
+            <i class="i-icono-nuevo-webview">
+                <img src="./assets/img/pen-solid.svg" width="15px" height="15px" alt="icono">
+            </i>
+            <input 
+                class="input-nuevo-webview" 
+                type="text" 
+                placeholder="Nuevo WebView"
+                formControlName="nombreAgregarWebView"
+                [ngClass]="{
+                    'texto-error-rojo': nombreAgregarWebView?.invalid && (nombreAgregarWebView?.dirty || nombreAgregarWebView?.touched)
+                }"
+            >
+        </div>
+        <div 
+            class="linea-titulo"
+            [ngClass]="{
+                'borde-error-rojo': nombreAgregarWebView?.invalid && (nombreAgregarWebView?.dirty || nombreAgregarWebView?.touched)
+            }"
+        >
+        </div>
+        <div class="mensaje-error-usuario" *ngIf="nombreAgregarWebView?.invalid && (nombreAgregarWebView?.dirty || nombreAgregarWebView?.touched || buscando)" >
+            <div *ngIf="nombreAgregarWebView?.errors?.['required']" >El nombre es requerido</div>
+            <div *ngIf="nombreAgregarWebView?.errors?.['pattern']" >Ingrese solo letras y espacios</div>
+        </div>
+
+    </div>
+
+    <div class="div-buscar-select">
+
+        <div class="div-input-buscar-servicio">
+            <i class="i-icono-buscar-servicio">
+                <img src="./assets/img/magnifying-glass-solid.svg" width="10px" height="10px" alt="icono">
+            </i>
+            <input 
+                class="input-buscar-servicio" 
+                type="text" 
+                placeholder="Busca el servicio que estás intentando agregar"
+                (input)="filtrarServicios($event)"
+            >
+        </div>
+        
+        <div class="div-multi-select-opcion" id="divSelectServicios">
+    
+            <!-- Input de selección -->
+            <div class="div-multi-select-input" (click)="toggleDropdown()">
+                <span>{{ getSelectedOptions() }}</span>
+                <img src="./assets/img/angle-down-solid.svg" class="arrow-icon" alt="Desplegar">
+            </div>
+            
+            <!-- Dropdown de opciones -->
+            <div class="div-multi-select-dropdown" *ngIf="isDropdownOpen">
+                <label *ngFor="let option of filteredServiciosList" class="label-multi-select-option">
+                <input 
+                    type="checkbox" 
+                    value="{{ option.Nombre }}" 
+                    [checked]="checkedSelectServicio(option.Nombre)" 
+                    (click)="selectOption(option)"
+                    >
+                {{ option.Nombre }}
+                </label>
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <div class="div-checkbox-principal-agregar">
+    
+        <div class="div-checkbox-principal">
+            <input 
+                type="checkbox" 
+                id="checkboxPrincipal" 
+                [checked]=""
+                formControlName="principalAgregarWebView"
+            />
+            <label class="cursor" for="checkboxPrincipal">Principal</label>
+        </div>
+    
+        <div class="div-checkbox-agregar-menu">
+            <input 
+                type="checkbox" 
+                id="checkboxAgregarMenu"  
+                [checked]=""
+                formControlName="menuAgregarWebView"
+            />
+            <label class="cursor" for="checkboxAgregarMenu">Agregar menú</label>
+        </div>
+    
+        <!--Icono del menu -->
+        <div class="div-btn-agregar-icono" *ngIf="formAgregarWebView.get('menuAgregarWebView')?.value">
+            <label class="label-btn-agregar-icono cursor">
+                <input 
+                    type="file" 
+                    accept="image/*" 
+                    (change)="onFileSelected($event, 'menu')" 
+                    hidden
+                    formControlName="iconoMenuAgregarWebView"
+                />
+                <span>Icono del menu</span>
+            </label>
+    
+            <div *ngIf="iconUrl" class="div-agregar-icono-preview">
+                <img [src]="iconUrl" alt="Icono" height="20px" width="20px" />
+            </div>
+        </div>
+
+        <!--Icono de la cabecera -->
+        <div class="div-btn-agregar-icono" *ngIf="formAgregarWebView.get('menuAgregarWebView')?.value">
+            <label class="label-btn-agregar-icono cursor">
+                <input 
+                    type="file" 
+                    accept="image/*" 
+                    (change)="onFileSelected($event, 'cabecera')" 
+                    hidden
+                    formControlName="iconoMenuAgregarWebView"
+                />
+                <span>Icono de la cabecera</span>
+            </label>
+    
+            <div *ngIf="iconUrlCabecera" class="div-agregar-icono-preview">
+                <img [src]="iconUrlCabecera" alt="Icono" height="20px" width="20px" />
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="div-titulos-menu-encabezados" *ngIf="formAgregarWebView.get('menuAgregarWebView')?.value">
+
+        <div class="div-input-primer-titulo-menu">
+            <i class="i-icono-nuevo-primero-titulo-menu">
+                <img src="./assets/img/pen-solid.svg" width="10px" height="10px" alt="icono">
+            </i>
+            <input 
+                class="input-primer-titulo-menu" 
+                type="text" 
+                placeholder="Ingresa la primera parte del título del menú"
+                formControlName="primerTituloMenuAgregarWebView"
+                [ngClass]="{
+                    'borde-error-rojo texto-error-rojo': primerTituloMenuAgregarWebView?.invalid && (primerTituloMenuAgregarWebView?.dirty || primerTituloMenuAgregarWebView?.touched)
+                }"
+            >
+            <div class="mensaje-error-usuario" *ngIf="primerTituloMenuAgregarWebView?.invalid && (primerTituloMenuAgregarWebView?.dirty || primerTituloMenuAgregarWebView?.touched || buscando)" >
+                <div *ngIf="primerTituloMenuAgregarWebView?.errors?.['pattern']" >Ingrese solo letras y espacios</div>
+            </div>
+        </div>
+
+        <div class="div-input-segundo-titulo-menu">
+            <i class="i-icono-nuevo-segundo-titulo-menu">
+                <img src="./assets/img/pen-solid.svg" width="10px" height="10px" alt="icono">
+            </i>
+            <input 
+                class="input-segundo-titulo-menu" 
+                type="text" 
+                placeholder="Ingresa la segunda parte del título del menú"
+                formControlName="segundoTituloMenuAgregarWebView"
+                [ngClass]="{
+                    'borde-error-rojo texto-error-rojo': segundoTituloMenuAgregarWebView?.invalid && (segundoTituloMenuAgregarWebView?.dirty || segundoTituloMenuAgregarWebView?.touched)
+                }"
+            >
+            <div class="mensaje-error-usuario" *ngIf="segundoTituloMenuAgregarWebView?.invalid && (segundoTituloMenuAgregarWebView?.dirty || segundoTituloMenuAgregarWebView?.touched || buscando)" >
+                <div *ngIf="segundoTituloMenuAgregarWebView?.errors?.['pattern']" >Ingrese solo letras y espacios</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="div-p-titulo-listado-servicios">
+        <p class="p-titulo-listado-servicios">Listado de servicios</p>
+    </div>
+
+    <div class="div-table-servicios">
+        <table>
+            <thead>
+                <tr>
+                    <th>Orden</th>
+                    <th>Nombre</th>
+                    <th>Descripción (MoneyThor)</th>
+                    <th colspan="2">Parametros</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr *ngIf="selectedOptions.length === 0">
+                    <td colspan="6" class="text-center">No hay servicios seleccionados</td>
+                </tr>
+    
+                <tr *ngFor="let servicio of selectedOptions; let i = index ">
+                    <td class="td-id-servicios">
+                        <p>{{ i+1 }}</p>
+                    </td>
+                    <td>{{ servicio.Nombre }}</td>
+                    <td>{{ servicio.Descripcion || '-' }}</td>
+                    <td colspan="2">
+                        {{ getParameters( servicio.properties ) }}
+                    </td>
+                    <td class="td-icono-eliminar">
+                        <i  
+                            matTooltip="Editar {{servicio.Nombre}}"
+                            matTooltipPosition="below"  class="i-icono-eliminar-webviwe cursor" (click)="selectOption(servicio)">
+                            <img src="./assets/img/trash-can-regular.svg" width="20px" height="20px" alt="icono">
+                        </i> 
+                    </td>
+                </tr>
+    
+            </tbody>
+        </table>    
+    </div>
+    
+    <div class="div-p-titulo-listado-redirecciones">
+        <p class="p-titulo-listado-redirecciones">Redirecciones</p>
+    </div>
+
+    <div class="div-table-redirecciones">
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo de elemento HTML</th>
+                    <th>Nombre</th>
+                    <th>ID</th>
+                    <th>Servicio</th>
+                    <th>Redirección</th>
+                </tr>
+            </thead>
+            <tbody >
+    
+                <tr *ngIf="redireccionesList.length === 0">
+                    <td colspan="5" class="text-center">No hay redirecciones seleccionados</td>
+                </tr>
+    
+                <tr *ngFor="let redirect of redireccionesList; let i = index">
+                    <td>{{ redirect.tipo.toLowerCase() || '-' }}</td>
+                    <td>{{ redirect.nombre || '-' }}</td>
+                    <td>{{ redirect.clase || '-' }}</td> <!-- ID -->
+                    <td>{{ redirect.servicio || '' }}</td>
+                    <td class="td-select">
+                        
+                        <select class="select-webviews"
+                            (change)="agregarWebView($event, redirect.nombre, redirect.servicio)"                     
+                        >
+                            <option value="" [disabled]="true" [selected]="true">Selecciona una opción</option>
+                            <option 
+                                *ngFor="let option of opcionesWebviews" 
+                                [value]="option.value"
+                                [selected]="option.value == redireccionesWebView[i]?.Webview"
+                            >
+                                {{ option.label }}
+                            </option>
+                        </select>
+
+                    </td>
+                </tr>
+    
+            </tbody>
+        </table>    
+    </div>
+    
+    <div class="div-p-titulo-listado-tracking">
+        <p class="p-titulo-listado-tracking">Tracking</p>
+    </div>
+
+    <div class="div-table-tracking">
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo de elemento HTML</th>
+                    <th>Nombre</th>
+                    <th>ID</th>
+                    <th>Servicio</th>
+                    <th>Tipo de trackeo</th>
+                </tr>
+            </thead>
+            <tbody >
+    
+                <tr *ngIf="trackingList.length === 0">
+                    <td colspan="5" class="text-center">No hay redirecciones seleccionados</td>
+                </tr>
+    
+                <tr *ngFor="let tracking of trackingList">
+                    <td>{{ tracking.tipo.toLowerCase() || '-' }}</td>
+                    <td>{{ tracking.nombre || '-' }}</td>
+                    <td>{{ tracking.clase || '-' }}</td> <!-- ID -->
+                    <td>{{ tracking.servicio || '-' }}</td>
+                    <td>{{ tracking.trackeo || '-' }}</td>
+                    <!--
+                    <td class="td-select">
+                        <select [(ngModel)]="trackeoselectedOption">
+                            <option value="" disabled selected>Selecciona una opcin</option>
+                            <option *ngFor="let option of trackeoOpciones" [value]="option.value">{{ option.label }}</option>
+                          </select> 
+                    </td>
+                    -->
+                </tr>
+    
+            </tbody>
+        </table>    
+    </div>
+    
+    <div class="div-btn-guardar">
+       <button 
+            class="btn-guardar-cambios" 
+            type="submit"
+            (click)="crearWebview()"
+            [disabled]="formAgregarWebView.invalid || buscando"
+            *ngIf="!idWebView"
+
+        >
+            Guardar
+            <span *ngIf="buscando" class="loader"></span>
+        </button>
+
+        <button 
+            class="btn-guardar-cambios" 
+            type="submit"
+            (click)="editarWebview()"
+            [disabled]="formAgregarWebView.invalid || buscando"
+            *ngIf="idWebView"
+        >
+            Editar
+            <span *ngIf="buscando" class="loader"></span>
+        </button>
+
+    </div>
+
+</form>
+
+<!-- Icon Cargar -->
+<div id="loaderModal" *ngIf="mostrarLoaderPagina">
+    <span class="loaderDosCirculos"></span>
+</div> 
+ <!-- Fin Icon Cargar -->

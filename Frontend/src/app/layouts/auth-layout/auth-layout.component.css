@@ -1,0 +1,128 @@
+.login-wrap {
+    font-family: 'Bi NeoIndustrial';
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 767px) {
+    .login-wrap { 
+        flex-direction: column; 
+    }
+}
+
+.login-box {
+    width: 100%;
+    max-width: 374px;
+    box-shadow: 10px 10px 35px #0000001A;
+    padding: 60px 50px;
+    border-radius: 45px 0px;
+}
+
+@media (max-width: 767px) {
+    .login-box { 
+        width: 100%; 
+    }
+}
+
+@media (max-width: 360px) {
+    .login-box { 
+        padding: 40px 30px; 
+    }
+}
+
+.login-box button {
+    padding: 8px 0;
+    width: 100%;
+    border-radius: 80px;
+    font-family: 'Bi NeoIndustrial';
+}
+
+.login-box h3 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.login-box .mat-form-field { 
+    width: 100%; 
+}
+
+.login-box .btn-center { 
+    text-align: center; 
+}
+
+.overlay {
+    background-color: #1d2150;
+    opacity: 0.8;
+    z-index: 9;
+}
+
+.auth-left-image {
+    background: linear-gradient(#0038668f, #0038668f), url(/./assets/img/login-bg.jpg);
+    background-size: cover;
+    border-right-style: solid;
+    border-color: #FFB81C;
+    border-width: 10px;
+}
+
+.logo-container {
+    width: 336px;
+    height: 552px;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    text-align: center;
+}
+
+.auth-logo { 
+    margin-top: 171px; 
+}
+
+.auth-logo-letter {
+    font: 30px/36px "Bi NeoIndustrial Bold";
+    letter-spacing: 0px;
+    color: #003865;
+    margin: 96px 35px 0px;
+    text-transform: uppercase;
+}
+
+/* Este esta vacio, ver por qué */
+.login-bg { }
+
+@media (max-width: 767px) {
+    .login-bg {
+        display: none;
+    }
+}
+
+/* Este esta vacio, ver por qué */
+.login-section {
+}
+
+@media (max-width: 767px) {
+    .login-section {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+        height: 100vh;
+    }
+}
+
+.mat-menu-panel {
+    max-width: 100% !important;
+    min-width: 230px !important;
+    font-style: italic;
+    background-color: #001f6c;
+}
+
+.mat-menu-panel button {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mat-menu-item:hover {
+    background-color: #0036de;
+    font-weight: lighter;
+}
+
+::ng-deep .mat-form-field-infix.ng-tns-c88-0 { 
+    padding: .5em 0; 
+}

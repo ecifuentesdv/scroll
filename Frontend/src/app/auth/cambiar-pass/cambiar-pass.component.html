@@ -1,0 +1,34 @@
+<h3 class="upper text-center mb-2 primary">Nueva contraseña</h3>
+
+<p class="text-center">Ingresa una nueva contraseña para tu cuenta</p>
+
+<form class="login-form" [formGroup]="login" (ngSubmit)="onSubmit()">
+
+  <mat-form-field class="w-full" appearance="fill">
+    <mat-label>Contraseña</mat-label>
+    <input matInput type="password" formControlName="password">
+  </mat-form-field>
+  <div class="mensaje-error" *ngIf="password?.invalid && (password?.dirty || password?.touched || submitted)" >
+    <div *ngIf="password?.errors?.['required']" >La contraseña es requerida</div>
+    <div *ngIf="password?.errors?.['pattern']" >La contraseña debe tener entre 8 y 30 caracteres que incluya al menos una letra mayúscula, una letra minúscula, un número y un carácter especial (por ejemplo: !&#64;#$%^&*()_+?¿'-/).</div>
+  </div>
+
+  <mat-form-field class="w-full" appearance="fill">
+    <mat-label>Confirmar contraseña</mat-label>
+    <input matInput type="password" formControlName="comfirmPassword">
+  </mat-form-field>
+  <div class="mensaje-error" *ngIf="comfirmPassword?.invalid && (comfirmPassword?.dirty || comfirmPassword?.touched || submitted)" >
+    <div *ngIf="comfirmPassword?.errors?.['required']" >La confirmación de la contraseña es requerida</div>
+    <div *ngIf="comfirmPassword?.errors?.['pattern']" >La confirmación de la contraseña debe tener entre 8 y 30 caracteres que incluya al menos una letra mayúscula, una letra minúscula, un número y un carácter especial (por ejemplo: !&#64;#$%^&*()_+?¿'-/).</div>
+    <div *ngIf="comfirmPassword?.errors?.['notEqual']" >Las contraseñas no coinciden</div>
+  </div>
+
+  <p class="btn-center bt-3">
+    <button class="custom-raised-button" mat-raised-button color="primary" type="submit" [disabled]="login.invalid || buscando">
+      Guardar <span *ngIf="buscando" class="loader"></span> 
+    </button>
+  </p>
+
+  <a href="#" class="primary link" routerLink="/login" routerLinkActive='active'> << Regresar</a>
+  
+</form>

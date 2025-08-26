@@ -1,0 +1,26 @@
+<h3 class="upper text-center mb-2 primary">¿Olvidaste tu contraseña?</h3>
+
+<p class="text-center">Ingresa tu correo electrónico y te enviaremos intrucciones para resetear tu contraseña.</p>
+
+<form class="login-form" [formGroup]="validEmail" (ngSubmit)="onSubmit()">
+
+  <mat-form-field class="w-full" appearance="fill">
+    <mat-label>Correo Electrónico</mat-label>
+    <input matInput placeholder="usuario@bi.com.gt" formControlName="correo">
+  </mat-form-field>
+  <div class="mensaje-error" *ngIf="correo?.invalid && (correo?.dirty || correo?.touched || submitted)" >
+    <div *ngIf="correo?.errors?.['required']" >El correo es requerido</div>
+    <div *ngIf="correo?.errors?.['email']" >Ingrese un correo válido</div>
+    <div *ngIf="correo?.errors?.['minlength']" >El correo debe de contener un mínimo de 8 caracteres</div>
+    <div *ngIf="correo?.errors?.['maxlength']" >El correo debe de contener un máximo de 30 caracteres</div>
+  </div>
+
+  <p class="btn-center bt-3">
+    <button class="custom-raised-button " mat-raised-button color="primary" type="submit" [disabled]="validEmail.invalid || buscando"> 
+      Enviar <span *ngIf="buscando" class="loader"></span>
+    </button>
+  </p>
+  
+  <a href="#" class="primary link" routerLink="/login" routerLinkActive='active'> << Regresar</a>
+
+</form>

@@ -1,0 +1,94 @@
+{
+    "source": {
+        "name": "BI"
+    },
+    "customer": {
+        "name": "cliente_banco_moneythor",
+        "custom_fields": [
+            {
+                "name": "birth_date",
+                "value": "2000-01-01"
+            },
+            {
+                "name": "full_name",
+                "value": "Cliente Banco Configuracion Moneythor"
+            },
+            {
+                "name": "instalacion",
+                "value": 123123123
+            }
+        ]
+    },        
+    "account": {
+        "number": "123123123123123123-GTQ",
+        "currency": "GTQ",
+        "type": "",
+        "balance": 10000,
+        "custom_fields": [
+            {
+                "name": "acc_type",
+                "value": "GTQ"
+            },
+            {
+                "name": "codigo_moneda",
+                "value": "2"
+            },
+            {
+                "name": "moneda",
+                "value": "Quetzales"
+            }
+        ]
+    },  "transactions": [
+        {
+            "currency": "GTQ",
+            "amount": 1000.00,
+            "description": "Parqueo y garages",
+            "date": "2025-06-03",
+            "movement": "debit",
+            "extraction": "2025-06-03T18:00:00.000-0600",
+            "custom_fields": [
+                {
+                    "name": "transaction_id",
+                    "value": "cliente_banco_moneythor-123123"
+                },
+                {
+                    "name": "transaction_type",
+                    "value": "debit"
+                },
+                {
+                    "name": "merchant_code",
+                    "value": "7523"
+                },
+                {
+                    "name": "merchant_name",
+                    "value": "Parqueo y garages"
+                },
+                {
+                    "name": "org_currency",
+                    "value": "GTQ"
+                },
+                {
+                    "name": "custom_description",
+                    "value": "#ClubsSchools"
+                },
+                {
+                    "name": "moneda",
+                    "value": "Quetzales"
+                },
+                {
+                    "name": "categoria_transaccion",
+                    "value": "CONSUMOS"
+                },
+                {
+                    "name": "tarjeta",
+                    "value": "CREDITO"
+                },
+                {
+                    "name": "cuenta_corporativa",
+                    "value": "123123123123123123"
+                }
+            ]
+        }
+    ]
+    
+}

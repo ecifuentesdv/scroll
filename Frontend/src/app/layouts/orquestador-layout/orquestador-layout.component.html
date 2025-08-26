@@ -1,0 +1,16 @@
+<div class="home" [ngClass]="getClasesPagina().fondo1">
+
+    <div [ngClass]="getClasesPagina().fondo2">
+
+        <app-header></app-header>
+
+        <div class="div-cuerpo-principal-home">
+            <router-outlet></router-outlet>
+        </div>
+
+        <div>
+            <footer class="" [ngClass]="getClasesPagina().footer"></footer>
+        </div>
+    </div>
+
+</div>

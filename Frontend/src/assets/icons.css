@@ -1,0 +1,5884 @@
+@font-face {
+  font-family: "Bi_icons";
+  src:
+    url("./fonts/icons/Bi_icons.ttf") format("truetype"),
+    url("../fonts/icons/Bi_icons.eot") format("embedded-opentype"),
+    url("../fonts/icons/Bi_icons.woff") format("woff");
+}
+.bi-icons {
+  font-family: "Bi_icons" !important;
+  font-size: 18px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bi-icons-aceptar:before {
+  content: "\ea01";
+}
+.bi-icons-aceptar-circulo:before {
+  content: "\ea02";
+}
+.bi-icons-aceptar-circulo-solido:before {
+  content: "\ea03";
+}
+.bi-icons-rechazar:before {
+  content: "\ea04";
+}
+.bi-icons-rechazar-circulo:before {
+  content: "\ea05";
+}
+.bi-icons-rechazar-circulo-solido:before {
+  content: "\ea06";
+}
+.bi-icons-menos:before {
+  content: "\ea07";
+}
+.bi-icons-menos-circulo:before {
+  content: "\ea08";
+}
+.bi-icons-menos-circulo-solido:before {
+  content: "\ea09";
+}
+.bi-icons-menos-cuadrado:before {
+  content: "\ea0a";
+}
+.bi-icons-agregar:before {
+  content: "\ea0b";
+}
+.bi-icons-agregar-circulo:before {
+  content: "\ea0c";
+}
+.bi-icons-agregar-circulo-solido:before {
+  content: "\ea0d";
+}
+.bi-icons-agregar-cuadrado:before {
+  content: "\ea0e";
+}
+.bi-icons-ir-abajo:before {
+  content: "\ea0f";
+}
+.bi-icons-ir-arriba:before {
+  content: "\ea10";
+}
+.bi-icons-ir-izquierda:before {
+  content: "\ea11";
+}
+.bi-icons-ir-derecha:before {
+  content: "\ea12";
+}
+.bi-icons-cerrar-sesion:before {
+  content: "\ea13";
+}
+.bi-icons-iniciar-sesion:before {
+  content: "\ea14";
+}
+.bi-icons-descargar:before {
+  content: "\ea15";
+}
+.bi-icons-subir:before {
+  content: "\ea16";
+}
+.bi-icons-enlace:before {
+  content: "\ea17";
+}
+.bi-icons-abrir-enlace-externo:before {
+  content: "\ea18";
+}
+.bi-icons-marcador:before {
+  content: "\ea19";
+}
+.bi-icons-guardar:before {
+  content: "\ea1a";
+}
+.bi-icons-visualizar:before {
+  content: "\ea1b";
+}
+.bi-icons-ocultar:before {
+  content: "\ea1c";
+}
+.bi-icons-bloqueado:before {
+  content: "\ea1d";
+}
+.bi-icons-desbloqueado:before {
+  content: "\ea1e";
+}
+.bi-icons-llave:before {
+  content: "\ea1f";
+}
+.bi-icons-huella:before {
+  content: "\ea20";
+}
+.bi-icons-maleware:before {
+  content: "\ea21";
+}
+.bi-icons-phishing:before {
+  content: "\ea22";
+}
+.bi-icons-basurero:before {
+  content: "\ea23";
+}
+.bi-icons-ajustes:before {
+  content: "\ea24";
+}
+.bi-icons-estrella:before {
+  content: "\ea25";
+}
+.bi-icons-estrella-solido:before {
+  content: "\ea26";
+}
+.bi-icons-corazon:before {
+  content: "\ea27";
+}
+.bi-icons-multiples-errores:before {
+  content: "\ea28";
+}
+.bi-icons-copiar:before {
+  content: "\ea29";
+}
+.bi-icons-portapapeles:before {
+  content: "\ea2a";
+}
+.bi-icons-idioma:before {
+  content: "\ea2b";
+}
+.bi-icons-ajustar-texto:before {
+  content: "\ea2c";
+}
+.bi-icons-arriba:before {
+  content: "\ea2d";
+}
+.bi-icons-abajo:before {
+  content: "\ea2e";
+}
+.bi-icons-derecha:before {
+  content: "\ea2f";
+}
+.bi-icons-izquierda:before {
+  content: "\ea30";
+}
+.bi-icons-cardinales:before {
+  content: "\ea31";
+}
+.bi-icons-esquinas:before {
+  content: "\ea32";
+}
+.bi-icons-ambos-sentidos:before {
+  content: "\ea33";
+}
+.bi-icons-recargar:before {
+  content: "\ea34";
+}
+.bi-icons-notificacion:before {
+  content: "\ea35";
+}
+.bi-icons-notificacion-solido:before {
+  content: "\ea36";
+}
+.bi-icons-notificacion-activa:before {
+  content: "\ea37";
+}
+.bi-icons-notificacion-activa-solido:before {
+  content: "\ea38";
+}
+.bi-icons-informacion:before {
+  content: "\ea39";
+}
+.bi-icons-informacion-solido:before {
+  content: "\ea3a";
+}
+.bi-icons-pregunta:before {
+  content: "\ea3b";
+}
+.bi-icons-pregunta-solido:before {
+  content: "\ea3c";
+}
+.bi-icons-advertencia:before {
+  content: "\ea3d";
+}
+.bi-icons-advertencia-solido:before {
+  content: "\ea3e";
+}
+.bi-icons-menu-hamburguesa:before {
+  content: "\ea3f";
+}
+.bi-icons-menu-hamburguesa-solido:before {
+  content: "\ea40";
+}
+.bi-icons-menu-hamburguesa-circulo:before {
+  content: "\ea41";
+}
+.bi-icons-menu-opciones:before {
+  content: "\ea42";
+}
+.bi-icons-menu-opciones-solido:before {
+  content: "\ea43";
+}
+.bi-icons-menu-opciones-circulo:before {
+  content: "\ea44";
+}
+.bi-icons-bentobox:before {
+  content: "\ea45";
+}
+.bi-icons-bentobox-solido:before {
+  content: "\ea46";
+}
+.bi-icons-vista-bentobox:before {
+  content: "\ea47";
+}
+.bi-icons-vista-bentobox-solido:before {
+  content: "\ea48";
+}
+.bi-icons-vista-lista:before {
+  content: "\ea49";
+}
+.bi-icons-vista-lista-solido:before {
+  content: "\ea4a";
+}
+.bi-icons-grupo-tablero:before {
+  content: "\ea4b";
+}
+.bi-icons-grupo-lista:before {
+  content: "\ea4c";
+}
+.bi-icons-cuadricula:before {
+  content: "\ea4d";
+}
+.bi-icons-filtros:before {
+  content: "\ea4e";
+}
+.bi-icons-opciones:before {
+  content: "\ea4f";
+}
+.bi-icons-buscador:before {
+  content: "\ea50";
+}
+.bi-icons-zoom-alejar:before {
+  content: "\ea51";
+}
+.bi-icons-zoom-aumentar:before {
+  content: "\ea52";
+}
+.bi-icons-buscador-sin-resultados:before {
+  content: "\ea53";
+}
+.bi-icons-reproducir:before {
+  content: "\ea54";
+}
+.bi-icons-pausar:before {
+  content: "\ea55";
+}
+.bi-icons-anterior:before {
+  content: "\ea56";
+}
+.bi-icons-siguiente:before {
+  content: "\ea57";
+}
+.bi-icons-volumen:before {
+  content: "\ea58";
+}
+.bi-icons-silenciar:before {
+  content: "\ea59";
+}
+.bi-icons-camara:before {
+  content: "\ea5a";
+}
+.bi-icons-imagen:before {
+  content: "\ea5b";
+}
+.bi-icons-imagen-agregar:before {
+  content: "\ea5c";
+}
+.bi-icons-imagen-solido:before {
+  content: "\ea5d";
+}
+.bi-icons-video:before {
+  content: "\ea5e";
+}
+.bi-icons-ubicacion:before {
+  content: "\ea5f";
+}
+.bi-icons-ubicacion-aceptar:before {
+  content: "\ea60";
+}
+.bi-icons-ubicacion-rechazar:before {
+  content: "\ea61";
+}
+.bi-icons-ubicacion-agregar:before {
+  content: "\ea62";
+}
+.bi-icons-ubicacion-izquierda:before {
+  content: "\ea63";
+}
+.bi-icons-ubicacion-derecha:before {
+  content: "\ea64";
+}
+.bi-icons-ubicacion-arriba:before {
+  content: "\ea65";
+}
+.bi-icons-ubicacion-abajo:before {
+  content: "\ea66";
+}
+.bi-icons-ubicacion-ajustes:before {
+  content: "\ea67";
+}
+.bi-icons-ubicacion-basurero:before {
+  content: "\ea68";
+}
+.bi-icons-ubicacion-bloqueado:before {
+  content: "\ea69";
+}
+.bi-icons-ubicacion-desbloqueado:before {
+  content: "\ea6a";
+}
+.bi-icons-ubicacion-tarjeta:before {
+  content: "\ea6b";
+}
+.bi-icons-ubicacion-efectivo:before {
+  content: "\ea6c";
+}
+.bi-icons-ubicacion-usuario:before {
+  content: "\ea6d";
+}
+.bi-icons-ubicacion-buscar:before {
+  content: "\ea6e";
+}
+.bi-icons-ubicacion-internacional:before {
+  content: "\ea6f";
+}
+.bi-icons-ubicacion-archivo:before {
+  content: "\ea70";
+}
+.bi-icons-ubicacion-documento:before {
+  content: "\ea71";
+}
+.bi-icons-ubicacion-celular:before {
+  content: "\ea72";
+}
+.bi-icons-ubicacion-laptop:before {
+  content: "\ea73";
+}
+.bi-icons-ubicacion-compras:before {
+  content: "\ea74";
+}
+.bi-icons-ubicacion-regalo:before {
+  content: "\ea75";
+}
+.bi-icons-ubicacion-opciones:before {
+  content: "\ea76";
+}
+.bi-icons-ubicacion-enlace:before {
+  content: "\ea77";
+}
+.bi-icons-ubicacion-guardar:before {
+  content: "\ea78";
+}
+.bi-icons-usuario:before {
+  content: "\ea79";
+}
+.bi-icons-usuario-aceptar:before {
+  content: "\ea7a";
+}
+.bi-icons-usuario-rechazar:before {
+  content: "\ea7b";
+}
+.bi-icons-usuario-agregar:before {
+  content: "\ea7c";
+}
+.bi-icons-usuario-izquierda:before {
+  content: "\ea7d";
+}
+.bi-icons-usuario-derecha:before {
+  content: "\ea7e";
+}
+.bi-icons-usuario-arriba:before {
+  content: "\ea7f";
+}
+.bi-icons-usuario-abajo:before {
+  content: "\ea80";
+}
+.bi-icons-usuario-ajustes:before {
+  content: "\ea81";
+}
+.bi-icons-usuario-basurero:before {
+  content: "\ea82";
+}
+.bi-icons-usuario-notificacion:before {
+  content: "\ea83";
+}
+.bi-icons-usuario-bloqueado:before {
+  content: "\ea84";
+}
+.bi-icons-usuario-desbloqueado:before {
+  content: "\ea85";
+}
+.bi-icons-usuario-tarjeta:before {
+  content: "\ea86";
+}
+.bi-icons-usuario-efectivo:before {
+  content: "\ea87";
+}
+.bi-icons-usuario-monedas:before {
+  content: "\ea88";
+}
+.bi-icons-usuario-cheque:before {
+  content: "\ea89";
+}
+.bi-icons-usuario-buscar:before {
+  content: "\ea8a";
+}
+.bi-icons-usuario-internacional:before {
+  content: "\ea8b";
+}
+.bi-icons-usuario-archivo:before {
+  content: "\ea8c";
+}
+.bi-icons-usuario-documento:before {
+  content: "\ea8d";
+}
+.bi-icons-usuario-celular:before {
+  content: "\ea8e";
+}
+.bi-icons-usuario-laptop:before {
+  content: "\ea8f";
+}
+.bi-icons-usuario-computadora:before {
+  content: "\ea90";
+}
+.bi-icons-usuario-impresora:before {
+  content: "\ea91";
+}
+.bi-icons-usuario-token:before {
+  content: "\ea92";
+}
+.bi-icons-usuario-correo:before {
+  content: "\ea93";
+}
+.bi-icons-usuario-favorito:before {
+  content: "\ea94";
+}
+.bi-icons-usuario-horario:before {
+  content: "\ea95";
+}
+.bi-icons-usuario-calendario:before {
+  content: "\ea96";
+}
+.bi-icons-usuario-compras:before {
+  content: "\ea97";
+}
+.bi-icons-usuario-luz:before {
+  content: "\ea98";
+}
+.bi-icons-usuario-energia:before {
+  content: "\ea99";
+}
+.bi-icons-usuario-qr:before {
+  content: "\ea9a";
+}
+.bi-icons-usuario-auriculares:before {
+  content: "\ea9b";
+}
+.bi-icons-usuario-regalo:before {
+  content: "\ea9c";
+}
+.bi-icons-usuario-editar:before {
+  content: "\ea9d";
+}
+.bi-icons-usuario-cargar:before {
+  content: "\ea9e";
+}
+.bi-icons-usuario-descargar:before {
+  content: "\ea9f";
+}
+.bi-icons-usuario-opciones:before {
+  content: "\eaa0";
+}
+.bi-icons-usuario-enlace:before {
+  content: "\eaa1";
+}
+.bi-icons-usuario-guardar:before {
+  content: "\eaa2";
+}
+.bi-icons-usuario-telefono:before {
+  content: "\eaa3";
+}
+.bi-icons-usuario-id:before {
+  content: "\eaa4";
+}
+.bi-icons-usuario-microfono:before {
+  content: "\eaa5";
+}
+.bi-icons-usuario-ubicacion:before {
+  content: "\eaa6";
+}
+.bi-icons-usuario-quetzal:before {
+  content: "\eaa7";
+}
+.bi-icons-usuario-lempira:before {
+  content: "\eaa8";
+}
+.bi-icons-usuario-dolar:before {
+  content: "\eaa9";
+}
+.bi-icons-usuario-euro:before {
+  content: "\eaaa";
+}
+.bi-icons-usuario-boleto:before {
+  content: "\eaab";
+}
+.bi-icons-usuario-banco:before {
+  content: "\eaac";
+}
+.bi-icons-usuario-calculadora:before {
+  content: "\eaad";
+}
+.bi-icons-usuario-mensaje:before {
+  content: "\eaae";
+}
+.bi-icons-usuario-web:before {
+  content: "\eaaf";
+}
+.bi-icons-equipo:before {
+  content: "\eab0";
+}
+.bi-icons-mujer:before {
+  content: "\eab1";
+}
+.bi-icons-hombre:before {
+  content: "\eab2";
+}
+.bi-icons-id:before {
+  content: "\eab3";
+}
+.bi-icons-id-detras:before {
+  content: "\eab4";
+}
+.bi-icons-gafete:before {
+  content: "\eab5";
+}
+.bi-icons-celular:before {
+  content: "\eab6";
+}
+.bi-icons-celular-aceptar:before {
+  content: "\eab7";
+}
+.bi-icons-celular-rechazar:before {
+  content: "\eab8";
+}
+.bi-icons-celular-agregar:before {
+  content: "\eab9";
+}
+.bi-icons-celular-izquierda:before {
+  content: "\eaba";
+}
+.bi-icons-celular-derecha:before {
+  content: "\eabb";
+}
+.bi-icons-celular-arriba:before {
+  content: "\eabc";
+}
+.bi-icons-celular-abajo:before {
+  content: "\eabd";
+}
+.bi-icons-celular-ajustes:before {
+  content: "\eabe";
+}
+.bi-icons-celular-basurero:before {
+  content: "\eabf";
+}
+.bi-icons-celular-notificacion:before {
+  content: "\eac0";
+}
+.bi-icons-celular-bloqueado:before {
+  content: "\eac1";
+}
+.bi-icons-celular-desbloqueado:before {
+  content: "\eac2";
+}
+.bi-icons-celular-tarjeta:before {
+  content: "\eac3";
+}
+.bi-icons-celular-efectivo:before {
+  content: "\eac4";
+}
+.bi-icons-aplicacionespago:before {
+  content: "\eac4";
+}
+.bi-icons-celular-monedas:before {
+  content: "\eac5";
+}
+.bi-icons-celular-cheque:before {
+  content: "\eac6";
+}
+.bi-icons-celular-usuario:before {
+  content: "\eac7";
+}
+.bi-icons-celular-buscar:before {
+  content: "\eac8";
+}
+.bi-icons-celular-internacional:before {
+  content: "\eac9";
+}
+.bi-icons-celular-archivo:before {
+  content: "\eaca";
+}
+.bi-icons-celular-documento:before {
+  content: "\eacb";
+}
+.bi-icons-celular-laptop:before {
+  content: "\eacc";
+}
+.bi-icons-celular-computadora:before {
+  content: "\eacd";
+}
+.bi-icons-celular-impresora:before {
+  content: "\eace";
+}
+.bi-icons-celular-token:before {
+  content: "\eacf";
+}
+.bi-icons-celular-correo:before {
+  content: "\ead0";
+}
+.bi-icons-celular-favorito:before {
+  content: "\ead1";
+}
+.bi-icons-celular-reloj:before {
+  content: "\ead2";
+}
+.bi-icons-celular-calendario:before {
+  content: "\ead3";
+}
+.bi-icons-celular-compras:before {
+  content: "\ead4";
+}
+.bi-icons-celular-luz:before {
+  content: "\ead5";
+}
+.bi-icons-celular-energia:before {
+  content: "\ead6";
+}
+.bi-icons-celular-qr:before {
+  content: "\ead7";
+}
+.bi-icons-celular-auriculares:before {
+  content: "\ead8";
+}
+.bi-icons-celular-regalo:before {
+  content: "\ead9";
+}
+.bi-icons-celular-editar:before {
+  content: "\eada";
+}
+.bi-icons-celular-cargar:before {
+  content: "\eadb";
+}
+.bi-icons-celular-descargar:before {
+  content: "\eadc";
+}
+.bi-icons-celular-opciones:before {
+  content: "\eadd";
+}
+.bi-icons-celular-enlace:before {
+  content: "\eade";
+}
+.bi-icons-celular-guardar:before {
+  content: "\eadf";
+}
+.bi-icons-celular-telefono:before {
+  content: "\eae0";
+}
+.bi-icons-telefoniamoviles:before {
+  content: "\eae0";
+}
+.bi-icons-celular-id:before {
+  content: "\eae1";
+}
+.bi-icons-celular-microfono:before {
+  content: "\eae2";
+}
+.bi-icons-celular-ubicacion:before {
+  content: "\eae3";
+}
+.bi-icons-celular-quetzal:before {
+  content: "\eae4";
+}
+.bi-icons-celular-lempira:before {
+  content: "\eae5";
+}
+.bi-icons-celular-dolar:before {
+  content: "\eae6";
+}
+.bi-icons-celular-euro:before {
+  content: "\eae7";
+}
+.bi-icons-celular-boleto:before {
+  content: "\eae8";
+}
+.bi-icons-celular-banco:before {
+  content: "\eae9";
+}
+.bi-icons-celular-calculadora:before {
+  content: "\eaea";
+}
+.bi-icons-celular-mensaje:before {
+  content: "\eaeb";
+}
+.bi-icons-celular-web:before {
+  content: "\eaec";
+}
+.bi-icons-celular-amor:before {
+  content: "\eaed";
+}
+.bi-icons-celular-pos:before {
+  content: "\eaee";
+}
+.bi-icons-tablet:before {
+  content: "\eaef";
+}
+.bi-icons-tablet-aceptar:before {
+  content: "\eaf0";
+}
+.bi-icons-tablet-rechazar:before {
+  content: "\eaf1";
+}
+.bi-icons-tablet-agregar:before {
+  content: "\eaf2";
+}
+.bi-icons-tablet-izquierda:before {
+  content: "\eaf3";
+}
+.bi-icons-tablet-derecha:before {
+  content: "\eaf4";
+}
+.bi-icons-tablet-arriba:before {
+  content: "\eaf5";
+}
+.bi-icons-tablet-abajo:before {
+  content: "\eaf6";
+}
+.bi-icons-tablet-ajustes:before {
+  content: "\eaf7";
+}
+.bi-icons-tablet-basurero:before {
+  content: "\eaf8";
+}
+.bi-icons-tablet-notificacion:before {
+  content: "\eaf9";
+}
+.bi-icons-tablet-bloqueado:before {
+  content: "\eafa";
+}
+.bi-icons-tablet-desbloqueado:before {
+  content: "\eafb";
+}
+.bi-icons-tablet-tarjeta:before {
+  content: "\eafc";
+}
+.bi-icons-tablet-efectivo:before {
+  content: "\eafd";
+}
+.bi-icons-tablet-monedas:before {
+  content: "\eafe";
+}
+.bi-icons-tablet-cheque:before {
+  content: "\eaff";
+}
+.bi-icons-tablet-usuario:before {
+  content: "\eb00";
+}
+.bi-icons-tablet-buscar:before {
+  content: "\eb01";
+}
+.bi-icons-tablet-internacional:before {
+  content: "\eb02";
+}
+.bi-icons-tablet-archivo:before {
+  content: "\eb03";
+}
+.bi-icons-tablet-documento:before {
+  content: "\eb04";
+}
+.bi-icons-tablet-celular:before {
+  content: "\eb05";
+}
+.bi-icons-tablet-laptop:before {
+  content: "\eb06";
+}
+.bi-icons-tablet-computadora:before {
+  content: "\eb07";
+}
+.bi-icons-tablet-impresora:before {
+  content: "\eb08";
+}
+.bi-icons-tablet-token:before {
+  content: "\eb09";
+}
+.bi-icons-tablet-correo:before {
+  content: "\eb0a";
+}
+.bi-icons-tablet-favorito:before {
+  content: "\eb0b";
+}
+.bi-icons-tablet-reloj:before {
+  content: "\eb0c";
+}
+.bi-icons-tablet-compras:before {
+  content: "\eb0d";
+}
+.bi-icons-tablet-calendario:before {
+  content: "\eb0e";
+}
+.bi-icons-tablet-luz:before {
+  content: "\eb0f";
+}
+.bi-icons-tablet-energia:before {
+  content: "\eb10";
+}
+.bi-icons-tablet-qr:before {
+  content: "\eb11";
+}
+.bi-icons-tablet-auriculares:before {
+  content: "\eb12";
+}
+.bi-icons-tablet-regalo:before {
+  content: "\eb13";
+}
+.bi-icons-tablet-editar:before {
+  content: "\eb14";
+}
+.bi-icons-tablet-cargar:before {
+  content: "\eb15";
+}
+.bi-icons-tablet-descargar:before {
+  content: "\eb16";
+}
+.bi-icons-tablet-opciones:before {
+  content: "\eb17";
+}
+.bi-icons-tablet-enlace:before {
+  content: "\eb18";
+}
+.bi-icons-tablet-guardar:before {
+  content: "\eb19";
+}
+.bi-icons-tablet-telefono:before {
+  content: "\eb1a";
+}
+.bi-icons-tablet-id:before {
+  content: "\eb1b";
+}
+.bi-icons-tablet-microfono:before {
+  content: "\eb1c";
+}
+.bi-icons-tablet-ubicacion:before {
+  content: "\eb1d";
+}
+.bi-icons-tablet-quetzal:before {
+  content: "\eb1e";
+}
+.bi-icons-tablet-lempira:before {
+  content: "\eb1f";
+}
+.bi-icons-tablet-dolar:before {
+  content: "\eb20";
+}
+.bi-icons-tablet-euro:before {
+  content: "\eb21";
+}
+.bi-icons-tablet-boleto:before {
+  content: "\eb22";
+}
+.bi-icons-tablet-banco:before {
+  content: "\eb23";
+}
+.bi-icons-tablet-calculadora:before {
+  content: "\eb24";
+}
+.bi-icons-tablet-mensaje:before {
+  content: "\eb25";
+}
+.bi-icons-tablet-web:before {
+  content: "\eb26";
+}
+.bi-icons-tablet-amor:before {
+  content: "\eb27";
+}
+.bi-icons-laptop:before {
+  content: "\eb28";
+}
+.bi-icons-laptop-aceptar:before {
+  content: "\eb29";
+}
+.bi-icons-laptop-rechazar:before {
+  content: "\eb2a";
+}
+.bi-icons-laptop-agregar:before {
+  content: "\eb2b";
+}
+.bi-icons-laptop-izquierda:before {
+  content: "\eb2c";
+}
+.bi-icons-laptop-derecha:before {
+  content: "\eb2d";
+}
+.bi-icons-laptop-arriba:before {
+  content: "\eb2e";
+}
+.bi-icons-laptop-abajo:before {
+  content: "\eb2f";
+}
+.bi-icons-laptop-ajustes:before {
+  content: "\eb30";
+}
+.bi-icons-laptop-basurero:before {
+  content: "\eb31";
+}
+.bi-icons-laptop-notificacion:before {
+  content: "\eb32";
+}
+.bi-icons-laptop-bloqueado:before {
+  content: "\eb33";
+}
+.bi-icons-laptop-desbloqueado:before {
+  content: "\eb34";
+}
+.bi-icons-laptop-tarjeta:before {
+  content: "\eb35";
+}
+.bi-icons-laptop-efectivo:before {
+  content: "\eb36";
+}
+.bi-icons-laptop-monedas:before {
+  content: "\eb37";
+}
+.bi-icons-laptop-cheque:before {
+  content: "\eb38";
+}
+.bi-icons-laptop-usuario:before {
+  content: "\eb39";
+}
+.bi-icons-laptop-buscar:before {
+  content: "\eb3a";
+}
+.bi-icons-laptop-internacional:before {
+  content: "\eb3b";
+}
+.bi-icons-laptop-archivo:before {
+  content: "\eb3c";
+}
+.bi-icons-laptop-documento:before {
+  content: "\eb3d";
+}
+.bi-icons-laptop-celular:before {
+  content: "\eb3e";
+}
+.bi-icons-serviciosgubernamentales:before {
+  content: "\eb3e";
+}
+.bi-icons-educacion:before {
+  content: "\eb3e";
+}
+.bi-icons-laptop-computadora:before {
+  content: "\eb3f";
+}
+.bi-icons-laptop-impresora:before {
+  content: "\eb40";
+}
+.bi-icons-laptop-token:before {
+  content: "\eb41";
+}
+.bi-icons-laptop-correo:before {
+  content: "\eb42";
+}
+.bi-icons-laptop-favorito:before {
+  content: "\eb43";
+}
+.bi-icons-laptop-reloj:before {
+  content: "\eb44";
+}
+.bi-icons-laptop-calendario:before {
+  content: "\eb45";
+}
+.bi-icons-laptop-compras:before {
+  content: "\eb46";
+}
+.bi-icons-laptop-luz:before {
+  content: "\eb47";
+}
+.bi-icons-laptop-energia:before {
+  content: "\eb48";
+}
+.bi-icons-laptop-qr:before {
+  content: "\eb49";
+}
+.bi-icons-laptop-auriculares:before {
+  content: "\eb4a";
+}
+.bi-icons-laptop-regalo:before {
+  content: "\eb4b";
+}
+.bi-icons-laptop-editar:before {
+  content: "\eb4c";
+}
+.bi-icons-laptop-cargar:before {
+  content: "\eb4d";
+}
+.bi-icons-laptop-descargar:before {
+  content: "\eb4e";
+}
+.bi-icons-laptop-opciones:before {
+  content: "\eb4f";
+}
+.bi-icons-laptop-enlace:before {
+  content: "\eb50";
+}
+.bi-icons-laptop-guardar:before {
+  content: "\eb51";
+}
+.bi-icons-laptop-telefono:before {
+  content: "\eb52";
+}
+.bi-icons-laptop-id:before {
+  content: "\eb53";
+}
+.bi-icons-laptop-microfono:before {
+  content: "\eb54";
+}
+.bi-icons-laptop-ubicacion:before {
+  content: "\eb55";
+}
+.bi-icons-laptop-quetzal:before {
+  content: "\eb56";
+}
+.bi-icons-laptop-lempira:before {
+  content: "\eb57";
+}
+.bi-icons-laptop-dolar:before {
+  content: "\eb58";
+}
+.bi-icons-laptop-euro:before {
+  content: "\eb59";
+}
+.bi-icons-laptop-boleto:before {
+  content: "\eb5a";
+}
+.bi-icons-laptop-banco:before {
+  content: "\eb5b";
+}
+.bi-icons-laptop-calculadora:before {
+  content: "\eb5c";
+}
+.bi-icons-laptop-mensaje:before {
+  content: "\eb5d";
+}
+.bi-icons-laptop-web:before {
+  content: "\eb5e";
+}
+.bi-icons-laptop-amor:before {
+  content: "\eb5f";
+}
+.bi-icons-desktop:before {
+  content: "\eb60";
+}
+.bi-icons-desktop-aceptar:before {
+  content: "\eb61";
+}
+.bi-icons-desktop-rechazar:before {
+  content: "\eb62";
+}
+.bi-icons-desktop-agregar:before {
+  content: "\eb63";
+}
+.bi-icons-desktop-izquierda:before {
+  content: "\eb64";
+}
+.bi-icons-desktop-derecha:before {
+  content: "\eb65";
+}
+.bi-icons-desktop-arriba:before {
+  content: "\eb66";
+}
+.bi-icons-desktop-abajo:before {
+  content: "\eb67";
+}
+.bi-icons-desktop-ajustes:before {
+  content: "\eb68";
+}
+.bi-icons-desktop-basurero:before {
+  content: "\eb69";
+}
+.bi-icons-desktop-notificacion:before {
+  content: "\eb6a";
+}
+.bi-icons-desktop-bloqueado:before {
+  content: "\eb6b";
+}
+.bi-icons-desktop-desbloqueado:before {
+  content: "\eb6c";
+}
+.bi-icons-desktop-tarjeta:before {
+  content: "\eb6d";
+}
+.bi-icons-desktop-efectivo:before {
+  content: "\eb6e";
+}
+.bi-icons-desktop-monedas:before {
+  content: "\eb6f";
+}
+.bi-icons-desktop-cheque:before {
+  content: "\eb70";
+}
+.bi-icons-desktop-usuario:before {
+  content: "\eb71";
+}
+.bi-icons-desktop-buscar:before {
+  content: "\eb72";
+}
+.bi-icons-desktop-internacional:before {
+  content: "\eb73";
+}
+.bi-icons-desktop-archivo:before {
+  content: "\eb74";
+}
+.bi-icons-desktop-documento:before {
+  content: "\eb75";
+}
+.bi-icons-desktop-celular:before {
+  content: "\eb76";
+}
+.bi-icons-desktop-laptop:before {
+  content: "\eb77";
+}
+.bi-icons-desktop-print:before {
+  content: "\eb78";
+}
+.bi-icons-desktop-token:before {
+  content: "\eb79";
+}
+.bi-icons-desktop-correo:before {
+  content: "\eb7a";
+}
+.bi-icons-desktop-favorito:before {
+  content: "\eb7b";
+}
+.bi-icons-desktop-reloj:before {
+  content: "\eb7c";
+}
+.bi-icons-desktop-calendario:before {
+  content: "\eb7d";
+}
+.bi-icons-desktop-compras:before {
+  content: "\eb7e";
+}
+.bi-icons-tiendascomputacion:before {
+  content: "\eb7e";
+}
+.bi-icons-desktop-luz:before {
+  content: "\eb7f";
+}
+.bi-icons-desktop-energia:before {
+  content: "\eb80";
+}
+.bi-icons-desktop-qr:before {
+  content: "\eb81";
+}
+.bi-icons-desktop-auriculares:before {
+  content: "\eb82";
+}
+.bi-icons-desktop-regalo:before {
+  content: "\eb83";
+}
+.bi-icons-desktop-editar:before {
+  content: "\eb84";
+}
+.bi-icons-desktop-cargar:before {
+  content: "\eb85";
+}
+.bi-icons-desktop-descargar:before {
+  content: "\eb86";
+}
+.bi-icons-desktop-opciones:before {
+  content: "\eb87";
+}
+.bi-icons-desktop-enlace:before {
+  content: "\eb88";
+}
+.bi-icons-desktop-guardar:before {
+  content: "\eb89";
+}
+.bi-icons-desktop-telefono:before {
+  content: "\eb8a";
+}
+.bi-icons-desktop-id:before {
+  content: "\eb8b";
+}
+.bi-icons-desktop-microfono:before {
+  content: "\eb8c";
+}
+.bi-icons-desktop-ubicacion:before {
+  content: "\eb8d";
+}
+.bi-icons-desktop-quetzal:before {
+  content: "\eb8e";
+}
+.bi-icons-desktop-lempira:before {
+  content: "\eb8f";
+}
+.bi-icons-desktop-dolar:before {
+  content: "\eb90";
+}
+.bi-icons-desktop-euro:before {
+  content: "\eb91";
+}
+.bi-icons-desktop-boleto:before {
+  content: "\eb92";
+}
+.bi-icons-desktop-banco:before {
+  content: "\eb93";
+}
+.bi-icons-desktop-calculadora:before {
+  content: "\eb94";
+}
+.bi-icons-desktop-mensaje:before {
+  content: "\eb95";
+}
+.bi-icons-desktop-web:before {
+  content: "\eb96";
+}
+.bi-icons-desktop-amor:before {
+  content: "\eb97";
+}
+.bi-icons-impresora:before {
+  content: "\eb98";
+}
+.bi-icons-impresora-aceptar:before {
+  content: "\eb99";
+}
+.bi-icons-impresora-rechazar:before {
+  content: "\eb9a";
+}
+.bi-icons-impresora-agregar:before {
+  content: "\eb9b";
+}
+.bi-icons-impresora-ajustes:before {
+  content: "\eb9c";
+}
+.bi-icons-impresora-basurero:before {
+  content: "\eb9d";
+}
+.bi-icons-impresora-notificacion:before {
+  content: "\eb9e";
+}
+.bi-icons-impresora-bloqueado:before {
+  content: "\eb9f";
+}
+.bi-icons-impresora-desbloqueado:before {
+  content: "\eba0";
+}
+.bi-icons-impresora-tarjeta:before {
+  content: "\eba1";
+}
+.bi-icons-impresora-cheque:before {
+  content: "\eba2";
+}
+.bi-icons-impresora-buscar:before {
+  content: "\eba3";
+}
+.bi-icons-impresora-archivo:before {
+  content: "\eba4";
+}
+.bi-icons-impresora-documento:before {
+  content: "\eba5";
+}
+.bi-icons-nube:before {
+  content: "\eba6";
+}
+.bi-icons-banco:before {
+  content: "\eba7";
+}
+.bi-icons-banco-aceptar:before {
+  content: "\eba8";
+}
+.bi-icons-banco-rechazar:before {
+  content: "\eba9";
+}
+.bi-icons-banco-agregar:before {
+  content: "\ebaa";
+}
+.bi-icons-banco-izquierda:before {
+  content: "\ebab";
+}
+.bi-icons-banco-derecha:before {
+  content: "\ebac";
+}
+.bi-icons-banco-arriba:before {
+  content: "\ebad";
+}
+.bi-icons-banco-abajo:before {
+  content: "\ebae";
+}
+.bi-icons-banco-ajustes:before {
+  content: "\ebaf";
+}
+.bi-icons-banco-basurero:before {
+  content: "\ebb0";
+}
+.bi-icons-banco-notificacion:before {
+  content: "\ebb1";
+}
+.bi-icons-banco-bloqueado:before {
+  content: "\ebb2";
+}
+.bi-icons-banco-desbloqueado:before {
+  content: "\ebb3";
+}
+.bi-icons-banco-tarjeta:before {
+  content: "\ebb4";
+}
+.bi-icons-banco-efectivo:before {
+  content: "\ebb5";
+}
+.bi-icons-banco-monedas:before {
+  content: "\ebb6";
+}
+.bi-icons-banco-cheque:before {
+  content: "\ebb7";
+}
+.bi-icons-banco-usuario:before {
+  content: "\ebb8";
+}
+
+.bi-icons-banco-buscar:before {
+  content: "\ebb9";
+}
+.bi-icons-banco-internacional:before {
+  content: "\ebba";
+}
+.bi-icons-banco-archivo:before {
+  content: "\ebbb";
+}
+.bi-icons-banco-documento:before {
+  content: "\ebbc";
+}
+.bi-icons-banco-celular:before {
+  content: "\ebbd";
+}
+.bi-icons-banco-laptop:before {
+  content: "\ebbe";
+}
+.bi-icons-banco-computadora:before {
+  content: "\ebbf";
+}
+.bi-icons-banco-impresora:before {
+  content: "\ebc0";
+}
+.bi-icons-banco-token:before {
+  content: "\ebc1";
+}
+.bi-icons-banco-correo:before {
+  content: "\ebc2";
+}
+.bi-icons-banco-favorito:before {
+  content: "\ebc3";
+}
+.bi-icons-banco-reloj:before {
+  content: "\ebc4";
+}
+.bi-icons-banco-calendario:before {
+  content: "\ebc5";
+}
+.bi-icons-banco-compras:before {
+  content: "\ebc6";
+}
+.bi-icons-banco-luz:before {
+  content: "\ebc7";
+}
+.bi-icons-banco-energia:before {
+  content: "\ebc8";
+}
+.bi-icons-banco-qr:before {
+  content: "\ebc9";
+}
+.bi-icons-banco-auriculares:before {
+  content: "\ebca";
+}
+.bi-icons-banco-regalo:before {
+  content: "\ebcb";
+}
+.bi-icons-banco-editar:before {
+  content: "\ebcc";
+}
+.bi-icons-banco-cargar:before {
+  content: "\ebcd";
+}
+.bi-icons-banco-descargar:before {
+  content: "\ebce";
+}
+.bi-icons-banco-opciones:before {
+  content: "\ebcf";
+}
+.bi-icons-banco-enlace:before {
+  content: "\ebd0";
+}
+.bi-icons-banco-guardar:before {
+  content: "\ebd1";
+}
+.bi-icons-banco-telefono:before {
+  content: "\ebd2";
+}
+.bi-icons-banco-id:before {
+  content: "\ebd3";
+}
+.bi-icons-banco-microfono:before {
+  content: "\ebd4";
+}
+.bi-icons-banco-ubicacion:before {
+  content: "\ebd5";
+}
+.bi-icons-banco-quetzal:before {
+  content: "\ebd6";
+}
+.bi-icons-banco-lempira:before {
+  content: "\ebd7";
+}
+.bi-icons-banco-dolar:before {
+  content: "\ebd8";
+}
+.bi-icons-banco-euro:before {
+  content: "\ebd9";
+}
+.bi-icons-banco-boleto:before {
+  content: "\ebda";
+}
+.bi-icons-banco-calculadora:before {
+  content: "\ebdb";
+}
+.bi-icons-banco-mensaje:before {
+  content: "\ebdc";
+}
+.bi-icons-banco-web:before {
+  content: "\ebdd";
+}
+.bi-icons-tarjeta:before {
+  content: "\ebde";
+}
+.bi-icons-tarjeta-aceptar:before {
+  content: "\ebdf";
+}
+.bi-icons-tarjeta-rechazar:before {
+  content: "\ebe0";
+}
+.bi-icons-tarjeta-agregar:before {
+  content: "\ebe1";
+}
+.bi-icons-tarjeta-izquierda:before {
+  content: "\ebe2";
+}
+.bi-icons-tarjeta-derecha:before {
+  content: "\ebe3";
+}
+.bi-icons-tarjeta-arriba:before {
+  content: "\ebe4";
+}
+.bi-icons-tarjeta-abajo:before {
+  content: "\ebe5";
+}
+.bi-icons-tarjeta-unificar-saldos:before {
+  content: "\ebe6";
+}
+.bi-icons-tarjeta-ajustes:before {
+  content: "\ebe7";
+}
+.bi-icons-tarjeta-basurero:before {
+  content: "\ebe8";
+}
+.bi-icons-tarjeta-notificacion:before {
+  content: "\ebe9";
+}
+.bi-icons-tarjeta-bloqueado:before {
+  content: "\ebea";
+}
+.bi-icons-tarjeta-desbloqueado:before {
+  content: "\ebeb";
+}
+.bi-icons-tarjeta-efectivo:before {
+  content: "\ebec";
+}
+.bi-icons-tarjeta-monedas:before {
+  content: "\ebed";
+}
+.bi-icons-tarjeta-cheque:before {
+  content: "\ebee";
+}
+.bi-icons-tarjeta-usuario:before {
+  content: "\ebef";
+}
+.bi-icons-tarjeta-buscar:before {
+  content: "\ebf0";
+}
+.bi-icons-tarjeta-internacional:before {
+  content: "\ebf1";
+}
+.bi-icons-tarjeta-archivo:before {
+  content: "\ebf2";
+}
+.bi-icons-tarjeta-documento:before {
+  content: "\ebf3";
+}
+.bi-icons-tarjeta-celular:before {
+  content: "\ebf4";
+}
+.bi-icons-tarjeta-laptop:before {
+  content: "\ebf5";
+}
+.bi-icons-tarjeta-computadora:before {
+  content: "\ebf6";
+}
+.bi-icons-tarjeta-impresora:before {
+  content: "\ebf7";
+}
+.bi-icons-tarjeta-token:before {
+  content: "\ebf8";
+}
+.bi-icons-tarjeta-correo:before {
+  content: "\ebf9";
+}
+.bi-icons-tarjeta-favorito:before {
+  content: "\ebfa";
+}
+.bi-icons-tarjeta-reloj:before {
+  content: "\ebfb";
+}
+.bi-icons-tarjeta-calendario:before {
+  content: "\ebfc";
+}
+.bi-icons-tarjeta-compras:before {
+  content: "\ebfd";
+}
+.bi-icons-tarjeta-luz:before {
+  content: "\ebfe";
+}
+.bi-icons-tarjeta-energia:before {
+  content: "\ebff";
+}
+.bi-icons-tarjeta-qr:before {
+  content: "\ec00";
+}
+.bi-icons-tarjeta-auriculares:before {
+  content: "\ec01";
+}
+.bi-icons-tarjeta-regalo:before {
+  content: "\ec02";
+}
+.bi-icons-tarjeta-editar:before {
+  content: "\ec03";
+}
+.bi-icons-tarjeta-cargar:before {
+  content: "\ec04";
+}
+.bi-icons-tarjeta-descargar:before {
+  content: "\ec05";
+}
+.bi-icons-tarjeta-opciones:before {
+  content: "\ec06";
+}
+.bi-icons-tarjeta-enalce:before {
+  content: "\ec07";
+}
+.bi-icons-tarjeta-guardar:before {
+  content: "\ec08";
+}
+.bi-icons-tarjeta-telefono:before {
+  content: "\ec09";
+}
+.bi-icons-tarjeta-id:before {
+  content: "\ec0a";
+}
+.bi-icons-tarjeta-microfono:before {
+  content: "\ec0b";
+}
+.bi-icons-tarjeta-ubicacion:before {
+  content: "\ec0c";
+}
+.bi-icons-tarjeta-quetzal:before {
+  content: "\ec0d";
+}
+.bi-icons-tarjeta-lempira:before {
+  content: "\ec0e";
+}
+.bi-icons-tarjeta-dollar:before {
+  content: "\ec0f";
+}
+.bi-icons-tarjeta-euro:before {
+  content: "\ec10";
+}
+.bi-icons-tarjeta-boleto:before {
+  content: "\ec11";
+}
+.bi-icons-tarjeta-banco:before {
+  content: "\ec12";
+}
+.bi-icons-tarjeta-calculadora:before {
+  content: "\ec13";
+}
+.bi-icons-tarjeta-mensaje:before {
+  content: "\ec14";
+}
+.bi-icons-tarjeta-web:before {
+  content: "\ec15";
+}
+.bi-icons-tarjetas-adicionales:before {
+  content: "\ec16";
+}
+.bi-icons-transferenciasmoviles:before {
+  content: "\ec17";
+}
+.bi-icons-efectivo:before {
+  content: "\ec17";
+}
+.bi-icons-transferenciaspagos:before {
+  content: "\ec17";
+}
+.bi-icons-efectivo-aceptar:before {
+  content: "\ec18";
+}
+.bi-icons-efectivo-rechazar:before {
+  content: "\ec19";
+}
+.bi-icons-efectivo-agregar:before {
+  content: "\ec1a";
+}
+.bi-icons-efectivo-izquierda:before {
+  content: "\ec1b";
+}
+.bi-icons-efectivo-derecha:before {
+  content: "\ec1c";
+}
+.bi-icons-efectivo-arriba:before {
+  content: "\ec1d";
+}
+.bi-icons-efectivo-abajo:before {
+  content: "\ec1e";
+}
+.bi-icons-efectivo-ajustes:before {
+  content: "\ec1f";
+}
+.bi-icons-efectivo-notificacion:before {
+  content: "\ec20";
+}
+.bi-icons-efectivo-bloqueado:before {
+  content: "\ec21";
+}
+.bi-icons-efectivo-desbloqueado:before {
+  content: "\ec22";
+}
+.bi-icons-efectivo-tarjeta:before {
+  content: "\ec23";
+}
+.bi-icons-efectivo-monedas:before {
+  content: "\ec24";
+}
+.bi-icons-efectivo-cheque:before {
+  content: "\ec25";
+}
+.bi-icons-efectivo-usuario:before {
+  content: "\ec26";
+}
+.bi-icons-efectivo-buscar:before {
+  content: "\ec27";
+}
+.bi-icons-efectivo-internacional:before {
+  content: "\ec28";
+}
+.bi-icons-efectivo-archivo:before {
+  content: "\ec29";
+}
+.bi-icons-efectivo-documento:before {
+  content: "\ec2a";
+}
+.bi-icons-efectivo-celular:before {
+  content: "\ec2b";
+}
+.bi-icons-efectivo-laptop:before {
+  content: "\ec2c";
+}
+.bi-icons-efectivo-computadora:before {
+  content: "\ec2d";
+}
+.bi-icons-efectivo-token:before {
+  content: "\ec2e";
+}
+.bi-icons-efectivo-correo:before {
+  content: "\ec2f";
+}
+.bi-icons-efectivo-favorito:before {
+  content: "\ec30";
+}
+.bi-icons-efectivo-reloj:before {
+  content: "\ec31";
+}
+.bi-icons-efectivo-calendario:before {
+  content: "\ec32";
+}
+.bi-icons-efectivo-compras:before {
+  content: "\ec33";
+}
+.bi-icons-serviciosbasicos:before {
+  content: "\ec34";
+}
+.bi-icons-efectivo-luz:before {
+  content: "\ec34";
+}
+.bi-icons-efectivo-energia:before {
+  content: "\ec35";
+}
+.bi-icons-efectivo-qr:before {
+  content: "\ec36";
+}
+.bi-icons-efectivo-auriculares:before {
+  content: "\ec37";
+}
+.bi-icons-efectivo-regalo:before {
+  content: "\ec38";
+}
+.bi-icons-efectivo-editar:before {
+  content: "\ec39";
+}
+.bi-icons-efectivo-cargar:before {
+  content: "\ec3a";
+}
+.bi-icons-efectivo-descargar:before {
+  content: "\ec3b";
+}
+.bi-icons-efectivo-opciones:before {
+  content: "\ec3c";
+}
+.bi-icons-efectivo-enlace:before {
+  content: "\ec3d";
+}
+.bi-icons-efectivo-guardar:before {
+  content: "\ec3e";
+}
+.bi-icons-efectivo-telefono:before {
+  content: "\ec3f";
+}
+.bi-icons-efectivo-id:before {
+  content: "\ec40";
+}
+.bi-icons-efectivo-microfono:before {
+  content: "\ec41";
+}
+.bi-icons-efectivo-ubicacion:before {
+  content: "\ec42";
+}
+.bi-icons-efectivo-quetzal:before {
+  content: "\ec43";
+}
+.bi-icons-efectivo-lempira:before {
+  content: "\ec44";
+}
+.bi-icons-efectivo-dollar:before {
+  content: "\ec45";
+}
+.bi-icons-efectivo-euro:before {
+  content: "\ec46";
+}
+.bi-icons-efectivo-boleto:before {
+  content: "\ec47";
+}
+.bi-icons-efectivo-banco:before {
+  content: "\ec48";
+}
+.bi-icons-pagoimpuestos:before {
+  content: "\ec48";
+}
+.bi-icons-pagomultas:before {
+  content: "\ec48";
+}
+.bi-icons-impuestosmultas:before {
+  content: "\ec48";
+}
+.bi-icons-efectivo-calculadora:before {
+  content: "\ec49";
+}
+.bi-icons-efectivo-mensaje:before {
+  content: "\ec4a";
+}
+.bi-icons-efectivo-web:before {
+  content: "\ec4b";
+}
+.bi-icons-efectivo-amor:before {
+  content: "\ec4c";
+}
+.bi-icons-efectivo-seguro:before {
+  content: "\ec4d";
+}
+.bi-icons-efectivo-seguro-aprobado:before {
+  content: "\ec4e";
+}
+.bi-icons-efectivo-seguro-rechazado:before {
+  content: "\ec4f";
+}
+.bi-icons-cheque:before {
+  content: "\ec50";
+}
+.bi-icons-cheque-aceptar:before {
+  content: "\ec51";
+}
+.bi-icons-cheque-rechazar:before {
+  content: "\ec52";
+}
+.bi-icons-cheque-agregar:before {
+  content: "\ec53";
+}
+.bi-icons-cheque-izquierda:before {
+  content: "\ec54";
+}
+.bi-icons-cheque-derecha:before {
+  content: "\ec55";
+}
+.bi-icons-cheque-arriba:before {
+  content: "\ec56";
+}
+.bi-icons-cheque-abajo:before {
+  content: "\ec57";
+}
+.bi-icons-cheque-ajustes:before {
+  content: "\ec58";
+}
+.bi-icons-cheque-basurero:before {
+  content: "\ec59";
+}
+.bi-icons-cheque-notificacion:before {
+  content: "\ec5a";
+}
+.bi-icons-cheque-bloqueado:before {
+  content: "\ec5b";
+}
+.bi-icons-cheque-desbloqueado:before {
+  content: "\ec5c";
+}
+.bi-icons-cheque-tarjeta:before {
+  content: "\ec5d";
+}
+.bi-icons-cheque-efectivo:before {
+  content: "\ec5e";
+}
+.bi-icons-cheque-monedas:before {
+  content: "\ec5f";
+}
+.bi-icons-cheque-usuario:before {
+  content: "\ec60";
+}
+.bi-icons-cheque-buscar:before {
+  content: "\ec61";
+}
+.bi-icons-cheque-internacional:before {
+  content: "\ec62";
+}
+.bi-icons-cheque-archivo:before {
+  content: "\ec63";
+}
+.bi-icons-cheque-documento:before {
+  content: "\ec64";
+}
+.bi-icons-cheque-celular:before {
+  content: "\ec65";
+}
+.bi-icons-cheque-laptop:before {
+  content: "\ec66";
+}
+.bi-icons-cheque-computadora:before {
+  content: "\ec67";
+}
+.bi-icons-cheque-impresora:before {
+  content: "\ec68";
+}
+.bi-icons-cheque-token:before {
+  content: "\ec69";
+}
+.bi-icons-cheque-correo:before {
+  content: "\ec6a";
+}
+.bi-icons-cheque-favorito:before {
+  content: "\ec6b";
+}
+.bi-icons-cheque-reloj:before {
+  content: "\ec6c";
+}
+.bi-icons-cheque-calendario:before {
+  content: "\ec6d";
+}
+.bi-icons-cheque-compras:before {
+  content: "\ec6e";
+}
+.bi-icons-cheque-luz:before {
+  content: "\ec6f";
+}
+.bi-icons-cheque-energia:before {
+  content: "\ec70";
+}
+.bi-icons-cheque-qr:before {
+  content: "\ec71";
+}
+.bi-icons-cheque-auriculares:before {
+  content: "\ec72";
+}
+.bi-icons-cheque-regalo:before {
+  content: "\ec73";
+}
+.bi-icons-cheque-editar:before {
+  content: "\ec74";
+}
+.bi-icons-cheque-cargar:before {
+  content: "\ec75";
+}
+.bi-icons-cheque-descargar:before {
+  content: "\ec76";
+}
+.bi-icons-cheque-opciones:before {
+  content: "\ec77";
+}
+.bi-icons-cheque-enlace:before {
+  content: "\ec78";
+}
+.bi-icons-cheque-guardar:before {
+  content: "\ec79";
+}
+.bi-icons-cheque-telefono:before {
+  content: "\ec7a";
+}
+.bi-icons-cheque-id:before {
+  content: "\ec7b";
+}
+.bi-icons-cheque-microfono:before {
+  content: "\ec7c";
+}
+.bi-icons-cheque-ubicacion:before {
+  content: "\ec7d";
+}
+.bi-icons-cheque-quetzal:before {
+  content: "\ec7e";
+}
+.bi-icons-cheque-lempira:before {
+  content: "\ec7f";
+}
+.bi-icons-cheque-dollar:before {
+  content: "\ec80";
+}
+.bi-icons-cheque-euro:before {
+  content: "\ec81";
+}
+.bi-icons-cheque-boleto:before {
+  content: "\ec82";
+}
+.bi-icons-cheque-banco:before {
+  content: "\ec83";
+}
+.bi-icons-cheque-calculadora:before {
+  content: "\ec84";
+}
+.bi-icons-cheque-mensaje:before {
+  content: "\ec85";
+}
+.bi-icons-cheque-web:before {
+  content: "\ec86";
+}
+.bi-icons-cajero:before {
+  content: "\ec87";
+}
+.bi-icons-cajero-aceptar:before {
+  content: "\ec88";
+}
+.bi-icons-cajero-rechazar:before {
+  content: "\ec89";
+}
+.bi-icons-cajero-agregar:before {
+  content: "\ec8a";
+}
+.bi-icons-cajero-izquierda:before {
+  content: "\ec8b";
+}
+.bi-icons-cajero-derecha:before {
+  content: "\ec8c";
+}
+.bi-icons-cajero-arriba:before {
+  content: "\ec8d";
+}
+.bi-icons-cajero-abajo:before {
+  content: "\ec8e";
+}
+.bi-icons-cajero-ajustes:before {
+  content: "\ec8f";
+}
+.bi-icons-cajero-basurero:before {
+  content: "\ec90";
+}
+.bi-icons-cajero-notificacion:before {
+  content: "\ec91";
+}
+.bi-icons-cajero-bloqueado:before {
+  content: "\ec92";
+}
+.bi-icons-cajero-desbloqueado:before {
+  content: "\ec93";
+}
+.bi-icons-cajero-tarjeta:before {
+  content: "\ec94";
+}
+.bi-icons-cajero-efectivo:before {
+  content: "\ec95";
+}
+.bi-icons-cajero-monedas:before {
+  content: "\ec96";
+}
+.bi-icons-cajero-cheque:before {
+  content: "\ec97";
+}
+.bi-icons-cajero-usuario:before {
+  content: "\ec98";
+}
+.bi-icons-cajero-buscar:before {
+  content: "\ec99";
+}
+.bi-icons-cajero-internacional:before {
+  content: "\ec9a";
+}
+.bi-icons-cajero-archivo:before {
+  content: "\ec9b";
+}
+.bi-icons-cajero-documento:before {
+  content: "\ec9c";
+}
+.bi-icons-cajero-celular:before {
+  content: "\ec9d";
+}
+.bi-icons-cajero-laptop:before {
+  content: "\ec9e";
+}
+.bi-icons-cajero-computadora:before {
+  content: "\ec9f";
+}
+.bi-icons-cajero-impresora:before {
+  content: "\eca0";
+}
+.bi-icons-cajero-token:before {
+  content: "\eca1";
+}
+.bi-icons-cajero-correo:before {
+  content: "\eca2";
+}
+.bi-icons-cajero-favorito:before {
+  content: "\eca3";
+}
+.bi-icons-cajero-reloj:before {
+  content: "\eca4";
+}
+.bi-icons-cajero-calendario:before {
+  content: "\eca5";
+}
+.bi-icons-cajero-compras:before {
+  content: "\eca6";
+}
+.bi-icons-cajero-luz:before {
+  content: "\eca7";
+}
+.bi-icons-cajero-energia:before {
+  content: "\eca8";
+}
+.bi-icons-cajero-qr:before {
+  content: "\eca9";
+}
+.bi-icons-cajero-auriculares:before {
+  content: "\ecaa";
+}
+.bi-icons-cajero-regalo:before {
+  content: "\ecab";
+}
+.bi-icons-cajero-editar:before {
+  content: "\ecac";
+}
+.bi-icons-cajero-cargar:before {
+  content: "\ecad";
+}
+.bi-icons-cajero-descargar:before {
+  content: "\ecae";
+}
+.bi-icons-cajero-opciones:before {
+  content: "\ecaf";
+}
+.bi-icons-cajero-enlace:before {
+  content: "\ecb0";
+}
+.bi-icons-cajero-guardar:before {
+  content: "\ecb1";
+}
+.bi-icons-cajero-telefono:before {
+  content: "\ecb2";
+}
+.bi-icons-cajero-id:before {
+  content: "\ecb3";
+}
+.bi-icons-cajero-microfono:before {
+  content: "\ecb4";
+}
+.bi-icons-cajero-ubicacion:before {
+  content: "\ecb5";
+}
+.bi-icons-cajero-quetzal:before {
+  content: "\ecb6";
+}
+.bi-icons-cajero-lempira:before {
+  content: "\ecb7";
+}
+.bi-icons-cajero-dolar:before {
+  content: "\ecb8";
+}
+.bi-icons-cajero-euro:before {
+  content: "\ecb9";
+}
+.bi-icons-cajero-boleto:before {
+  content: "\ecba";
+}
+.bi-icons-cajero-banco:before {
+  content: "\ecbb";
+}
+.bi-icons-cajero-calculadora:before {
+  content: "\ecbc";
+}
+.bi-icons-cajero-mensaje:before {
+  content: "\ecbd";
+}
+.bi-icons-cajero-web:before {
+  content: "\ecbe";
+}
+.bi-icons-pos:before {
+  content: "\ecbf";
+}
+.bi-icons-pos-aceptar:before {
+  content: "\ecc0";
+}
+.bi-icons-pos-rechazar:before {
+  content: "\ecc1";
+}
+.bi-icons-pos-agregar:before {
+  content: "\ecc2";
+}
+.bi-icons-pos-izquierda:before {
+  content: "\ecc3";
+}
+.bi-icons-pos-derecha:before {
+  content: "\ecc4";
+}
+.bi-icons-pos-arriba:before {
+  content: "\ecc5";
+}
+.bi-icons-pos-abajo:before {
+  content: "\ecc6";
+}
+.bi-icons-pos-ajustes:before {
+  content: "\ecc7";
+}
+.bi-icons-pos-basurero:before {
+  content: "\ecc8";
+}
+.bi-icons-pos-notificacion:before {
+  content: "\ecc9";
+}
+.bi-icons-pos-bloqueado:before {
+  content: "\ecca";
+}
+.bi-icons-pos-desbloqueado:before {
+  content: "\eccb";
+}
+.bi-icons-pos-tarjeta:before {
+  content: "\eccc";
+}
+.bi-icons-pos-efectivo:before {
+  content: "\eccd";
+}
+.bi-icons-pos-monedas:before {
+  content: "\ecce";
+}
+.bi-icons-pos-cheque:before {
+  content: "\eccf";
+}
+.bi-icons-pos-usuario:before {
+  content: "\ecd0";
+}
+.bi-icons-pos-buscar:before {
+  content: "\ecd1";
+}
+.bi-icons-pos-internacional:before {
+  content: "\ecd2";
+}
+.bi-icons-pos-archivo:before {
+  content: "\ecd3";
+}
+.bi-icons-pos-documento:before {
+  content: "\ecd4";
+}
+.bi-icons-pos-celular:before {
+  content: "\ecd5";
+}
+.bi-icons-pos-laptop:before {
+  content: "\ecd6";
+}
+.bi-icons-pos-computadora:before {
+  content: "\ecd7";
+}
+.bi-icons-pos-print:before {
+  content: "\ecd8";
+}
+.bi-icons-pos-token:before {
+  content: "\ecd9";
+}
+.bi-icons-pos-correo:before {
+  content: "\ecda";
+}
+.bi-icons-pos-favorito:before {
+  content: "\ecdb";
+}
+.bi-icons-pos-reloj:before {
+  content: "\ecdc";
+}
+.bi-icons-pos-calendario:before {
+  content: "\ecdd";
+}
+.bi-icons-pos-compras:before {
+  content: "\ecde";
+}
+.bi-icons-pos-luz:before {
+  content: "\ecdf";
+}
+.bi-icons-pos-energia:before {
+  content: "\ece0";
+}
+.bi-icons-pos-qr:before {
+  content: "\ece1";
+}
+.bi-icons-pos-auriculares:before {
+  content: "\ece2";
+}
+.bi-icons-pos-regalo:before {
+  content: "\ece3";
+}
+.bi-icons-pos-editar:before {
+  content: "\ece4";
+}
+.bi-icons-pos-cargar:before {
+  content: "\ece5";
+}
+.bi-icons-pos-descargar:before {
+  content: "\ece6";
+}
+.bi-icons-pos-opciones:before {
+  content: "\ece7";
+}
+.bi-icons-pos-enlace:before {
+  content: "\ece8";
+}
+.bi-icons-pos-guardar:before {
+  content: "\ece9";
+}
+.bi-icons-pos-telefono:before {
+  content: "\ecea";
+}
+.bi-icons-pos-id:before {
+  content: "\eceb";
+}
+.bi-icons-pos-microfono:before {
+  content: "\ecec";
+}
+.bi-icons-pos-ubicacion:before {
+  content: "\eced";
+}
+.bi-icons-pos-quetzal:before {
+  content: "\ecee";
+}
+.bi-icons-pos-lempira:before {
+  content: "\ecef";
+}
+.bi-icons-pos-dollar:before {
+  content: "\ecf0";
+}
+.bi-icons-pos-euro:before {
+  content: "\ecf1";
+}
+.bi-icons-pos-boleto:before {
+  content: "\ecf2";
+}
+.bi-icons-pos-banco:before {
+  content: "\ecf3";
+}
+.bi-icons-pos-calculadora:before {
+  content: "\ecf4";
+}
+.bi-icons-pos-web:before {
+  content: "\ecf5";
+}
+.bi-icons-pos-mensaje:before {
+  content: "\ecf6";
+}
+.bi-icons-quetzal-circulo:before {
+  content: "\ecf7";
+}
+.bi-icons-lempira-circulo:before {
+  content: "\ecf8";
+}
+.bi-icons-dolar-circulo:before {
+  content: "\ecf9";
+}
+.bi-icons-euro-circulo:before {
+  content: "\ecfa";
+}
+.bi-icons-solicitud-apertura-cuenta:before {
+  content: "\ecfb";
+}
+.bi-icons-solicitud-tarjeta:before {
+  content: "\ecfc";
+}
+.bi-icons-solicitud-efectivo:before {
+  content: "\ecfd";
+}
+.bi-icons-solicitud-recibo:before {
+  content: "\ecfe";
+}
+.bi-icons-solicitud-seguro:before {
+  content: "\ecff";
+}
+.bi-icons-solicitud-puntos-bi:before {
+  content: "\ed00";
+}
+.bi-icons-solicitud-tasa-baja:before {
+  content: "\ed01";
+}
+.bi-icons-compras:before {
+  content: "\ed02";
+}
+.bi-icons-compras-aceptar:before {
+  content: "\ed03";
+}
+.bi-icons-compras-rechazar:before {
+  content: "\ed04";
+}
+.bi-icons-compras-agregar:before {
+  content: "\ed05";
+}
+.bi-icons-compras-ajustes:before {
+  content: "\ed06";
+}
+.bi-icons-compras-basurero:before {
+  content: "\ed07";
+}
+.bi-icons-compras-notificacion:before {
+  content: "\ed08";
+}
+.bi-icons-compras-bloqueado:before {
+  content: "\ed09";
+}
+.bi-icons-compras-desbloqueado:before {
+  content: "\ed0a";
+}
+.bi-icons-compras-tarjeta:before {
+  content: "\ed0b";
+}
+.bi-icons-compras-efectivo:before {
+  content: "\ed0c";
+}
+.bi-icons-compras-monedas:before {
+  content: "\ed0d";
+}
+.bi-icons-clubcompras:before {
+  content: "\ed0d";
+}
+.bi-icons-compras-cheque:before {
+  content: "\ed0e";
+}
+.bi-icons-compras-usuario:before {
+  content: "\ed0f";
+}
+.bi-icons-compras-buscar:before {
+  content: "\ed10";
+}
+.bi-icons-compras-internacional:before {
+  content: "\ed11";
+}
+.bi-icons-compras-archivo:before {
+  content: "\ed12";
+}
+.bi-icons-compras-documento:before {
+  content: "\ed13";
+}
+.bi-icons-compras-celular:before {
+  content: "\ed14";
+}
+.bi-icons-compras-laptop:before {
+  content: "\ed15";
+}
+.bi-icons-compras-computadora:before {
+  content: "\ed16";
+}
+.bi-icons-compras-impresora:before {
+  content: "\ed17";
+}
+.bi-icons-compras-token:before {
+  content: "\ed18";
+}
+.bi-icons-compras-correo:before {
+  content: "\ed19";
+}
+.bi-icons-compras-favorito:before {
+  content: "\ed1a";
+}
+.bi-icons-compras-horario:before {
+  content: "\ed1b";
+}
+.bi-icons-compras-calendario:before {
+  content: "\ed1c";
+}
+.bi-icons-compras-qr:before {
+  content: "\ed1d";
+}
+.bi-icons-compras-auriculares:before {
+  content: "\ed1e";
+}
+.bi-icons-compras-regalo:before {
+  content: "\ed1f";
+}
+.bi-icons-compras-editar:before {
+  content: "\ed20";
+}
+.bi-icons-compras-opciones:before {
+  content: "\ed21";
+}
+.bi-icons-compras-enlace:before {
+  content: "\ed22";
+}
+.bi-icons-compras-guardar:before {
+  content: "\ed23";
+}
+.bi-icons-compras-telefono:before {
+  content: "\ed24";
+}
+.bi-icons-carrito-de-compras:before {
+  content: "\ed25";
+}
+.bi-icons-supermercados:before {
+  content: "\ed25";
+}
+.bi-icons-carrito-de-compras-tarjeta:before {
+  content: "\ed26";
+}
+.bi-icons-carrito-de-compras-efectivo:before {
+  content: "\ed27";
+}
+.bi-icons-carrito-de-compras-monedas:before {
+  content: "\ed28";
+}
+.bi-icons-carrito-de-compras-internacional:before {
+  content: "\ed29";
+}
+.bi-icons-carrito-de-compras-celular:before {
+  content: "\ed2a";
+}
+.bi-icons-carrito-de-compras-laptop:before {
+  content: "\ed2b";
+}
+.bi-icons-carrito-de-compras-computadora:before {
+  content: "\ed2c";
+}
+.bi-icons-carrito-de-compras-amor:before {
+  content: "\ed2d";
+}
+.bi-icons-carrito-de-compras-regalo:before {
+  content: "\ed2e";
+}
+.bi-icons-grafica-ascendente:before {
+  content: "\ed2f";
+}
+.bi-icons-grafica-ascendente-solido:before {
+  content: "\ed30";
+}
+.bi-icons-grafica-descendente:before {
+  content: "\ed31";
+}
+.bi-icons-grafica-descendente-solido:before {
+  content: "\ed32";
+}
+.bi-icons-grafica-circular:before {
+  content: "\ed33";
+}
+.bi-icons-grafica-circular-solido:before {
+  content: "\ed34";
+}
+.bi-icons-qr:before {
+  content: "\ed35";
+}
+.bi-icons-qr-aceptar:before {
+  content: "\ed36";
+}
+.bi-icons-qr-rechazar:before {
+  content: "\ed37";
+}
+.bi-icons-qr-agregar:before {
+  content: "\ed38";
+}
+.bi-icons-qr-izquierda:before {
+  content: "\ed39";
+}
+.bi-icons-qr-derecha:before {
+  content: "\ed3a";
+}
+.bi-icons-qr-arriba:before {
+  content: "\ed3b";
+}
+.bi-icons-qr-abajo:before {
+  content: "\ed3c";
+}
+.bi-icons-qr-ajustes:before {
+  content: "\ed3d";
+}
+.bi-icons-qr-basurero:before {
+  content: "\ed3e";
+}
+.bi-icons-qr-notificacion:before {
+  content: "\ed3f";
+}
+.bi-icons-qr-bloqueado:before {
+  content: "\ed40";
+}
+.bi-icons-qr-desbloqueado:before {
+  content: "\ed41";
+}
+.bi-icons-qr-tarjeta:before {
+  content: "\ed42";
+}
+.bi-icons-qr-efectivo:before {
+  content: "\ed43";
+}
+.bi-icons-qr-monedas:before {
+  content: "\ed44";
+}
+.bi-icons-qr-cheque:before {
+  content: "\ed45";
+}
+.bi-icons-qr-usuario:before {
+  content: "\ed46";
+}
+.bi-icons-qr-buscar:before {
+  content: "\ed47";
+}
+.bi-icons-qr-internacional:before {
+  content: "\ed48";
+}
+.bi-icons-qr-archivo:before {
+  content: "\ed49";
+}
+.bi-icons-qr-documento:before {
+  content: "\ed4a";
+}
+.bi-icons-qr-celular:before {
+  content: "\ed4b";
+}
+.bi-icons-qr-laptop:before {
+  content: "\ed4c";
+}
+.bi-icons-qr-computadora:before {
+  content: "\ed4d";
+}
+.bi-icons-qr-impresora:before {
+  content: "\ed4e";
+}
+.bi-icons-qr-token:before {
+  content: "\ed4f";
+}
+.bi-icons-qr-correo:before {
+  content: "\ed50";
+}
+.bi-icons-qr-favorito:before {
+  content: "\ed51";
+}
+.bi-icons-qr-reloj:before {
+  content: "\ed52";
+}
+.bi-icons-qr-calendario:before {
+  content: "\ed53";
+}
+.bi-icons-qr-compras:before {
+  content: "\ed54";
+}
+.bi-icons-qr-luz:before {
+  content: "\ed55";
+}
+.bi-icons-qr-energia:before {
+  content: "\ed56";
+}
+.bi-icons-qr-auriculares:before {
+  content: "\ed57";
+}
+.bi-icons-qr-regalo:before {
+  content: "\ed58";
+}
+.bi-icons-qr-editar:before {
+  content: "\ed59";
+}
+.bi-icons-qr-cargar:before {
+  content: "\ed5a";
+}
+.bi-icons-qr-descargar:before {
+  content: "\ed5b";
+}
+.bi-icons-qr-opciones:before {
+  content: "\ed5c";
+}
+.bi-icons-qr-enlace:before {
+  content: "\ed5d";
+}
+.bi-icons-qr-guardar:before {
+  content: "\ed5e";
+}
+.bi-icons-qr-telefono:before {
+  content: "\ed5f";
+}
+.bi-icons-qr-id:before {
+  content: "\ed60";
+}
+.bi-icons-qr-microfono:before {
+  content: "\ed61";
+}
+.bi-icons-qr-ubicacion:before {
+  content: "\ed62";
+}
+.bi-icons-qr-quetzal:before {
+  content: "\ed63";
+}
+.bi-icons-qr-lempira:before {
+  content: "\ed64";
+}
+.bi-icons-qr-dolar:before {
+  content: "\ed65";
+}
+.bi-icons-qr-euro:before {
+  content: "\ed66";
+}
+.bi-icons-qr-boleto:before {
+  content: "\ed67";
+}
+.bi-icons-qr-banco:before {
+  content: "\ed68";
+}
+.bi-icons-qr-calculadora:before {
+  content: "\ed69";
+}
+.bi-icons-qr-mensaje:before {
+  content: "\ed6a";
+}
+.bi-icons-qr-web:before {
+  content: "\ed6b";
+}
+.bi-icons-biometria:before {
+  content: "\ed6c";
+}
+.bi-icons-biometria-aceptar:before {
+  content: "\ed6d";
+}
+.bi-icons-biometria-rechazar:before {
+  content: "\ed6e";
+}
+.bi-icons-biometria-agregar:before {
+  content: "\ed6f";
+}
+.bi-icons-biometria-izquierda:before {
+  content: "\ed70";
+}
+.bi-icons-biometria-derecha:before {
+  content: "\ed71";
+}
+.bi-icons-biometria-arriba:before {
+  content: "\ed72";
+}
+.bi-icons-biometria-abajo:before {
+  content: "\ed73";
+}
+.bi-icons-biometria-ajustes:before {
+  content: "\ed74";
+}
+.bi-icons-biometria-basurero:before {
+  content: "\ed75";
+}
+.bi-icons-biometria-notificacion:before {
+  content: "\ed76";
+}
+.bi-icons-biometria-bloqueado:before {
+  content: "\ed77";
+}
+.bi-icons-biometria-desbloqueado:before {
+  content: "\ed78";
+}
+.bi-icons-biometria-tarjeta:before {
+  content: "\ed79";
+}
+.bi-icons-biometria-efectivo:before {
+  content: "\ed7a";
+}
+.bi-icons-biometria-monedas:before {
+  content: "\ed7b";
+}
+.bi-icons-biometria-cheque:before {
+  content: "\ed7c";
+}
+.bi-icons-biometria-buscar:before {
+  content: "\ed7d";
+}
+.bi-icons-biometria-internacional:before {
+  content: "\ed7e";
+}
+.bi-icons-biometria-archivo:before {
+  content: "\ed7f";
+}
+.bi-icons-biometria-documento:before {
+  content: "\ed80";
+}
+.bi-icons-biometria-celular:before {
+  content: "\ed81";
+}
+.bi-icons-biometria-laptop:before {
+  content: "\ed82";
+}
+.bi-icons-biometria-computadora:before {
+  content: "\ed83";
+}
+.bi-icons-biometria-impresora:before {
+  content: "\ed84";
+}
+.bi-icons-biometria-token:before {
+  content: "\ed85";
+}
+.bi-icons-biometria-correo:before {
+  content: "\ed86";
+}
+.bi-icons-biometria-favorito:before {
+  content: "\ed87";
+}
+.bi-icons-biometria-reloj:before {
+  content: "\ed88";
+}
+.bi-icons-biometria-calendario:before {
+  content: "\ed89";
+}
+.bi-icons-biometria-compras:before {
+  content: "\ed8a";
+}
+.bi-icons-biometria-luz:before {
+  content: "\ed8b";
+}
+.bi-icons-biometria-energia:before {
+  content: "\ed8c";
+}
+.bi-icons-biometria-qr:before {
+  content: "\ed8d";
+}
+.bi-icons-biometria-auriculares:before {
+  content: "\ed8e";
+}
+.bi-icons-biometria-regalo:before {
+  content: "\ed8f";
+}
+.bi-icons-biometria-editar:before {
+  content: "\ed90";
+}
+.bi-icons-biometria-cargar:before {
+  content: "\ed91";
+}
+.bi-icons-biometria-descargar:before {
+  content: "\ed92";
+}
+.bi-icons-biometria-opciones:before {
+  content: "\ed93";
+}
+.bi-icons-biometria-enlace:before {
+  content: "\ed94";
+}
+.bi-icons-biometria-guardar:before {
+  content: "\ed95";
+}
+.bi-icons-biometria-telefono:before {
+  content: "\ed96";
+}
+.bi-icons-biometria-id:before {
+  content: "\ed97";
+}
+.bi-icons-biometria-microfono:before {
+  content: "\ed98";
+}
+.bi-icons-biometria-ubicacion:before {
+  content: "\ed99";
+}
+.bi-icons-biometria-quetzal:before {
+  content: "\ed9a";
+}
+.bi-icons-biometria-lempira:before {
+  content: "\ed9b";
+}
+.bi-icons-biometria-dolar:before {
+  content: "\ed9c";
+}
+.bi-icons-biometria-euro:before {
+  content: "\ed9d";
+}
+.bi-icons-biometria-boleto:before {
+  content: "\ed9e";
+}
+.bi-icons-biometria-banco:before {
+  content: "\ed9f";
+}
+.bi-icons-biometria-calculadora:before {
+  content: "\eda0";
+}
+.bi-icons-biometria-mensaje:before {
+  content: "\eda1";
+}
+.bi-icons-biometria-web:before {
+  content: "\eda2";
+}
+.bi-icons-biid:before {
+  content: "\eda3";
+}
+.bi-icons-biid-aceptar:before {
+  content: "\eda4";
+}
+.bi-icons-biid-rechazar:before {
+  content: "\eda5";
+}
+.bi-icons-biid-agregar:before {
+  content: "\eda6";
+}
+.bi-icons-biid-izquierda:before {
+  content: "\eda7";
+}
+.bi-icons-biid-derecha:before {
+  content: "\eda8";
+}
+.bi-icons-biid-arriba:before {
+  content: "\eda9";
+}
+.bi-icons-biid-abajo:before {
+  content: "\edaa";
+}
+.bi-icons-biid-ajustes:before {
+  content: "\edab";
+}
+.bi-icons-biid-basurero:before {
+  content: "\edac";
+}
+.bi-icons-biid-usuario:before {
+  content: "\edad";
+}
+.bi-icons-faceid:before {
+  content: "\edae";
+}
+.bi-icons-faceid-aceptar:before {
+  content: "\edaf";
+}
+.bi-icons-faceid-rechazar:before {
+  content: "\edb0";
+}
+.bi-icons-faceid-agregar:before {
+  content: "\edb1";
+}
+.bi-icons-faceid-izquierda:before {
+  content: "\edb2";
+}
+.bi-icons-faceid-derecha:before {
+  content: "\edb3";
+}
+.bi-icons-faceid-arriba:before {
+  content: "\edb4";
+}
+.bi-icons-faceid-abajo:before {
+  content: "\edb5";
+}
+.bi-icons-faceid-ajustes:before {
+  content: "\edb6";
+}
+.bi-icons-faceid-basurero:before {
+  content: "\edb7";
+}
+.bi-icons-faceid-usuario:before {
+  content: "\edb8";
+}
+.bi-icons-tecolote:before {
+  content: "\edb9";
+}
+.bi-icons-billetera:before {
+  content: "\edba";
+}
+.bi-icons-abi:before {
+  content: "\edbb";
+}
+.bi-icons-porcentaje:before {
+  content: "\edbc";
+}
+.bi-icons-firma:before {
+  content: "\edbd";
+}
+.bi-icons-regalo:before {
+  content: "\edbe";
+}
+.bi-icons-regalo-aceptar:before {
+  content: "\edbf";
+}
+.bi-icons-regalo-rechazar:before {
+  content: "\edc0";
+}
+.bi-icons-regalo-agregar:before {
+  content: "\edc1";
+}
+.bi-icons-regalo-izquierda:before {
+  content: "\edc2";
+}
+.bi-icons-regalo-derecha:before {
+  content: "\edc3";
+}
+.bi-icons-regalo-arriba:before {
+  content: "\edc4";
+}
+.bi-icons-regalo-abajo:before {
+  content: "\edc5";
+}
+.bi-icons-regalo-ajustes:before {
+  content: "\edc6";
+}
+.bi-icons-regalo-basurero:before {
+  content: "\edc7";
+}
+.bi-icons-regalo-notificacion:before {
+  content: "\edc8";
+}
+.bi-icons-regalo-bloqueado:before {
+  content: "\edc9";
+}
+.bi-icons-regalo-desbloqueado:before {
+  content: "\edca";
+}
+.bi-icons-regalo-tarjeta:before {
+  content: "\edcb";
+}
+.bi-icons-regalo-efectivo:before {
+  content: "\edcc";
+}
+.bi-icons-regalo-monedas:before {
+  content: "\edcd";
+}
+.bi-icons-regalo-cheque:before {
+  content: "\edce";
+}
+.bi-icons-regalo-usuario:before {
+  content: "\edcf";
+}
+.bi-icons-regalo-buscar:before {
+  content: "\edd0";
+}
+.bi-icons-regalo-internacional:before {
+  content: "\edd1";
+}
+.bi-icons-regalo-archivo:before {
+  content: "\edd2";
+}
+.bi-icons-regalo-documento:before {
+  content: "\edd3";
+}
+.bi-icons-regalo-celular:before {
+  content: "\edd4";
+}
+.bi-icons-regalo-laptop:before {
+  content: "\edd5";
+}
+.bi-icons-regalo-computadora:before {
+  content: "\edd6";
+}
+.bi-icons-regalo-impresora:before {
+  content: "\edd7";
+}
+.bi-icons-regalo-token:before {
+  content: "\edd8";
+}
+.bi-icons-regalo-correo:before {
+  content: "\edd9";
+}
+.bi-icons-regalo-favorito:before {
+  content: "\edda";
+}
+.bi-icons-regalo-reloj:before {
+  content: "\eddb";
+}
+.bi-icons-regalo-calendario:before {
+  content: "\eddc";
+}
+.bi-icons-regalo-compras:before {
+  content: "\eddd";
+}
+.bi-icons-regalo-luz:before {
+  content: "\edde";
+}
+.bi-icons-regalo-energia:before {
+  content: "\eddf";
+}
+.bi-icons-regalo-qr:before {
+  content: "\ede0";
+}
+.bi-icons-regalo-auriculares:before {
+  content: "\ede1";
+}
+.bi-icons-regalo-editar:before {
+  content: "\ede2";
+}
+.bi-icons-regalo-cargar:before {
+  content: "\ede3";
+}
+.bi-icons-regalo-descargar:before {
+  content: "\ede4";
+}
+.bi-icons-regalo-opciones:before {
+  content: "\ede5";
+}
+.bi-icons-regalo-enlace:before {
+  content: "\ede6";
+}
+.bi-icons-regalo-guardar:before {
+  content: "\ede7";
+}
+.bi-icons-regalo-telefono:before {
+  content: "\ede8";
+}
+.bi-icons-regalo-id:before {
+  content: "\ede9";
+}
+.bi-icons-regalo-microfono:before {
+  content: "\edea";
+}
+.bi-icons-regalo-ubicacion:before {
+  content: "\edeb";
+}
+.bi-icons-regalo-quetzal:before {
+  content: "\edec";
+}
+.bi-icons-regalo-lempira:before {
+  content: "\eded";
+}
+.bi-icons-regalo-dolar:before {
+  content: "\edee";
+}
+.bi-icons-regalo-euro:before {
+  content: "\edef";
+}
+.bi-icons-regalo-boleto:before {
+  content: "\edf0";
+}
+.bi-icons-regalo-banco:before {
+  content: "\edf1";
+}
+.bi-icons-regalo-calculadora:before {
+  content: "\edf2";
+}
+.bi-icons-regalo-mensaje:before {
+  content: "\edf3";
+}
+.bi-icons-regalo-web:before {
+  content: "\edf4";
+}
+.bi-icons-luz:before {
+  content: "\edf5";
+}
+.bi-icons-luz-aceptar:before {
+  content: "\edf6";
+}
+.bi-icons-luz-rechazar:before {
+  content: "\edf7";
+}
+.bi-icons-luz-agregar:before {
+  content: "\edf8";
+}
+.bi-icons-luz-izquierda:before {
+  content: "\edf9";
+}
+.bi-icons-luz-derecha:before {
+  content: "\edfa";
+}
+.bi-icons-luz-arriba:before {
+  content: "\edfb";
+}
+.bi-icons-luz-abajo:before {
+  content: "\edfc";
+}
+.bi-icons-luz-ajustes:before {
+  content: "\edfd";
+}
+.bi-icons-luz-basurero:before {
+  content: "\edfe";
+}
+.bi-icons-luz-notificacion:before {
+  content: "\edff";
+}
+.bi-icons-luz-bloqueado:before {
+  content: "\ee00";
+}
+.bi-icons-luz-desbloqueado:before {
+  content: "\ee01";
+}
+.bi-icons-luz-tarjeta:before {
+  content: "\ee02";
+}
+.bi-icons-luz-efectivo:before {
+  content: "\ee03";
+}
+.bi-icons-luz-monedas:before {
+  content: "\ee04";
+}
+.bi-icons-luz-cheque:before {
+  content: "\ee05";
+}
+.bi-icons-luz-usuario:before {
+  content: "\ee06";
+}
+.bi-icons-luz-buscar:before {
+  content: "\ee07";
+}
+.bi-icons-luz-internacional:before {
+  content: "\ee08";
+}
+.bi-icons-luz-archivo:before {
+  content: "\ee09";
+}
+.bi-icons-luz-documento:before {
+  content: "\ee0a";
+}
+.bi-icons-luz-celular:before {
+  content: "\ee0b";
+}
+.bi-icons-luz-laptop:before {
+  content: "\ee0c";
+}
+.bi-icons-luz-computadora:before {
+  content: "\ee0d";
+}
+.bi-icons-luz-impresora:before {
+  content: "\ee0e";
+}
+.bi-icons-luz-token:before {
+  content: "\ee0f";
+}
+.bi-icons-luz-correo:before {
+  content: "\ee10";
+}
+.bi-icons-luz-favorito:before {
+  content: "\ee11";
+}
+.bi-icons-luz-reloj:before {
+  content: "\ee12";
+}
+.bi-icons-luz-calendario:before {
+  content: "\ee13";
+}
+.bi-icons-luz-compras:before {
+  content: "\ee14";
+}
+.bi-icons-luz-energia:before {
+  content: "\ee15";
+}
+.bi-icons-luz-qr:before {
+  content: "\ee16";
+}
+.bi-icons-luz-auriculares:before {
+  content: "\ee17";
+}
+.bi-icons-luz-editar:before {
+  content: "\ee18";
+}
+.bi-icons-luz-cargar:before {
+  content: "\ee19";
+}
+.bi-icons-luz-descargar:before {
+  content: "\ee1a";
+}
+.bi-icons-luz-opciones:before {
+  content: "\ee1b";
+}
+.bi-icons-luz-enlace:before {
+  content: "\ee1c";
+}
+.bi-icons-luz-guardar:before {
+  content: "\ee1d";
+}
+.bi-icons-luz-telefono:before {
+  content: "\ee1e";
+}
+.bi-icons-luz-id:before {
+  content: "\ee1f";
+}
+.bi-icons-luz-microfono:before {
+  content: "\ee20";
+}
+.bi-icons-luz-ubicacion:before {
+  content: "\ee21";
+}
+.bi-icons-luz-quetzal:before {
+  content: "\ee22";
+}
+.bi-icons-luz-lempira:before {
+  content: "\ee23";
+}
+.bi-icons-luz-dolar:before {
+  content: "\ee24";
+}
+.bi-icons-luz-euro:before {
+  content: "\ee25";
+}
+.bi-icons-luz-boleto:before {
+  content: "\ee26";
+}
+.bi-icons-luz-banco:before {
+  content: "\ee27";
+}
+.bi-icons-luz-calculadora:before {
+  content: "\ee28";
+}
+.bi-icons-luz-mensaje:before {
+  content: "\ee29";
+}
+.bi-icons-luz-web:before {
+  content: "\ee2a";
+}
+.bi-icons-energia:before {
+  content: "\ee2b";
+}
+.bi-icons-energia-aceptar:before {
+  content: "\ee2c";
+}
+.bi-icons-energia-rechazar:before {
+  content: "\ee2d";
+}
+.bi-icons-energia-agregar:before {
+  content: "\ee2e";
+}
+.bi-icons-energia-izquierda:before {
+  content: "\ee2f";
+}
+.bi-icons-energia-derecha:before {
+  content: "\ee30";
+}
+.bi-icons-energia-arriba:before {
+  content: "\ee31";
+}
+.bi-icons-energia-abajo:before {
+  content: "\ee32";
+}
+.bi-icons-energia-ajustes:before {
+  content: "\ee33";
+}
+.bi-icons-energia-basurero:before {
+  content: "\ee34";
+}
+.bi-icons-energia-notificacion:before {
+  content: "\ee35";
+}
+.bi-icons-energia-bloqueado:before {
+  content: "\ee36";
+}
+.bi-icons-energia-desbloqueado:before {
+  content: "\ee37";
+}
+.bi-icons-energia-tarjeta:before {
+  content: "\ee38";
+}
+.bi-icons-energia-efectivo:before {
+  content: "\ee39";
+}
+.bi-icons-energia-monedas:before {
+  content: "\ee3a";
+}
+.bi-icons-energia-cheque:before {
+  content: "\ee3b";
+}
+.bi-icons-energia-usuario:before {
+  content: "\ee3c";
+}
+.bi-icons-energia-buscar:before {
+  content: "\ee3d";
+}
+.bi-icons-energia-internacional:before {
+  content: "\ee3e";
+}
+.bi-icons-energia-archivo:before {
+  content: "\ee3f";
+}
+.bi-icons-energia-documento:before {
+  content: "\ee40";
+}
+.bi-icons-energia-celular:before {
+  content: "\ee41";
+}
+.bi-icons-energia-laptop:before {
+  content: "\ee42";
+}
+.bi-icons-energia-computadora:before {
+  content: "\ee43";
+}
+.bi-icons-energia-impresora:before {
+  content: "\ee44";
+}
+.bi-icons-energia-token:before {
+  content: "\ee45";
+}
+.bi-icons-energia-correo:before {
+  content: "\ee46";
+}
+.bi-icons-energia-favoritos:before {
+  content: "\ee47";
+}
+.bi-icons-energia-reloj:before {
+  content: "\ee48";
+}
+.bi-icons-energia-calendario:before {
+  content: "\ee49";
+}
+.bi-icons-energia-compras:before {
+  content: "\ee4a";
+}
+.bi-icons-energia-luz:before {
+  content: "\ee4b";
+}
+.bi-icons-energia-qr:before {
+  content: "\ee4c";
+}
+.bi-icons-energia-auriculares:before {
+  content: "\ee4d";
+}
+.bi-icons-energia-editar:before {
+  content: "\ee4e";
+}
+.bi-icons-energia-cargar:before {
+  content: "\ee4f";
+}
+.bi-icons-energia-descargar:before {
+  content: "\ee50";
+}
+.bi-icons-energia-opciones:before {
+  content: "\ee51";
+}
+.bi-icons-energia-enlace:before {
+  content: "\ee52";
+}
+.bi-icons-energia-guardar:before {
+  content: "\ee53";
+}
+.bi-icons-energia-telefono:before {
+  content: "\ee54";
+}
+.bi-icons-energia-id:before {
+  content: "\ee55";
+}
+.bi-icons-energia-microfono:before {
+  content: "\ee56";
+}
+.bi-icons-energia-ubicacion:before {
+  content: "\ee57";
+}
+.bi-icons-energia-quetzal:before {
+  content: "\ee58";
+}
+.bi-icons-energia-lempira:before {
+  content: "\ee59";
+}
+.bi-icons-energia-dolar:before {
+  content: "\ee5a";
+}
+.bi-icons-energia-euro:before {
+  content: "\ee5b";
+}
+.bi-icons-energia-boleto:before {
+  content: "\ee5c";
+}
+.bi-icons-energia-banco:before {
+  content: "\ee5d";
+}
+.bi-icons-energia-calculadora:before {
+  content: "\ee5e";
+}
+.bi-icons-energia-mensaje:before {
+  content: "\ee5f";
+}
+.bi-icons-energia-web:before {
+  content: "\ee60";
+}
+.bi-icons-seguro:before {
+  content: "\ee61";
+}
+.bi-icons-seguro-aceptar:before {
+  content: "\ee62";
+}
+.bi-icons-seguridadvigilancia:before {
+  content: "\ee62";
+}
+.bi-icons-seguro-rechazar:before {
+  content: "\ee63";
+}
+.bi-icons-seguro-agregar:before {
+  content: "\ee64";
+}
+.bi-icons-seguro-izquierda:before {
+  content: "\ee65";
+}
+.bi-icons-seguro-derecha:before {
+  content: "\ee66";
+}
+.bi-icons-seguro-arriba:before {
+  content: "\ee67";
+}
+.bi-icons-seguro-abajo:before {
+  content: "\ee68";
+}
+.bi-icons-seguro-ajustes:before {
+  content: "\ee69";
+}
+.bi-icons-seguro-basurero:before {
+  content: "\ee6a";
+}
+.bi-icons-seguro-notificacion:before {
+  content: "\ee6b";
+}
+.bi-icons-seguro-bloqueado:before {
+  content: "\ee6c";
+}
+.bi-icons-seguro-desbloqueado:before {
+  content: "\ee6d";
+}
+.bi-icons-seguro-tarjeta:before {
+  content: "\ee6e";
+}
+.bi-icons-ventaseguros:before {
+  content: "\ee6e";
+}
+.bi-icons-seguro-efectivo:before {
+  content: "\ee6f";
+}
+.bi-icons-seguro-monedas:before {
+  content: "\ee70";
+}
+.bi-icons-seguro-cheque:before {
+  content: "\ee71";
+}
+.bi-icons-seguro-usuario:before {
+  content: "\ee72";
+}
+.bi-icons-seguro-buscar:before {
+  content: "\ee73";
+}
+.bi-icons-seguro-internacional:before {
+  content: "\ee74";
+}
+.bi-icons-seguro-archivo:before {
+  content: "\ee75";
+}
+.bi-icons-seguro-documento:before {
+  content: "\ee76";
+}
+.bi-icons-seguro-celular:before {
+  content: "\ee77";
+}
+.bi-icons-seguro-laptop:before {
+  content: "\ee78";
+}
+.bi-icons-seguro-computadora:before {
+  content: "\ee79";
+}
+.bi-icons-seguro-impresora:before {
+  content: "\ee7a";
+}
+.bi-icons-seguro-token:before {
+  content: "\ee7b";
+}
+.bi-icons-seguro-correo:before {
+  content: "\ee7c";
+}
+.bi-icons-seguro-favorito:before {
+  content: "\ee7d";
+}
+.bi-icons-seguro-reloj:before {
+  content: "\ee7e";
+}
+.bi-icons-seguro-calendario:before {
+  content: "\ee7f";
+}
+.bi-icons-seguro-compras:before {
+  content: "\ee80";
+}
+.bi-icons-seguro-luz:before {
+  content: "\ee81";
+}
+.bi-icons-seguro-energia:before {
+  content: "\ee82";
+}
+.bi-icons-seguro-qr:before {
+  content: "\ee83";
+}
+.bi-icons-seguro-auriculares:before {
+  content: "\ee84";
+}
+.bi-icons-seguro-regalo:before {
+  content: "\ee85";
+}
+.bi-icons-seguro-editar:before {
+  content: "\ee86";
+}
+.bi-icons-seguro-cargar:before {
+  content: "\ee87";
+}
+.bi-icons-seguro-descargar:before {
+  content: "\ee88";
+}
+.bi-icons-seguro-opciones:before {
+  content: "\ee89";
+}
+.bi-icons-seguro-enlace:before {
+  content: "\ee8a";
+}
+.bi-icons-seguro-guardar:before {
+  content: "\ee8b";
+}
+.bi-icons-seguro-telefono:before {
+  content: "\ee8c";
+}
+.bi-icons-seguro-id:before {
+  content: "\ee8d";
+}
+.bi-icons-seguro-quetzal:before {
+  content: "\ee8e";
+}
+.bi-icons-seguro-lempira:before {
+  content: "\ee8f";
+}
+.bi-icons-seguro-dolar:before {
+  content: "\ee90";
+}
+.bi-icons-seguro-euro:before {
+  content: "\ee91";
+}
+.bi-icons-seguro-boleto:before {
+  content: "\ee92";
+}
+.bi-icons-seguro-banco:before {
+  content: "\ee93";
+}
+.bi-icons-serviciosfinancieros:before {
+  content: "\ee93";
+}
+.bi-icons-seguro-calculadora:before {
+  content: "\ee94";
+}
+.bi-icons-seguro-mensaje:before {
+  content: "\ee95";
+}
+.bi-icons-seguro-web:before {
+  content: "\ee96";
+}
+.bi-icons-seguro-amor:before {
+  content: "\ee97";
+}
+.bi-icons-seguro-muerte:before {
+  content: "\ee98";
+}
+.bi-icons-seguro-cirugia:before {
+  content: "\ee99";
+}
+.bi-icons-seguro-cancer:before {
+  content: "\ee9a";
+}
+.bi-icons-seguro-motocicleta:before {
+  content: "\ee9b";
+}
+.bi-icons-seguro-carro:before {
+  content: "\ee9c";
+}
+.bi-icons-seguro-tienda:before {
+  content: "\ee9d";
+}
+.bi-icons-carro:before {
+  content: "\ee9e";
+}
+.bi-icons-agenciasvehiculos:before {
+  content: "\ee9e";
+}
+.bi-icons-carro-aceptar:before {
+  content: "\ee9f";
+}
+.bi-icons-carro-rechazar:before {
+  content: "\eea0";
+}
+.bi-icons-carro-agregar:before {
+  content: "\eea1";
+}
+.bi-icons-carro-izquierda:before {
+  content: "\eea2";
+}
+.bi-icons-carro-derecha:before {
+  content: "\eea3";
+}
+.bi-icons-carro-arriba:before {
+  content: "\eea4";
+}
+.bi-icons-carro-abajo:before {
+  content: "\eea5";
+}
+.bi-icons-carro-ajustes:before {
+  content: "\eea6";
+}
+.bi-icons-mantenimientovehiculos:before {
+  content: "\eea6";
+}
+.bi-icons-agenciasvehiculoss:before {
+  content: "\eea6";
+}
+.bi-icons-carro-basurero:before {
+  content: "\eea7";
+}
+.bi-icons-carro-notificacion:before {
+  content: "\eea8";
+}
+.bi-icons-carro-bloqueado:before {
+  content: "\eea9";
+}
+.bi-icons-carro-desbloqueado:before {
+  content: "\eeaa";
+}
+.bi-icons-carro-tarjeta:before {
+  content: "\eeab";
+}
+.bi-icons-rentavehiculos:before {
+  content: "\eeab";
+}
+.bi-icons-carro-efectivo:before {
+  content: "\eeac";
+}
+.bi-icons-carro-monedas:before {
+  content: "\eead";
+}
+.bi-icons-carro-cheque:before {
+  content: "\eeae";
+}
+.bi-icons-carro-usuario:before {
+  content: "\eeaf";
+}
+.bi-icons-carro-buscar:before {
+  content: "\eeb0";
+}
+.bi-icons-carro-internacional:before {
+  content: "\eeb1";
+}
+.bi-icons-carro-archivo:before {
+  content: "\eeb2";
+}
+.bi-icons-carro-documento:before {
+  content: "\eeb3";
+}
+.bi-icons-carro-token:before {
+  content: "\eeb4";
+}
+.bi-icons-carro-correo:before {
+  content: "\eeb5";
+}
+.bi-icons-carro-favorito:before {
+  content: "\eeb6";
+}
+.bi-icons-carro-reloj:before {
+  content: "\eeb7";
+}
+.bi-icons-carro-calendario:before {
+  content: "\eeb8";
+}
+.bi-icons-carro-compra:before {
+  content: "\eeb9";
+}
+.bi-icons-carro-energia:before {
+  content: "\eeba";
+}
+.bi-icons-carro-qr:before {
+  content: "\eebb";
+}
+.bi-icons-carro-regalo:before {
+  content: "\eebc";
+}
+.bi-icons-carro-editar:before {
+  content: "\eebd";
+}
+.bi-icons-carro-enlace:before {
+  content: "\eebe";
+}
+.bi-icons-carro-guardar:before {
+  content: "\eebf";
+}
+.bi-icons-parqueos:before {
+  content: "\eebf";
+}
+.bi-icons-lavado:before {
+  content: "\eebf";
+}
+.bi-icons-parqueoslavado:before {
+  content: "\eebf";
+}
+.bi-icons-carro-telefono:before {
+  content: "\eec0";
+}
+.bi-icons-carro-id:before {
+  content: "\eec1";
+}
+.bi-icons-carro-ubicacion:before {
+  content: "\eec2";
+}
+.bi-icons-carro-quetzal:before {
+  content: "\eec3";
+}
+.bi-icons-carro-lempira:before {
+  content: "\eec4";
+}
+.bi-icons-carro-dolar:before {
+  content: "\eec5";
+}
+.bi-icons-carro-euro:before {
+  content: "\eec6";
+}
+.bi-icons-carro-boleto:before {
+  content: "\eec7";
+}
+.bi-icons-carro-banco:before {
+  content: "\eec8";
+}
+.bi-icons-carro-calculadora:before {
+  content: "\eec9";
+}
+.bi-icons-carro-web:before {
+  content: "\eeca";
+}
+.bi-icons-carro-amor:before {
+  content: "\eecb";
+}
+.bi-icons-carro-seguro:before {
+  content: "\eecc";
+}
+.bi-icons-carro-seguro-aprobado:before {
+  content: "\eecd";
+}
+.bi-icons-carro-seguro-rechazado:before {
+  content: "\eece";
+}
+.bi-icons-casa:before {
+  content: "\eecf";
+}
+.bi-icons-inmobiliarias:before {
+  content: "\eecf";
+}
+.bi-icons-casa-aceptar:before {
+  content: "\eed0";
+}
+.bi-icons-casa-rechazar:before {
+  content: "\eed1";
+}
+.bi-icons-casa-agregar:before {
+  content: "\eed2";
+}
+.bi-icons-casa-izquierda:before {
+  content: "\eed3";
+}
+.bi-icons-casa-derecha:before {
+  content: "\eed4";
+}
+.bi-icons-casa-arriba:before {
+  content: "\eed5";
+}
+.bi-icons-casa-abajo:before {
+  content: "\eed6";
+}
+.bi-icons-casa-ajustes:before {
+  content: "\eed7";
+}
+.bi-icons-casa-basurero:before {
+  content: "\eed8";
+}
+.bi-icons-casa-notificacion:before {
+  content: "\eed9";
+}
+.bi-icons-casa-bloqueado:before {
+  content: "\eeda";
+}
+.bi-icons-casa-desbloqueado:before {
+  content: "\eedb";
+}
+.bi-icons-casa-tarjeta:before {
+  content: "\eedc";
+}
+.bi-icons-casa-efectivo:before {
+  content: "\eedd";
+}
+.bi-icons-casa-monedas:before {
+  content: "\eede";
+}
+.bi-icons-casaempeño:before {
+  content: "\eede";
+}
+.bi-icons-casa-cheque:before {
+  content: "\eedf";
+}
+.bi-icons-casa-usuario:before {
+  content: "\eee0";
+}
+.bi-icons-casa-buscar:before {
+  content: "\eee1";
+}
+.bi-icons-casa-internacional:before {
+  content: "\eee2";
+}
+.bi-icons-casa-archivo:before {
+  content: "\eee3";
+}
+.bi-icons-casa-documento:before {
+  content: "\eee4";
+}
+.bi-icons-casa-celular:before {
+  content: "\eee5";
+}
+.bi-icons-casa-laptop:before {
+  content: "\eee6";
+}
+.bi-icons-casa-computadora:before {
+  content: "\eee7";
+}
+.bi-icons-casa-impresora:before {
+  content: "\eee8";
+}
+.bi-icons-casa-token:before {
+  content: "\eee9";
+}
+.bi-icons-casa-correo:before {
+  content: "\eeea";
+}
+.bi-icons-casa-favorito:before {
+  content: "\eeeb";
+}
+.bi-icons-casa-reloj:before {
+  content: "\eeec";
+}
+.bi-icons-casa-calendario:before {
+  content: "\eeed";
+}
+.bi-icons-casa-compras:before {
+  content: "\eeee";
+}
+.bi-icons-casa-luz:before {
+  content: "\eeef";
+}
+.bi-icons-casa-energia:before {
+  content: "\eef0";
+}
+.bi-icons-casa-qr:before {
+  content: "\eef1";
+}
+.bi-icons-casa-auriculares:before {
+  content: "\eef2";
+}
+.bi-icons-casa-regalo:before {
+  content: "\eef3";
+}
+.bi-icons-casa-editar:before {
+  content: "\eef4";
+}
+.bi-icons-casa-cargar:before {
+  content: "\eef5";
+}
+.bi-icons-casa-descargar:before {
+  content: "\eef6";
+}
+.bi-icons-casa-opciones:before {
+  content: "\eef7";
+}
+.bi-icons-casa-enlace:before {
+  content: "\eef8";
+}
+.bi-icons-casa-guardar:before {
+  content: "\eef9";
+}
+.bi-icons-casa-telefono:before {
+  content: "\eefa";
+}
+.bi-icons-casa-id:before {
+  content: "\eefb";
+}
+.bi-icons-casa-microfono:before {
+  content: "\eefc";
+}
+.bi-icons-casa-ubicacion:before {
+  content: "\eefd";
+}
+.bi-icons-casa-quetzal:before {
+  content: "\eefe";
+}
+.bi-icons-casa-lempira:before {
+  content: "\eeff";
+}
+.bi-icons-casa-dolar:before {
+  content: "\ef00";
+}
+.bi-icons-casa-euro:before {
+  content: "\ef01";
+}
+.bi-icons-casa-boleto:before {
+  content: "\ef02";
+}
+.bi-icons-casa-banco:before {
+  content: "\ef03";
+}
+.bi-icons-casa-calculadora:before {
+  content: "\ef04";
+}
+.bi-icons-casa-mensaje:before {
+  content: "\ef05";
+}
+.bi-icons-casa-web:before {
+  content: "\ef06";
+}
+.bi-icons-muerte:before {
+  content: "\ef07";
+}
+.bi-icons-choque:before {
+  content: "\ef08";
+}
+.bi-icons-juez:before {
+  content: "\ef09";
+}
+.bi-icons-edificio:before {
+  content: "\ef0a";
+}
+.bi-icons-hoteleshospedaje:before {
+  content: "\ef0a";
+}
+.bi-icons-edificio-aceptar:before {
+  content: "\ef0b";
+}
+.bi-icons-edificio-rechazar:before {
+  content: "\ef0c";
+}
+.bi-icons-edificio-agregar:before {
+  content: "\ef0d";
+}
+.bi-icons-edificio-izquierda:before {
+  content: "\ef0e";
+}
+.bi-icons-edificio-derecha:before {
+  content: "\ef0f";
+}
+.bi-icons-edificio-arriba:before {
+  content: "\ef10";
+}
+.bi-icons-edificio-abajo:before {
+  content: "\ef11";
+}
+.bi-icons-edificio-ajustes:before {
+  content: "\ef12";
+}
+.bi-icons-edificio-basurero:before {
+  content: "\ef13";
+}
+.bi-icons-edificio-notificacion:before {
+  content: "\ef14";
+}
+.bi-icons-edificio-bloqueado:before {
+  content: "\ef15";
+}
+.bi-icons-edificio-desbloqueado:before {
+  content: "\ef16";
+}
+.bi-icons-edificio-tarjeta:before {
+  content: "\ef17";
+}
+.bi-icons-edificio-efectivo:before {
+  content: "\ef18";
+}
+.bi-icons-edificio-monedas:before {
+  content: "\ef19";
+}
+.bi-icons-edificio-cheque:before {
+  content: "\ef1a";
+}
+.bi-icons-edificio-usuario:before {
+  content: "\ef1b";
+}
+.bi-icons-proveedores:before {
+  content: "\ef1b";
+}
+.bi-icons-edificio-buscar:before {
+  content: "\ef1c";
+}
+.bi-icons-edificio-internacional:before {
+  content: "\ef1d";
+}
+.bi-icons-edificio-archivo:before {
+  content: "\ef1e";
+}
+.bi-icons-edificio-documento:before {
+  content: "\ef1f";
+}
+.bi-icons-edificio-celular:before {
+  content: "\ef20";
+}
+.bi-icons-edificio-laptop:before {
+  content: "\ef21";
+}
+.bi-icons-edificio-computadora:before {
+  content: "\ef22";
+}
+.bi-icons-edificio-impresora:before {
+  content: "\ef23";
+}
+.bi-icons-edificio-token:before {
+  content: "\ef24";
+}
+.bi-icons-edificio-correo:before {
+  content: "\ef25";
+}
+.bi-icons-edificio-favorito:before {
+  content: "\ef26";
+}
+.bi-icons-clubesescuelas:before {
+  content: "\ef26";
+}
+.bi-icons-edificio-reloj:before {
+  content: "\ef27";
+}
+.bi-icons-edificio-calendario:before {
+  content: "\ef28";
+}
+.bi-icons-edificio-compras:before {
+  content: "\ef29";
+}
+.bi-icons-edificio-luz:before {
+  content: "\ef2a";
+}
+.bi-icons-edificio-energia:before {
+  content: "\ef2b";
+}
+.bi-icons-edificio-qr:before {
+  content: "\ef2c";
+}
+.bi-icons-edificio-auriculares:before {
+  content: "\ef2d";
+}
+.bi-icons-edificio-regalo:before {
+  content: "\ef2e";
+}
+.bi-icons-edificio-editar:before {
+  content: "\ef2f";
+}
+.bi-icons-edificio-cargar:before {
+  content: "\ef30";
+}
+.bi-icons-edificio-descargar:before {
+  content: "\ef31";
+}
+.bi-icons-edificio-opciones:before {
+  content: "\ef32";
+}
+.bi-icons-edificio-enlace:before {
+  content: "\ef33";
+}
+.bi-icons-edificio-guardar:before {
+  content: "\ef34";
+}
+.bi-icons-edificio-telefono:before {
+  content: "\ef35";
+}
+.bi-icons-edificio-id:before {
+  content: "\ef36";
+}
+.bi-icons-edificio-microfono:before {
+  content: "\ef37";
+}
+.bi-icons-edificio-ubicacion:before {
+  content: "\ef38";
+}
+.bi-icons-edificio-quetzal:before {
+  content: "\ef39";
+}
+.bi-icons-edificio-lempira:before {
+  content: "\ef3a";
+}
+.bi-icons-edificio-dolar:before {
+  content: "\ef3b";
+}
+.bi-icons-edificio-euro:before {
+  content: "\ef3c";
+}
+.bi-icons-edificio-boleto:before {
+  content: "\ef3d";
+}
+.bi-icons-edificio-banco:before {
+  content: "\ef3e";
+}
+.bi-icons-edificio-calculadora:before {
+  content: "\ef3f";
+}
+.bi-icons-edificio-mensaje:before {
+  content: "\ef40";
+}
+.bi-icons-edificio-web:before {
+  content: "\ef41";
+}
+.bi-icons-edificio-seguro:before {
+  content: "\ef42";
+}
+.bi-icons-maletin:before {
+  content: "\ef43";
+}
+.bi-icons-maletin-aceptar:before {
+  content: "\ef44";
+}
+.bi-icons-maletin-rechazar:before {
+  content: "\ef45";
+}
+.bi-icons-maletin-agregar:before {
+  content: "\ef46";
+}
+.bi-icons-maletin-izquierda:before {
+  content: "\ef47";
+}
+.bi-icons-maletin-derecha:before {
+  content: "\ef48";
+}
+.bi-icons-maletin-arriba:before {
+  content: "\ef49";
+}
+.bi-icons-maletin-abajo:before {
+  content: "\ef4a";
+}
+.bi-icons-maletin-ajustes:before {
+  content: "\ef4b";
+}
+.bi-icons-maletin-basurero:before {
+  content: "\ef4c";
+}
+.bi-icons-maletin-notificacion:before {
+  content: "\ef4d";
+}
+.bi-icons-maletin-bloqueado:before {
+  content: "\ef4e";
+}
+.bi-icons-maletin-desbloqueado:before {
+  content: "\ef4f";
+}
+.bi-icons-maletin-tarjeta:before {
+  content: "\ef50";
+}
+.bi-icons-maletin-efectivo:before {
+  content: "\ef51";
+}
+.bi-icons-maletin-monedas:before {
+  content: "\ef52";
+}
+.bi-icons-maletin-cheque:before {
+  content: "\ef53";
+}
+.bi-icons-maletin-usuario:before {
+  content: "\ef54";
+}
+.bi-icons-maletin-buscar:before {
+  content: "\ef55";
+}
+.bi-icons-maletin-internacional:before {
+  content: "\ef56";
+}
+.bi-icons-maletin-archivo:before {
+  content: "\ef57";
+}
+.bi-icons-maletin-documento:before {
+  content: "\ef58";
+}
+.bi-icons-maletin-celular:before {
+  content: "\ef59";
+}
+.bi-icons-maletin-laptop:before {
+  content: "\ef5a";
+}
+.bi-icons-maletin-computadora:before {
+  content: "\ef5b";
+}
+.bi-icons-maletin-impresora:before {
+  content: "\ef5c";
+}
+.bi-icons-maletin-token:before {
+  content: "\ef5d";
+}
+.bi-icons-maletin-correo:before {
+  content: "\ef5e";
+}
+.bi-icons-maletin-favorito:before {
+  content: "\ef5f";
+}
+.bi-icons-maletin-reloj:before {
+  content: "\ef60";
+}
+.bi-icons-maletin-calendario:before {
+  content: "\ef61";
+}
+.bi-icons-maletin-compras:before {
+  content: "\ef62";
+}
+.bi-icons-maletin-luz:before {
+  content: "\ef63";
+}
+.bi-icons-maletin-energia:before {
+  content: "\ef64";
+}
+.bi-icons-maletin-qr:before {
+  content: "\ef65";
+}
+.bi-icons-maletin-auriculares:before {
+  content: "\ef66";
+}
+.bi-icons-maletin-regalo:before {
+  content: "\ef67";
+}
+.bi-icons-maletin-editar:before {
+  content: "\ef68";
+}
+.bi-icons-maletin-cargar:before {
+  content: "\ef69";
+}
+.bi-icons-maletin-descargar:before {
+  content: "\ef6a";
+}
+.bi-icons-maletin-opciones:before {
+  content: "\ef6b";
+}
+.bi-icons-maletin-enlace:before {
+  content: "\ef6c";
+}
+.bi-icons-maletin-guardar:before {
+  content: "\ef6d";
+}
+.bi-icons-maletin-telefono:before {
+  content: "\ef6e";
+}
+.bi-icons-maletin-id:before {
+  content: "\ef6f";
+}
+.bi-icons-maletin-microfono:before {
+  content: "\ef70";
+}
+.bi-icons-maletin-ubicacion:before {
+  content: "\ef71";
+}
+.bi-icons-maletin-quetzal:before {
+  content: "\ef72";
+}
+.bi-icons-maletin-lempira:before {
+  content: "\ef73";
+}
+.bi-icons-maletin-dolar:before {
+  content: "\ef74";
+}
+.bi-icons-maletin-euro:before {
+  content: "\ef75";
+}
+.bi-icons-maletin-boleto:before {
+  content: "\ef76";
+}
+.bi-icons-maletin-banco:before {
+  content: "\ef77";
+}
+.bi-icons-maletin-calculadora:before {
+  content: "\ef78";
+}
+.bi-icons-maletin-mensaje:before {
+  content: "\ef79";
+}
+.bi-icons-maletin-web:before {
+  content: "\ef7a";
+}
+.bi-icons-hospital:before {
+  content: "\ef7b";
+}
+.bi-icons-hospital-aceptar:before {
+  content: "\ef7c";
+}
+.bi-icons-hospital-rechazar:before {
+  content: "\ef7d";
+}
+.bi-icons-hospital-agregar:before {
+  content: "\ef7e";
+}
+.bi-icons-hospital-izquierda:before {
+  content: "\ef7f";
+}
+.bi-icons-hospital-derecha:before {
+  content: "\ef80";
+}
+.bi-icons-hospital-arriba:before {
+  content: "\ef81";
+}
+.bi-icons-hospital-abajo:before {
+  content: "\ef82";
+}
+.bi-icons-hospital-ajustes:before {
+  content: "\ef83";
+}
+.bi-icons-hospital-basurero:before {
+  content: "\ef84";
+}
+.bi-icons-hospital-notificacion:before {
+  content: "\ef85";
+}
+.bi-icons-hospital-bloqueado:before {
+  content: "\ef86";
+}
+.bi-icons-hospital-desbloqueado:before {
+  content: "\ef87";
+}
+.bi-icons-hospital-tarjeta:before {
+  content: "\ef88";
+}
+.bi-icons-hospital-efectivo:before {
+  content: "\ef89";
+}
+.bi-icons-gastoshospitalarios:before {
+  content: "\ef89";
+}
+.bi-icons-hospital-monedas:before {
+  content: "\ef8a";
+}
+.bi-icons-hospital-cheque:before {
+  content: "\ef8b";
+}
+.bi-icons-hospital-usuario:before {
+  content: "\ef8c";
+}
+.bi-icons-hospital-buscar:before {
+  content: "\ef8d";
+}
+.bi-icons-hospital-internacional:before {
+  content: "\ef8e";
+}
+.bi-icons-hospital-archivo:before {
+  content: "\ef8f";
+}
+.bi-icons-hospital-documento:before {
+  content: "\ef90";
+}
+.bi-icons-hospital-celular:before {
+  content: "\ef91";
+}
+.bi-icons-hospital-laptop:before {
+  content: "\ef92";
+}
+.bi-icons-hospital-computadora:before {
+  content: "\ef93";
+}
+.bi-icons-hospital-impresora:before {
+  content: "\ef94";
+}
+.bi-icons-hospital-token:before {
+  content: "\ef95";
+}
+.bi-icons-hospital-correo:before {
+  content: "\ef96";
+}
+.bi-icons-hospital-favorito:before {
+  content: "\ef97";
+}
+.bi-icons-hospital-reloj:before {
+  content: "\ef98";
+}
+.bi-icons-hospital-calendario:before {
+  content: "\ef99";
+}
+.bi-icons-hospital-compras:before {
+  content: "\ef9a";
+}
+.bi-icons-hospital-luz:before {
+  content: "\ef9b";
+}
+.bi-icons-hospital-energia:before {
+  content: "\ef9c";
+}
+.bi-icons-hospital-qr:before {
+  content: "\ef9d";
+}
+.bi-icons-hospital-auriculares:before {
+  content: "\ef9e";
+}
+.bi-icons-hospital-regalo:before {
+  content: "\ef9f";
+}
+.bi-icons-hospital-editar:before {
+  content: "\efa0";
+}
+.bi-icons-hospital-cargar:before {
+  content: "\efa1";
+}
+.bi-icons-hospital-descargar:before {
+  content: "\efa2";
+}
+.bi-icons-hospital-opciones:before {
+  content: "\efa3";
+}
+.bi-icons-hospital-enlace:before {
+  content: "\efa4";
+}
+.bi-icons-hospital-guardar:before {
+  content: "\efa5";
+}
+.bi-icons-hospital-telefono:before {
+  content: "\efa6";
+}
+.bi-icons-hospital-id:before {
+  content: "\efa7";
+}
+.bi-icons-hospital-microfono:before {
+  content: "\efa8";
+}
+.bi-icons-hospital-ubicacion:before {
+  content: "\efa9";
+}
+.bi-icons-hospital-quetzal:before {
+  content: "\efaa";
+}
+.bi-icons-hospital-lempira:before {
+  content: "\efab";
+}
+.bi-icons-hospital-dolar:before {
+  content: "\efac";
+}
+.bi-icons-hospital-euro:before {
+  content: "\efad";
+}
+.bi-icons-hospital-boleto:before {
+  content: "\efae";
+}
+.bi-icons-hospital-banco:before {
+  content: "\efaf";
+}
+.bi-icons-hospital-calculadora:before {
+  content: "\efb0";
+}
+.bi-icons-hospital-mensaje:before {
+  content: "\efb1";
+}
+.bi-icons-hospital-web:before {
+  content: "\efb2";
+}
+.bi-icons-hospital-amor:before {
+  content: "\efb3";
+}
+.bi-icons-hospital-seguro:before {
+  content: "\efb4";
+}
+.bi-icons-hospital-seguro-aprobado:before {
+  content: "\efb5";
+}
+.bi-icons-hospital-seguro-rechazado:before {
+  content: "\efb6";
+}
+.bi-icons-tienda:before {
+  content: "\efb7";
+}
+.bi-icons-tiendasdepartamentos:before {
+  content: "\efb7";
+}
+.bi-icons-tienda-efectivo:before {
+  content: "\efb8";
+}
+.bi-icons-tienda-tarjeta:before {
+  content: "\efb9";
+}
+.bi-icons-tienda-usuario:before {
+  content: "\efba";
+}
+.bi-icons-tienda-compras:before {
+  content: "\efbb";
+}
+.bi-icons-tienda-carro:before {
+  content: "\efbc";
+}
+.bi-icons-tienda-seguro:before {
+  content: "\efbd";
+}
+.bi-icons-agenda:before {
+  content: "\efbe";
+}
+.bi-icons-agenda-aceptar:before {
+  content: "\efbf";
+}
+.bi-icons-agenda-rechazar:before {
+  content: "\efc0";
+}
+.bi-icons-agenda-agregar:before {
+  content: "\efc1";
+}
+.bi-icons-agenda-izquierda:before {
+  content: "\efc2";
+}
+.bi-icons-agenda-derecha:before {
+  content: "\efc3";
+}
+.bi-icons-agenda-arriba:before {
+  content: "\efc4";
+}
+.bi-icons-agenda-abajo:before {
+  content: "\efc5";
+}
+.bi-icons-agenda-ajustes:before {
+  content: "\efc6";
+}
+.bi-icons-agenda-basurero:before {
+  content: "\efc7";
+}
+.bi-icons-agenda-notificacion:before {
+  content: "\efc8";
+}
+.bi-icons-agenda-bloquear:before {
+  content: "\efc9";
+}
+.bi-icons-agenda-desbloquear:before {
+  content: "\efca";
+}
+.bi-icons-agenda-tarjeta:before {
+  content: "\efcb";
+}
+.bi-icons-agenda-efectivo:before {
+  content: "\efcc";
+}
+.bi-icons-agenda-monedas:before {
+  content: "\efcd";
+}
+.bi-icons-agenda-cheque:before {
+  content: "\efce";
+}
+.bi-icons-agenda-usuario:before {
+  content: "\efcf";
+}
+.bi-icons-agenda-buscar:before {
+  content: "\efd0";
+}
+.bi-icons-agenda-internacional:before {
+  content: "\efd1";
+}
+.bi-icons-agenda-archivo:before {
+  content: "\efd2";
+}
+.bi-icons-agenda-documento:before {
+  content: "\efd3";
+}
+.bi-icons-agenda-token:before {
+  content: "\efd4";
+}
+.bi-icons-agenda-correo:before {
+  content: "\efd5";
+}
+.bi-icons-agenda-favorito:before {
+  content: "\efd6";
+}
+.bi-icons-agenda-reloj:before {
+  content: "\efd7";
+}
+.bi-icons-agenda-calendario:before {
+  content: "\efd8";
+}
+.bi-icons-agenda-compra:before {
+  content: "\efd9";
+}
+.bi-icons-agenda-editar:before {
+  content: "\efda";
+}
+.bi-icons-agenda-cargar:before {
+  content: "\efdb";
+}
+.bi-icons-agenda-descargar:before {
+  content: "\efdc";
+}
+.bi-icons-agenda-opciones:before {
+  content: "\efdd";
+}
+.bi-icons-agenda-enlace:before {
+  content: "\efde";
+}
+.bi-icons-agenda-telefono:before {
+  content: "\efdf";
+}
+.bi-icons-agenda-id:before {
+  content: "\efe0";
+}
+.bi-icons-agenda-ubicacion:before {
+  content: "\efe1";
+}
+.bi-icons-agenda-quetzal:before {
+  content: "\efe2";
+}
+.bi-icons-agenda-lempira:before {
+  content: "\efe3";
+}
+.bi-icons-agenda-dolar:before {
+  content: "\efe4";
+}
+.bi-icons-agenda-euro:before {
+  content: "\efe5";
+}
+.bi-icons-agenda-boleto:before {
+  content: "\efe6";
+}
+.bi-icons-agenda-banco:before {
+  content: "\efe7";
+}
+.bi-icons-calendario:before {
+  content: "\efe8";
+}
+.bi-icons-calendario-aceptar:before {
+  content: "\efe9";
+}
+.bi-icons-calendario-rechazar:before {
+  content: "\efea";
+}
+.bi-icons-calendario-agregar:before {
+  content: "\efeb";
+}
+.bi-icons-calendario-izquierda:before {
+  content: "\efec";
+}
+.bi-icons-calendario-derecha:before {
+  content: "\efed";
+}
+.bi-icons-calendario-arriba:before {
+  content: "\efee";
+}
+.bi-icons-calendario-abajo:before {
+  content: "\efef";
+}
+.bi-icons-calendario-ajustes:before {
+  content: "\eff0";
+}
+.bi-icons-calendario-basurero:before {
+  content: "\eff1";
+}
+.bi-icons-calendario-notificacion:before {
+  content: "\eff2";
+}
+.bi-icons-calendario-bloqueado:before {
+  content: "\eff3";
+}
+.bi-icons-calendario-desbloqueado:before {
+  content: "\eff4";
+}
+.bi-icons-calendario-tarjeta:before {
+  content: "\eff5";
+}
+.bi-icons-calendario-efectivo:before {
+  content: "\eff6";
+}
+.bi-icons-calendario-monedas:before {
+  content: "\eff7";
+}
+.bi-icons-calendario-cheque:before {
+  content: "\eff8";
+}
+.bi-icons-calendario-usuario:before {
+  content: "\eff9";
+}
+.bi-icons-calendario-buscar:before {
+  content: "\effa";
+}
+.bi-icons-calendario-archivo:before {
+  content: "\effb";
+}
+.bi-icons-calendario-documento:before {
+  content: "\effc";
+}
+.bi-icons-calendario-reloj:before {
+  content: "\effd";
+}
+.bi-icons-calendario-compras:before {
+  content: "\effe";
+}
+.bi-icons-calendario-luz:before {
+  content: "\efff";
+}
+.bi-icons-calendario-energia:before {
+  content: "\f000";
+}
+.bi-icons-calendario-qr:before {
+  content: "\f001";
+}
+.bi-icons-calendario-regalo:before {
+  content: "\f002";
+}
+.bi-icons-calendario-editar:before {
+  content: "\f003";
+}
+.bi-icons-calendario-boleto:before {
+  content: "\f004";
+}
+.bi-icons-calendario-regresar:before {
+  content: "\f005";
+}
+.bi-icons-documento:before {
+  content: "\f006";
+}
+.bi-icons-documento-aceptar:before {
+  content: "\f007";
+}
+.bi-icons-documento-rechazar:before {
+  content: "\f008";
+}
+.bi-icons-documento-agregar:before {
+  content: "\f009";
+}
+.bi-icons-documento-izquierda:before {
+  content: "\f00a";
+}
+.bi-icons-documento-derecha:before {
+  content: "\f00b";
+}
+.bi-icons-documento-arriba:before {
+  content: "\f00c";
+}
+.bi-icons-documento-abajo:before {
+  content: "\f00d";
+}
+.bi-icons-documento-ajustes:before {
+  content: "\f00e";
+}
+.bi-icons-documento-basurero:before {
+  content: "\f00f";
+}
+.bi-icons-documento-notificacion:before {
+  content: "\f010";
+}
+.bi-icons-documento-bloqueado:before {
+  content: "\f011";
+}
+.bi-icons-documento-desbloqueado:before {
+  content: "\f012";
+}
+.bi-icons-documento-tarjeta:before {
+  content: "\f013";
+}
+.bi-icons-documento-efectivo:before {
+  content: "\f014";
+}
+.bi-icons-documento-monedas:before {
+  content: "\f015";
+}
+.bi-icons-documento-cheque:before {
+  content: "\f016";
+}
+.bi-icons-documento-usuario:before {
+  content: "\f017";
+}
+.bi-icons-documento-buscar:before {
+  content: "\f018";
+}
+.bi-icons-documento-internacional:before {
+  content: "\f019";
+}
+.bi-icons-documento-archivo:before {
+  content: "\f01a";
+}
+.bi-icons-documento-celular:before {
+  content: "\f01b";
+}
+.bi-icons-documento-laptop:before {
+  content: "\f01c";
+}
+.bi-icons-documento-computadora:before {
+  content: "\f01d";
+}
+.bi-icons-documento-impresora:before {
+  content: "\f01e";
+}
+.bi-icons-documento-token:before {
+  content: "\f01f";
+}
+.bi-icons-documento-correo:before {
+  content: "\f020";
+}
+.bi-icons-documento-favorito:before {
+  content: "\f021";
+}
+.bi-icons-documento-reloj:before {
+  content: "\f022";
+}
+.bi-icons-documento-calendario:before {
+  content: "\f023";
+}
+.bi-icons-documento-compras:before {
+  content: "\f024";
+}
+.bi-icons-documento-luz:before {
+  content: "\f025";
+}
+.bi-icons-documento-energia:before {
+  content: "\f026";
+}
+.bi-icons-documento-qr:before {
+  content: "\f027";
+}
+.bi-icons-documento-regalo:before {
+  content: "\f028";
+}
+.bi-icons-documento-editar:before {
+  content: "\f029";
+}
+.bi-icons-documento-cargar:before {
+  content: "\f02a";
+}
+.bi-icons-documento-descargar:before {
+  content: "\f02b";
+}
+.bi-icons-documento-opciones:before {
+  content: "\f02c";
+}
+.bi-icons-documento-enlace:before {
+  content: "\f02d";
+}
+.bi-icons-documento-guardar:before {
+  content: "\f02e";
+}
+.bi-icons-documento-id:before {
+  content: "\f02f";
+}
+.bi-icons-documento-microfono:before {
+  content: "\f030";
+}
+.bi-icons-documento-quetzal:before {
+  content: "\f031";
+}
+.bi-icons-documento-lempira:before {
+  content: "\f032";
+}
+.bi-icons-documento-dolar:before {
+  content: "\f033";
+}
+.bi-icons-documento-euro:before {
+  content: "\f034";
+}
+.bi-icons-documento-boleto:before {
+  content: "\f035";
+}
+.bi-icons-documento-banco:before {
+  content: "\f036";
+}
+.bi-icons-documento-calculadora:before {
+  content: "\f037";
+}
+.bi-icons-archivo:before {
+  content: "\f038";
+}
+.bi-icons-archivo-aceptar:before {
+  content: "\f039";
+}
+.bi-icons-archivo-rechazar:before {
+  content: "\f03a";
+}
+.bi-icons-archivo-agregar:before {
+  content: "\f03b";
+}
+.bi-icons-archivo-izquierda:before {
+  content: "\f03c";
+}
+.bi-icons-archivo-derecha:before {
+  content: "\f03d";
+}
+.bi-icons-archivo-arriba:before {
+  content: "\f03e";
+}
+.bi-icons-archivo-abajo:before {
+  content: "\f03f";
+}
+.bi-icons-archivo-ajustes:before {
+  content: "\f040";
+}
+.bi-icons-archivo-basurero:before {
+  content: "\f041";
+}
+.bi-icons-archivo-notificacion:before {
+  content: "\f042";
+}
+.bi-icons-archivo-bloqueado:before {
+  content: "\f043";
+}
+.bi-icons-archivo-desbloqueado:before {
+  content: "\f044";
+}
+.bi-icons-archivo-tarjeta:before {
+  content: "\f045";
+}
+.bi-icons-archivo-efectivo:before {
+  content: "\f046";
+}
+.bi-icons-archivo-monedas:before {
+  content: "\f047";
+}
+.bi-icons-archivo-cheque:before {
+  content: "\f048";
+}
+.bi-icons-archivo-usuario:before {
+  content: "\f049";
+}
+.bi-icons-archivo-buscar:before {
+  content: "\f04a";
+}
+.bi-icons-archivo-internacional:before {
+  content: "\f04b";
+}
+.bi-icons-archivo-documento:before {
+  content: "\f04c";
+}
+.bi-icons-archivo-celular:before {
+  content: "\f04d";
+}
+.bi-icons-archivo-laptop:before {
+  content: "\f04e";
+}
+.bi-icons-archivo-computadora:before {
+  content: "\f04f";
+}
+.bi-icons-archivo-impresora:before {
+  content: "\f050";
+}
+.bi-icons-archivo-token:before {
+  content: "\f051";
+}
+.bi-icons-archivo-correo:before {
+  content: "\f052";
+}
+.bi-icons-archivo-favorito:before {
+  content: "\f053";
+}
+.bi-icons-archivo-reloj:before {
+  content: "\f054";
+}
+.bi-icons-archivo-calendario:before {
+  content: "\f055";
+}
+.bi-icons-archivo-compras:before {
+  content: "\f056";
+}
+.bi-icons-archivo-luz:before {
+  content: "\f057";
+}
+.bi-icons-archivo-energia:before {
+  content: "\f058";
+}
+.bi-icons-archivo-qr:before {
+  content: "\f059";
+}
+.bi-icons-archivo-regalo:before {
+  content: "\f05a";
+}
+.bi-icons-archivo-editar:before {
+  content: "\f05b";
+}
+.bi-icons-archivo-cargar:before {
+  content: "\f05c";
+}
+.bi-icons-archivo-descargar:before {
+  content: "\f05d";
+}
+.bi-icons-archivo-opciones:before {
+  content: "\f05e";
+}
+.bi-icons-archivo-enlace:before {
+  content: "\f05f";
+}
+.bi-icons-archivo-guardar:before {
+  content: "\f060";
+}
+.bi-icons-archivo-id:before {
+  content: "\f061";
+}
+.bi-icons-archivo-ubicacion:before {
+  content: "\f062";
+}
+.bi-icons-archivo-quetzal:before {
+  content: "\f063";
+}
+.bi-icons-archivo-lempira:before {
+  content: "\f064";
+}
+.bi-icons-archivo-dolar:before {
+  content: "\f065";
+}
+.bi-icons-archivo-euro:before {
+  content: "\f066";
+}
+.bi-icons-archivo-boleto:before {
+  content: "\f067";
+}
+.bi-icons-archivo-banco:before {
+  content: "\f068";
+}
+.bi-icons-archivo-calculadora:before {
+  content: "\f069";
+}
+.bi-icons-lista:before {
+  content: "\f06a";
+}
+.bi-icons-otros:before {
+  content: "\f06a";
+}
+.bi-icons-lista-agregar:before {
+  content: "\f06b";
+}
+.bi-icons-lista-izquierda:before {
+  content: "\f06c";
+}
+.bi-icons-lista-derecha:before {
+  content: "\f06d";
+}
+.bi-icons-lista-arriba:before {
+  content: "\f06e";
+}
+.bi-icons-lista-abajo:before {
+  content: "\f06f";
+}
+.bi-icons-lista-usuario:before {
+  content: "\f070";
+}
+.bi-icons-lista-buscar:before {
+  content: "\f071";
+}
+.bi-icons-lista-compras:before {
+  content: "\f072";
+}
+.bi-icons-lista-cargar:before {
+  content: "\f073";
+}
+.bi-icons-lista-descargar:before {
+  content: "\f074";
+}
+.bi-icons-lista-opciones:before {
+  content: "\f075";
+}
+.bi-icons-lista-enlace:before {
+  content: "\f076";
+}
+.bi-icons-lista-boleto:before {
+  content: "\f077";
+}
+.bi-icons-lista-banco:before {
+  content: "\f078";
+}
+.bi-icons-caja:before {
+  content: "\f079";
+}
+.bi-icons-caja-producto:before {
+  content: "\f07a";
+}
+.bi-icons-word:before {
+  content: "\f07b";
+}
+.bi-icons-excel:before {
+  content: "\f07c";
+}
+.bi-icons-pdf:before {
+  content: "\f07d";
+}
+.bi-icons-internacional:before {
+  content: "\f07e";
+}
+.bi-icons-internacional-aceptar:before {
+  content: "\f07f";
+}
+.bi-icons-internacional-rechazar:before {
+  content: "\f080";
+}
+.bi-icons-internacional-agregar:before {
+  content: "\f081";
+}
+.bi-icons-internacional-izquierda:before {
+  content: "\f082";
+}
+.bi-icons-internacional-derecha:before {
+  content: "\f083";
+}
+.bi-icons-internacional-arriba:before {
+  content: "\f084";
+}
+.bi-icons-internacional-abajo:before {
+  content: "\f085";
+}
+.bi-icons-internacional-ajustes:before {
+  content: "\f086";
+}
+.bi-icons-internacional-basurero:before {
+  content: "\f087";
+}
+.bi-icons-internacional-notificacion:before {
+  content: "\f088";
+}
+.bi-icons-internacional-bloqueado:before {
+  content: "\f089";
+}
+.bi-icons-internacional-desbloqueado:before {
+  content: "\f08a";
+}
+.bi-icons-internacional-tarjeta:before {
+  content: "\f08b";
+}
+.bi-icons-internacional-efectivo:before {
+  content: "\f08c";
+}
+.bi-icons-internacional-monedas:before {
+  content: "\f08d";
+}
+.bi-icons-internacional-cheque:before {
+  content: "\f08e";
+}
+.bi-icons-internacional-usuario:before {
+  content: "\f08f";
+}
+.bi-icons-outsourcing:before {
+  content: "\f08f";
+}
+.bi-icons-internacional-buscar:before {
+  content: "\f090";
+}
+.bi-icons-internacional-archivo:before {
+  content: "\f091";
+}
+.bi-icons-internacional-documento:before {
+  content: "\f092";
+}
+.bi-icons-internacional-celular:before {
+  content: "\f093";
+}
+.bi-icons-internacional-laptop:before {
+  content: "\f094";
+}
+.bi-icons-internacional-computadora:before {
+  content: "\f095";
+}
+.bi-icons-internacional-impresora:before {
+  content: "\f096";
+}
+.bi-icons-internacional-token:before {
+  content: "\f097";
+}
+.bi-icons-internacional-correo:before {
+  content: "\f098";
+}
+.bi-icons-internacional-favorito:before {
+  content: "\f099";
+}
+.bi-icons-internacional-reloj:before {
+  content: "\f09a";
+}
+.bi-icons-internacional-calendario:before {
+  content: "\f09b";
+}
+.bi-icons-internacional-compras:before {
+  content: "\f09c";
+}
+.bi-icons-internacional-luz:before {
+  content: "\f09d";
+}
+.bi-icons-internacional-energia:before {
+  content: "\f09e";
+}
+.bi-icons-internacional-qr:before {
+  content: "\f09f";
+}
+.bi-icons-internacional-auriculares:before {
+  content: "\f0a0";
+}
+.bi-icons-internacional-regalo:before {
+  content: "\f0a1";
+}
+.bi-icons-internacional-editar:before {
+  content: "\f0a2";
+}
+.bi-icons-internacional-opciones:before {
+  content: "\f0a3";
+}
+.bi-icons-internacional-enlace:before {
+  content: "\f0a4";
+}
+.bi-icons-internacional-guardar:before {
+  content: "\f0a5";
+}
+.bi-icons-internacional-telefono:before {
+  content: "\f0a6";
+}
+.bi-icons-internacional-id:before {
+  content: "\f0a7";
+}
+.bi-icons-internacional-microfono:before {
+  content: "\f0a8";
+}
+.bi-icons-internacional-ubicacion:before {
+  content: "\f0a9";
+}
+.bi-icons-internacional-quetzal:before {
+  content: "\f0aa";
+}
+.bi-icons-internacional-dolar:before {
+  content: "\f0ab";
+}
+.bi-icons-internacional-euro:before {
+  content: "\f0ac";
+}
+.bi-icons-internacional-boleto:before {
+  content: "\f0ad";
+}
+.bi-icons-internacional-banco:before {
+  content: "\f0ae";
+}
+.bi-icons-internacional-mensaje:before {
+  content: "\f0af";
+}
+.bi-icons-correo:before {
+  content: "\f0b0";
+}
+.bi-icons-correo-aceptar:before {
+  content: "\f0b1";
+}
+.bi-icons-correo-rechazar:before {
+  content: "\f0b2";
+}
+.bi-icons-correo-agregar:before {
+  content: "\f0b3";
+}
+.bi-icons-correo-izquierda:before {
+  content: "\f0b4";
+}
+.bi-icons-correo-derecha:before {
+  content: "\f0b5";
+}
+.bi-icons-correo-arriba:before {
+  content: "\f0b6";
+}
+.bi-icons-correo-abajo:before {
+  content: "\f0b7";
+}
+.bi-icons-correo-ajustes:before {
+  content: "\f0b8";
+}
+.bi-icons-correo-basurero:before {
+  content: "\f0b9";
+}
+.bi-icons-correo-notificacion:before {
+  content: "\f0ba";
+}
+.bi-icons-correo-tarjeta:before {
+  content: "\f0bb";
+}
+.bi-icons-correo-efectivo:before {
+  content: "\f0bc";
+}
+.bi-icons-correo-monedas:before {
+  content: "\f0bd";
+}
+.bi-icons-correo-cheque:before {
+  content: "\f0be";
+}
+.bi-icons-correo-usuario:before {
+  content: "\f0bf";
+}
+.bi-icons-correo-buscar:before {
+  content: "\f0c0";
+}
+.bi-icons-correo-archivo:before {
+  content: "\f0c1";
+}
+.bi-icons-correo-impresora:before {
+  content: "\f0c2";
+}
+.bi-icons-correo-token:before {
+  content: "\f0c3";
+}
+.bi-icons-correo-favorito:before {
+  content: "\f0c4";
+}
+.bi-icons-correo-reloj:before {
+  content: "\f0c5";
+}
+.bi-icons-correo-calendario:before {
+  content: "\f0c6";
+}
+.bi-icons-correo-compras:before {
+  content: "\f0c7";
+}
+.bi-icons-correo-luz:before {
+  content: "\f0c8";
+}
+.bi-icons-correo-energia:before {
+  content: "\f0c9";
+}
+.bi-icons-correo-regalo:before {
+  content: "\f0ca";
+}
+.bi-icons-correo-editar:before {
+  content: "\f0cb";
+}
+.bi-icons-correo-enlace:before {
+  content: "\f0cc";
+}
+.bi-icons-correo-ubicacion:before {
+  content: "\f0cd";
+}
+.bi-icons-correo-quetzal:before {
+  content: "\f0ce";
+}
+.bi-icons-correo-lempira:before {
+  content: "\f0cf";
+}
+.bi-icons-correo-dolar:before {
+  content: "\f0d0";
+}
+.bi-icons-correo-euro:before {
+  content: "\f0d1";
+}
+.bi-icons-correo-boleto:before {
+  content: "\f0d2";
+}
+.bi-icons-correo-banco:before {
+  content: "\f0d3";
+}
+.bi-icons-correo-mensaje:before {
+  content: "\f0d4";
+}
+.bi-icons-correo-amor:before {
+  content: "\f0d5";
+}
+.bi-icons-correo-seguro:before {
+  content: "\f0d6";
+}
+.bi-icons-correo-seguro-aprobado:before {
+  content: "\f0d7";
+}
+.bi-icons-correo-seguro-rechazado:before {
+  content: "\f0d8";
+}
+.bi-icons-mensaje:before {
+  content: "\f0d9";
+}
+.bi-icons-mensaje-aceptar:before {
+  content: "\f0da";
+}
+.bi-icons-mensaje-rechazar:before {
+  content: "\f0db";
+}
+.bi-icons-mensaje-agregar:before {
+  content: "\f0dc";
+}
+.bi-icons-mensaje-izquierda:before {
+  content: "\f0dd";
+}
+.bi-icons-mensaje-derecha:before {
+  content: "\f0de";
+}
+.bi-icons-mensaje-arriba:before {
+  content: "\f0df";
+}
+.bi-icons-mensaje-abajo:before {
+  content: "\f0e0";
+}
+.bi-icons-mensaje-ajustes:before {
+  content: "\f0e1";
+}
+.bi-icons-mensaje-basurero:before {
+  content: "\f0e2";
+}
+.bi-icons-mensaje-notificacion:before {
+  content: "\f0e3";
+}
+.bi-icons-mensaje-bloqueado:before {
+  content: "\f0e4";
+}
+.bi-icons-mensaje-desbloqueado:before {
+  content: "\f0e5";
+}
+.bi-icons-mensaje-tarjeta:before {
+  content: "\f0e6";
+}
+.bi-icons-mensaje-efectivo:before {
+  content: "\f0e7";
+}
+.bi-icons-mensaje-monedas:before {
+  content: "\f0e8";
+}
+.bi-icons-mensaje-cheque:before {
+  content: "\f0e9";
+}
+.bi-icons-mensaje-usuario:before {
+  content: "\f0ea";
+}
+.bi-icons-mensaje-buscar:before {
+  content: "\f0eb";
+}
+.bi-icons-mensaje-internacional:before {
+  content: "\f0ec";
+}
+.bi-icons-mensaje-archivo:before {
+  content: "\f0ed";
+}
+.bi-icons-mensaje-documento:before {
+  content: "\f0ee";
+}
+.bi-icons-mensaje-celular:before {
+  content: "\f0ef";
+}
+.bi-icons-mensaje-laptop:before {
+  content: "\f0f0";
+}
+.bi-icons-mensaje-computadora:before {
+  content: "\f0f1";
+}
+.bi-icons-mensaje-token:before {
+  content: "\f0f2";
+}
+.bi-icons-mensaje-correo:before {
+  content: "\f0f3";
+}
+.bi-icons-mensaje-favorito:before {
+  content: "\f0f4";
+}
+.bi-icons-mensaje-reloj:before {
+  content: "\f0f5";
+}
+.bi-icons-mensaje-calendario:before {
+  content: "\f0f6";
+}
+.bi-icons-mensaje-compras:before {
+  content: "\f0f7";
+}
+.bi-icons-mensaje-luz:before {
+  content: "\f0f8";
+}
+.bi-icons-mensaje-energia:before {
+  content: "\f0f9";
+}
+.bi-icons-mensaje-qr:before {
+  content: "\f0fa";
+}
+.bi-icons-mensaje-auriculares:before {
+  content: "\f0fb";
+}
+.bi-icons-mensaje-regalo:before {
+  content: "\f0fc";
+}
+.bi-icons-mensaje-editar:before {
+  content: "\f0fd";
+}
+.bi-icons-mensaje-cargar:before {
+  content: "\f0fe";
+}
+.bi-icons-mensaje-descargar:before {
+  content: "\f0ff";
+}
+.bi-icons-mensaje-opciones:before {
+  content: "\f100";
+}
+.bi-icons-mensaje-enlace:before {
+  content: "\f101";
+}
+.bi-icons-mensaje-guardar:before {
+  content: "\f102";
+}
+.bi-icons-mensaje-telefono:before {
+  content: "\f103";
+}
+.bi-icons-mensaje-id:before {
+  content: "\f104";
+}
+.bi-icons-mensaje-microfono:before {
+  content: "\f105";
+}
+.bi-icons-mensaje-ubicacion:before {
+  content: "\f106";
+}
+.bi-icons-mensaje-quetzal:before {
+  content: "\f107";
+}
+.bi-icons-mensaje-lempira:before {
+  content: "\f108";
+}
+.bi-icons-mensaje-dolar:before {
+  content: "\f109";
+}
+.bi-icons-mensaje-euro:before {
+  content: "\f10a";
+}
+.bi-icons-mensaje-boleto:before {
+  content: "\f10b";
+}
+.bi-icons-mensaje-banco:before {
+  content: "\f10c";
+}
+.bi-icons-mensaje-calculadora:before {
+  content: "\f10d";
+}
+.bi-icons-mensaje-mensaje:before {
+  content: "\f10e";
+}
+.bi-icons-mensaje-web:before {
+  content: "\f10f";
+}
+.bi-icons-microfono:before {
+  content: "\f110";
+}
+.bi-icons-microfono-aceptar:before {
+  content: "\f111";
+}
+.bi-icons-microfono-rechazar:before {
+  content: "\f112";
+}
+.bi-icons-microfono-ajustes:before {
+  content: "\f113";
+}
+.bi-icons-prensa:before {
+  content: "\f114";
+}
+.bi-icons-auriculares:before {
+  content: "\f115";
+}
+.bi-icons-radio:before {
+  content: "\f116";
+}
+.bi-icons-router:before {
+  content: "\f117";
+}
+.bi-icons-wifi:before {
+  content: "\f118";
+}
+.bi-icons-telefono:before {
+  content: "\f119";
+}
+.bi-icons-internet:before {
+  content: "\f11a";
+}
+.bi-icons-web:before {
+  content: "\f11b";
+}
+.bi-icons-bus:before {
+  content: "\f11c";
+}
+.bi-icons-transporte:before {
+  content: "\f11c";
+}
+.bi-icons-ambulancia:before {
+  content: "\f11d";
+}
+.bi-icons-carro-lado:before {
+  content: "\f11e";
+}
+.bi-icons-parqueos:before {
+  content: "\f11e";
+}
+.bi-icons-carro-frente:before {
+  content: "\f11f";
+}
+.bi-icons-avion:before {
+  content: "\f120";
+}
+.bi-icons-aerolineas:before {
+  content: "\f120";
+}
+.bi-icons-barco:before {
+  content: "\f121";
+}
+.bi-icons-moto:before {
+  content: "\f122";
+}
+.bi-icons-gasolina:before {
+  content: "\f123";
+}
+.bi-icons-gasolineras:before {
+  content: "\f123";
+}
+.bi-icons-gasolina-tarjeta:before {
+  content: "\f124";
+}
+.bi-icons-precaucion:before {
+  content: "\f125";
+}
+.bi-icons-excavadora:before {
+  content: "\f126";
+}
+.bi-icons-casco:before {
+  content: "\f127";
+}
+.bi-icons-transportacion:before {
+  content: "\f128";
+}
+.bi-icons-equipoindustrial:before {
+  content: "\f128";
+}
+.bi-icons-carro-de-carga:before {
+  content: "\f129";
+}
+.bi-icons-fletesmudanzas:before {
+  content: "\f129";
+}
+.bi-icons-anatomia-corazon:before {
+  content: "\f12a";
+}
+.bi-icons-anatomia-pulmones:before {
+  content: "\f12b";
+}
+.bi-icons-necesidades-especiales:before {
+  content: "\f12c";
+}
+.bi-icons-mano-agradecimiento:before {
+  content: "\f12d";
+}
+.bi-icons-servicios-de-salud:before {
+  content: "\f12e";
+}
+.bi-icons-spasalud:before {
+  content: "\f12e";
+}
+.bi-icons-estetoscopio:before {
+  content: "\f12f";
+}
+.bi-icons-gastos-medicos:before {
+  content: "\f130";
+}
+.bi-icons-cancer:before {
+  content: "\f131";
+}
+.bi-icons-navidad:before {
+  content: "\f132";
+}
+.bi-icons-graduacion:before {
+  content: "\f133";
+}
+.bi-icons-halloween:before {
+  content: "\f134";
+}
+.bi-icons-hamburguesa:before {
+  content: "\f135";
+}
+.bi-icons-restaurantes:before {
+  content: "\f135";
+}
+.bi-icons-bebida:before {
+  content: "\f136";
+}
+.bi-icons-licor:before {
+  content: "\f137";
+}
+.bi-icons-vinoslicores:before {
+  content: "\f137";
+}
+.bi-icons-calculadora:before {
+  content: "\f138";
+}
+.bi-icons-libro:before {
+  content: "\f139";
+}
+.bi-icons-librerias:before {
+  content: "\f139";
+}
+.bi-icons-libro-usuario:before {
+  content: "\f13a";
+}
+.bi-icons-utiles:before {
+  content: "\f13b";
+}
+.bi-icons-herramientas:before {
+  content: "\f13c";
+}
+.bi-icons-ferreteriaconstruccion:before {
+  content: "\f13c";
+}
+.bi-icons-reloj:before {
+  content: "\f13d";
+}
+.bi-icons-mochila:before {
+  content: "\f13e";
+}
+.bi-icons-anteojos:before {
+  content: "\f13f";
+}
+.bi-icons-lapiz:before {
+  content: "\f140";
+}
+.bi-icons-juego:before {
+  content: "\f141";
+}
+.bi-icons-entretenimiento:before {
+  content: "\f141";
+}
+.bi-icons-camisa:before {
+  content: "\f142";
+}
+.bi-icons-mantenimientolavanderia:before {
+  content: "\f142";
+}
+.bi-icons-mantenimiento:before {
+  content: "\f142";
+}
+.bi-icons-lavanderia:before {
+  content: "\f142";
+}
+.bi-icons-sombrilla:before {
+  content: "\f143";
+}
+.bi-icons-ticket:before {
+  content: "\f144";
+}
+.bi-icons-boleto:before {
+  content: "\f145";
+}
+.bi-icons-joya:before {
+  content: "\f146";
+}
+.bi-icons-joyeriarelojes:before {
+  content: "\f146";
+}
+.bi-icons-llanta:before {
+  content: "\f147";
+}
+.bi-icons-maleta:before {
+  content: "\f148";
+}
+.bi-icons-vacaciones:before {
+  content: "\f149";
+}
+.bi-icons-pelota:before {
+  content: "\f14a";
+}
+.bi-icons-medalla:before {
+  content: "\f14b";
+}
+.bi-icons-idea:before {
+  content: "\f14c";
+}
+.bi-icons-reciclaje:before {
+  content: "\f14d";
+}
+.bi-icons-mano-planta:before {
+  content: "\f14e";
+}
+.bi-icons-deporte:before {
+  content: "\f14f";
+}
+.bi-icons-publicidad:before {
+  content: "\f150";
+}
+.bi-icons-publicidad:before {
+  content: "\f150";
+}
+.bi-icons-conexion-regional:before {
+  content: "\f151";
+}
+.bi-icons-ciudad:before {
+  content: "\f152";
+}
+.bi-icons-velocidad:before {
+  content: "\f153";
+}
+.bi-icons-ebi:before {
+  content: "\f154";
+}
+.bi-icons-ebi-derecha:before {
+  content: "\f155";
+}
+.bi-icons-ebi-usuario:before {
+  content: "\f156";
+}
+.bi-icons-ebi-efectivo:before {
+  content: "\f157";
+}
+.bi-icons-ebi-celular:before {
+  content: "\f158";
+}
+.bi-icons-ebi-internacional:before {
+  content: "\f159";
+}
+.bi-icons-zigi:before {
+  content: "\f15a";
+}
+.bi-icons-cuik:before {
+  content: "\f15b";
+}
+.bi-icons-bi-pay:before {
+  content: "\f15c";
+}
+.bi-icons-click-to-pay:before {
+  content: "\f15d";
+}
+.bi-icons-facebook:before {
+  content: "\f15e";
+}
+.bi-icons-facebook-solido:before {
+  content: "\f15f";
+}
+.bi-icons-x:before {
+  content: "\f160";
+}
+.bi-icons-x-solido:before {
+  content: "\f161";
+}
+.bi-icons-instagram:before {
+  content: "\f162";
+}
+.bi-icons-instagram-solido:before {
+  content: "\f163";
+}
+.bi-icons-whatsapp:before {
+  content: "\f164";
+}
+.bi-icons-whatsapp-solido:before {
+  content: "\f165";
+}
+.bi-icons-tiktok:before {
+  content: "\f166";
+}
+.bi-icons-tiktok-solido:before {
+  content: "\f167";
+}
+.bi-icons-linkedin:before {
+  content: "\f168";
+}
+.bi-icons-linkedin-solido:before {
+  content: "\f169";
+}
+.bi-icons-youtube:before {
+  content: "\f16a";
+}
+.bi-icons-youtube-solido:before {
+  content: "\f16b";
+}
+.bi-icons-google:before {
+  content: "\f16c";
+}
+.bi-icons-apple:before {
+  content: "\f16d";
+}
+.bi-icons-android:before {
+  content: "\f16e";
+}
+.bi-icons-accesibilidad:before {
+  content: "\f16f";
+}
+.bi-icons-documento-bidireccionales:before {
+  content: "\f170";
+}
+.bi-icons-pago-sin-contacto:before {
+  content: "\f171";
+}
+.bi-icons-documento-en-pausa:before {
+  content: "\f172";
+}
+.bi-icons-documento-en-proceso:before {
+  content: "\f173";
+}

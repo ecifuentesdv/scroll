@@ -1,0 +1,147 @@
+
+.div-usuarios-cerrar-sesion {
+    display: flex;
+    gap: 30px;
+}
+
+.btn-cerrar-sesion {
+    padding: 0px;
+    width: 100%;
+    max-width: 178px;
+    line-height: 20px;
+    font-size: 16px;
+    font-family: "Bi NeoIndustrial Bold", sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    gap: 10px;
+
+    transition: fill 0.3s ease-in-out;
+}
+
+.btn-cerrar-sesion i svg path{
+    fill: currentColor !important ;
+    transition: fill 0.3s ease-in-out;
+}
+
+.btn-cerrar-sesion.active {
+    color: #ffb81c;
+}
+
+
+
+.btn-cerrar-sesion:hover, .btn-cerrar-sesion svg path:hover {
+    color: #ffb81c;
+}
+
+.i-icono-cerrar-sesion {
+    display: flex;
+    align-items: center;
+}
+.div-ancho-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px; 
+    box-sizing: border-box; 
+}
+.header {
+    background: linear-gradient(271deg, #003865, #001C33);
+    box-shadow: 0px 10px 6px #00000029;
+    margin-bottom: 10px;
+    opacity: 1;
+  /*  height: 80px;*/
+    display: flex;
+    align-items: center;   
+    position: relative;
+}
+
+.barras {
+    background-color: #003865;
+}
+
+.barras button {
+    background-color: #003865;
+    border: none;
+    color: #ffffff;
+}
+
+.barras button i svg path {
+    fill: currentColor;
+}
+
+.barras button:hover {
+    color: #ffb81c;
+}
+
+.after-layer {
+    display: none;
+}
+
+@media ( min-width: 750px ) {
+    .barras { 
+        display: none; 
+    }
+}
+
+@media ( max-width: 750px ) {
+
+    .mostrar {
+        display: flex;
+    }
+
+    .ocultar {
+        display: none;
+    }
+
+    .div-usuarios-cerrar-sesion {
+        gap: 20px;
+    }
+
+    .div-cuerpo-principal-home { 
+        padding: 0 20px; 
+    }
+    .div-usuarios-cerrar-sesion {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        min-height: 200px;
+        position: absolute;
+        z-index: 999;
+        top: 63px;
+        left: 0;
+        background: linear-gradient(271deg, #003865, #001C33);
+        padding: 17px 0;
+        padding-left: 40px;
+        box-shadow: 0px 10px 6px #00000029;
+    }
+
+    .after-layer {
+        position: absolute;
+        top: 240px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 230px);
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(1px);
+        z-index: 10;
+        cursor: pointer;
+      }
+
+
+    .btn-cerrar-sesion {
+        font-size: 13px;
+    }
+
+    .btn-cerrar-sesion i svg {
+        width: 15px !important;
+        height: 15px !important;
+    }
+}

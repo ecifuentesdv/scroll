@@ -1,0 +1,54 @@
+
+
+module.exports = class NotificationTemplate {
+    async welcomeUser (){
+
+        return `<!DOCTYPE html>
+        <html>
+            <body style="margin: 0; padding: 0; background: #d5d5d5;">
+                <table cellpadding="0" cellspacing="0" width="100%" height="100%">
+                    <tr>
+                        <td align="center" valign="top">
+                            <table cellpadding="0" cellspacing="0" width="75%" style="max-width: 600px; margin-top: 30px; background: white; font-family: Arial; border-radius: 15px;">
+                                <tr>
+                                    <td colspan="2" style="background-color: #030d4f; border-radius: 15px 15px 0 0; text-align: center; padding: 20px 0; -webkit-box-shadow: 2px 20px 25px -16px rgba(0,0,0,0.75); -moz-box-shadow: 2px 20px 25px -16px rgba(0,0,0,0.75); box-shadow: 2px 20px 25px -16px rgba(0,0,0,0.75);">
+                                     
+                                        <img src="https://2661626.fs1.hubspotusercontent-na1.net/hubfs/2661626/NIU3%20(1).png" alt="Logo" width="150" style="border-radius: 15px; ">
+                                        <h1 style="color: white; margin: 0;">Notificación</h1>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" align="justify" style="padding: 10px;">
+                                        <p style="margin: 5px 0;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit nisi at est quod, unde reprehenderit nihil eligendi doloremque et autem.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" align="justify" style="padding: 10px;">
+                                        <p style="margin: 10px 0;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat aperiam perspiciatis labore odit dolorum repellendus corporis doloribus nisi. Dolores iste nam iusto, quod aut nobis soluta ipsum. Ut, autem blanditiis?</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" align="justify" style="padding: 10px;">
+                                        <p style="margin: 10px 0; ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora eos tenetur quos ad sunt quas, voluptate sed quae delectus distinctio minus ullam similique dignissimos totam laborum voluptates fugiat magnam molestias iste ratione reiciendis. Voluptates, odit dolore, rerum officia facere, aliquam dolorum ullam nisi voluptatibus corrupti unde cumque ipsa laudantium veniam.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="padding: 10px;">
+                                        <h4 style="margin: 0;">Atentamente:</h4>
+                                        <p style="margin: 10px 0; text-align: justify;">Administrador</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" align="right"  style="padding: 10px;">
+                                       <img src="https://2661626.fs1.hubspotusercontent-na1.net/hubfs/2661626/NIU.gif" alto="log Niu" width="150">
+                                    </td>
+                                </tr>
+            
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </body>
+            </html>`;
+    }
+}

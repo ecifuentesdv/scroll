@@ -1,0 +1,252 @@
+.cuerpoCompleto {
+    min-height: 592px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    max-width: 970px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Loader container */
+#loaderModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.errorTip {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../assets/img/fondo-gris.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*margin: 0 20px;*/
+}
+
+.errorTip .imgerror {
+    width: 95%;
+    height: auto;
+    background-image: url('../../../assets/img/Banner_error_2_DSKT.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    height: 199px;
+    max-width: 1000px;
+}
+
+.errorTip .imgerrorToken {
+    width: 95%;
+    height: auto;
+    background-image: url('../../../assets/img/Banner_error_DSKT.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    height: 199px;
+    max-width: 1000px;
+}
+
+@media(max-width: 800px) {
+    .errorTip .imgerror {
+        background-image: url('../../../assets/img/Banner_error_2_TBT.png');
+    }
+}
+
+@media(max-width: 500px) {
+    .errorTip .imgerror {
+        background-image: url('../../../assets/img/Banner_error_2_MOB.png');
+    }
+}
+
+.loaderDosCirculos {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: block;
+    margin:15px auto;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotationDosCirculos 1s linear infinite;
+}
+.loaderDosCirculos::after,
+.loaderDosCirculos::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #003865;
+    width: 16px;
+    height: 16px;
+    transform: translate(-50%, 50%);
+    border-radius: 40% 0;
+}
+.loaderDosCirculos::before {
+    left: auto;
+    right: 0;
+    background: #FFA600;
+    transform: translate(50%, 100%);
+}
+
+.modalTips {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.content-modalTips{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+}
+
+.headerTips {
+    height: 50px;
+    width: 100vw;
+    background-color: #003865;
+    display: flex;
+    justify-content: center
+}
+
+.contHeaderTips {
+    width: 90%;
+    height: 100%;
+    max-width: 970px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.contHeaderTips button {
+    margin: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-family: "Bi NeoIndustrial Bold", sans-serif;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.contHeaderTips button i svg {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.contBodyTips {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
+
+.ocultar {
+    display: none;
+}
+
+
+.modalMensajes {
+    background: #00000057;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalMensajes .contModalMensajes {
+    width: 95%!important;
+    max-width: 650px;
+    height: auto;
+    text-align: justify;
+    background: #fff;
+    border-radius: 25px;
+    padding: 25px 15px;
+
+
+    position: fixed;
+    top: 200px; /* o ajusta según lo alto que quieras mostrarlo */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999; /* asegúrate que esté por encima de todo */
+
+}
+
+.modalMensajes .contModalMensajes .mensajeModal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.modalMensajes .contModalMensajes .mensajeModal {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--gray-800) !important;
+    font-family: "Bi NeoIndustrial Ligth", sans-serif;
+
+}
+
+.modalMensajes .contModalMensajes .mensajeModal h3 {
+    text-align: center;
+    width: 100%;
+    color: #003865;
+    font-family: "Bi NeoIndustrial bold", sans-serif;
+    font-size: 16px;
+}
+
+
+.modalMensajes .contModalMensajes button{
+    background: #003865;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: #fff;
+    border: none;
+    display: block;
+    margin: 15px auto;
+    font-size: 16px;
+    font-family: "Bi NeoIndustrial bold", sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+
+@keyframes rotationDosCirculos {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Fin Loader container */

@@ -1,0 +1,288 @@
+<div class="div-aHome">
+    <a class="aHome" routerLink="/orquestador" routerLinkActive='active'>Home</a>
+</div>
+
+<div class="div-titulo-boton">
+    <div class="div-titulo-linea">
+        <h2 class="h2-titulo">Usuarios</h2>
+        <div class="linea-titulo"></div>
+    </div>
+    
+    <button (click)="abrirModalCrear();" class="btn-agregar-usuario">+ Agregar Usuario</button>
+</div>
+
+<div class="div-input-buscar-usuario">
+    <i class="i-icono-buscar-usuario">
+        <img src="./assets/img/magnifying-glass-solid.svg" width="10px" height="10px" alt="icono">
+    </i>
+    <input class="input-buscar-usuario" type="text" placeholder="Buscar" (input)="filtrarUsuarios($event)">
+</div>
+
+<div class="div-p-titulo-listado-usuarios">
+    <p class="p-titulo-listado-usuarios">Listado de Usuarios</p>
+</div>
+
+<div class="div-table-usuarios">
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Rol</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngIf="usuarios.length === 0">
+                <td colspan="4" class="text-center">No se han encontrado usuarios, agrega uno para comenzar</td>
+            </tr>
+
+            <tr *ngFor="let usuario of (filtro ? usuariosFiltrados : usuarios)">
+            <!--<tr *ngFor="let usuario of usuarios">-->
+                <td>{{ usuario.Nombre }} {{ usuario.Apellido }}</td>
+                <td>{{ usuario.Correo }}</td>
+                <td>{{ usuario.Rol }}</td>
+                <td class="td-iconos-espacio">        
+                    <i  matTooltip="Editar {{usuario.Nombre}}"
+                       matTooltipPosition="below"
+                    (click)="abrirModalEditar(usuario);" class="i-icono-editar-usuario cursor">
+                        <img src="./assets/img/pen-to-square-regular.svg" width="20px" height="20px" alt="icono">
+                    </i>
+                    <i  matTooltip="Eliminar {{usuario.Nombre}}"
+                        matTooltipPosition="below"
+                        (click)="abrirModalEliminar(usuario);" class="i-icono-eliminar-usuario cursor">
+                        <img src="./assets/img/trash-can-regular.svg" width="20px" height="20px" alt="icono">
+                    </i>
+                </td>
+            </tr>
+        </tbody>
+    </table>    
+</div>
+
+<!-- Modal eliminar usuarios -->
+<div class="modal-contenedor-eliminar" [class.show]="modalVisibleEliminar">
+
+    <div class="modal-contenido-eliminar-usuario">
+
+        <div class="div-i-icono-cerrar-eliminar-usuario">
+            <i (click)="cerrarModalEliminar();" class="i-icono-cerrar-eliminar-usuario cursor">
+                <img src="./assets/img/xmark-solid.svg" width="10px" height="10px" alt="icono">
+            </i>
+        </div>
+
+        <div class="div-i-icono-advertencia-eliminar-usuario">
+            <i class="i-icono-advertencia-eliminar-usuario">
+                <img src="./assets/img/triangle-exclamation-solid.svg" width="46px" height="40px" alt="icono">
+            </i>
+        </div>
+
+        <div>
+            <h2 class="h2-titulo-eliminar-usuario">¿Eliminar al usuario {{ usuarioSeleccionado?.Nombre }} {{ usuarioSeleccionado?.Apellido }}?</h2>
+        </div>
+
+        <div>
+            <p class="p-descripcion-eliminar-usuario">Advertencia: Si continúas, el usuario será eliminado permanentemente. Esta acción no se puede deshacer. ¿Estás seguro?</p>
+        </div>
+        
+        <div class="div-btn-eliminar-usuario">
+            <button (click)="eliminarUsuario( usuarioSeleccionado?.Correo )" class="btn-eliminar-usuario">
+                Eliminar
+                <span *ngIf="buscando" class="loader"></span> 
+            </button>
+        </div> 
+
+    </div>
+
+</div>
+
+<!-- Modal crear usuarios -->
+<div class="modal-contenedor-crear" [class.show]="modalVisibleCrear">
+
+    <div class="modal-contenido-crear-usuario">
+
+        <div class="div-i-icono-cerrar-crear-usuario">
+            <i (click)="cerrarModalCrear();" class="i-icono-cerrar-crear-usuario cursor">
+                <img src="./assets/img/xmark-solid.svg" width="10px" height="10px" alt="icono">
+            </i>
+        </div>
+
+        <div>
+            <h2 class="h2-titulo-crear-usuario">Crear nuevo usuario</h2>
+        </div>
+
+        <form [formGroup]="formCrearUsuario" (ngSubmit)="crearUsuario()">
+
+            <div class="div-formulario-contenedor-crear">
+            
+                <div class="div-grupo-label-input-crear">
+                    <label class="label-datos-formulario-crear" [ngClass]="{'texto-error-rojo': nombreCrearUsuario?.invalid && (nombreCrearUsuario?.dirty || nombreCrearUsuario?.touched)}">Nombre</label>
+                    <input class="input-datos-formulario-crear" type="text" placeholder="Ingresa los nombres" formControlName="nombreCrearUsuario" [ngClass]="{'texto-error-rojo borde-error-rojo': nombreCrearUsuario?.invalid && (nombreCrearUsuario?.dirty || nombreCrearUsuario?.touched)}"/>
+                    <div class="mensaje-error-usuario" *ngIf="nombreCrearUsuario?.invalid && (nombreCrearUsuario?.dirty || nombreCrearUsuario?.touched || buscando)" >
+                        <div *ngIf="nombreCrearUsuario?.errors?.['required']" >El nombre es requerido</div>
+                        <div *ngIf="nombreCrearUsuario?.errors?.['pattern']" >Ingrese solo letras y espacios</div>
+                    </div>
+                </div>
+                <div class="div-grupo-label-input-crear">
+                    <label class="label-datos-formulario-crear" [ngClass]="{'texto-error-rojo': apellidoCrearUsuario?.invalid && (apellidoCrearUsuario?.dirty || apellidoCrearUsuario?.touched)}">Apellido</label>
+                    <input class="input-datos-formulario-crear" type="text" placeholder="Ingresa los apellidos" formControlName="apellidoCrearUsuario" [ngClass]="{'texto-error-rojo borde-error-rojo': apellidoCrearUsuario?.invalid && (apellidoCrearUsuario?.dirty || apellidoCrearUsuario?.touched)}" />
+                    <div class="mensaje-error-usuario" *ngIf="apellidoCrearUsuario?.invalid && (apellidoCrearUsuario?.dirty || apellidoCrearUsuario?.touched || buscando)" >
+                        <div *ngIf="apellidoCrearUsuario?.errors?.['required']" >El apellido es requerido</div>
+                        <div *ngIf="apellidoCrearUsuario?.errors?.['pattern']" >Ingrese solo letras y espacios</div>
+                    </div>
+                </div>
+                <div class="div-grupo-label-input-crear">
+                    <label class="label-datos-formulario-crear" [ngClass]="{'texto-error-rojo': correoCrearUsuario?.invalid && (correoCrearUsuario?.dirty || correoCrearUsuario?.touched)}">Correo</label>
+                    <input class="input-datos-formulario-crear" type="email" placeholder="Ingresa el correo electrónico" formControlName="correoCrearUsuario" [ngClass]="{'texto-error-rojo borde-error-rojo': correoCrearUsuario?.invalid && (correoCrearUsuario?.dirty || correoCrearUsuario?.touched)}"/>
+                    <div class="mensaje-error-usuario" *ngIf="correoCrearUsuario?.invalid && (correoCrearUsuario?.dirty || correoCrearUsuario?.touched || buscando)" >
+                        <div *ngIf="correoCrearUsuario?.errors?.['required']" >El correo es requerido</div>
+                        <div *ngIf="correoCrearUsuario?.errors?.['email']" >Ingrese un correo válido</div>
+                        <div *ngIf="correoCrearUsuario?.errors?.['minlength']" >El correo debe de contener un mínimo de 8 caracteres</div>
+                        <div *ngIf="correoCrearUsuario?.errors?.['maxlength']" >El correo debe de contener un máximo de 30 caracteres</div>
+                    </div>
+                </div>
+                <div class="div-grupo-label-input-crear">
+                    <label class="label-datos-formulario-crear" [ngClass]="{'texto-error-rojo': rolCrearUsuario?.invalid && (rolCrearUsuario?.dirty || rolCrearUsuario?.touched)}">Rol</label>
+                    <select class="input-datos-formulario-crear" formControlName="rolCrearUsuario" [ngClass]="{'texto-error-rojo borde-error-rojo': rolCrearUsuario?.invalid && (rolCrearUsuario?.dirty || rolCrearUsuario?.touched)}">
+                        <option value="" disabled [selected]="true">Selecciona el rol</option>
+                        <!--<option value="Super Administrador">Super Administrador</option>-->
+                        <option value="ADMINISTRADOR">Administrador</option>
+                        <option value="USUARIO">Usuario</option>
+                    </select>
+                    <div class="mensaje-error-usuario" *ngIf="rolCrearUsuario?.invalid && (rolCrearUsuario?.dirty || rolCrearUsuario?.touched || buscando)" >
+                        <div *ngIf="rolCrearUsuario?.errors?.['required']" >El rol es requerido</div>
+                    </div>
+                </div>
+                <div class="div-grupo-label-input-crear">
+                    <label class="label-datos-formulario-crear" [ngClass]="{'texto-error-rojo': contrasenaCrearUsuario?.invalid && (contrasenaCrearUsuario?.dirty || contrasenaCrearUsuario?.touched)}">Contraseña</label>
+                    <input class="input-datos-formulario-crear" type="password" placeholder="Ingresa la nueva contraseña" formControlName="contrasenaCrearUsuario" [ngClass]="{'texto-error-rojo borde-error-rojo': contrasenaCrearUsuario?.invalid && (contrasenaCrearUsuario?.dirty || contrasenaCrearUsuario?.touched)}"/>
+                    <div class="mensaje-error-usuario" *ngIf="contrasenaCrearUsuario?.invalid && (contrasenaCrearUsuario?.dirty || contrasenaCrearUsuario?.touched || buscando)">
+                        <div *ngIf="contrasenaCrearUsuario?.errors?.['required']" >La contraseña es requerida</div>
+                        <div *ngIf="contrasenaCrearUsuario?.errors?.['pattern']" >La contraseña debe tener entre 8 y 30 caracteres que incluya al menos una letra mayúscula, una letra minúscula, un número y un carácter especial (por ejemplo: !&#64;#$%^&*()_+?¿'-/).</div>
+                    </div>
+                </div>
+                <div class="div-grupo-label-input-crear">
+                    <label class="label-datos-formulario-crear" [ngClass]="{'texto-error-rojo': contrasenaVerificarCrearUsuario?.invalid && (contrasenaVerificarCrearUsuario?.dirty || contrasenaVerificarCrearUsuario?.touched)}">Verifica la contraseña</label>
+                    <input class="input-datos-formulario-crear" type="password" placeholder="Ingresa nuevamente la nueva contraseña" formControlName="contrasenaVerificarCrearUsuario" [ngClass]="{'texto-error-rojo borde-error-rojo': contrasenaVerificarCrearUsuario?.invalid && (contrasenaVerificarCrearUsuario?.dirty || contrasenaVerificarCrearUsuario?.touched)}"/>
+                    <div class="mensaje-error-usuario" *ngIf="contrasenaVerificarCrearUsuario?.invalid && (contrasenaVerificarCrearUsuario?.dirty || contrasenaVerificarCrearUsuario?.touched || buscando)" >
+                        <div *ngIf="contrasenaVerificarCrearUsuario?.errors?.['required']" >La confirmación de la contraseña es requerida</div>
+                        <div *ngIf="contrasenaVerificarCrearUsuario?.errors?.['pattern']" >La confirmación de la contraseña debe tener entre 8 y 30 caracteres que incluya al menos una letra mayúscula, una letra minúscula, un número y un carácter especial (por ejemplo: !&#64;#$%^&*()_+?¿'-/).</div>
+                    </div>
+                </div>
+                <div class="mensaje-error-usuario" *ngIf="formCrearUsuario?.errors?.['notEqual'] && (contrasenaVerificarCrearUsuario?.dirty || contrasenaVerificarCrearUsuario?.touched || buscando)">
+                    <div>Las contraseñas no coinciden</div>
+                </div>
+
+                <div class="div-btn-crear-usuario">
+                    <button class="btn-crear-nuevo-usuario" type="submit" [disabled]="formCrearUsuario.invalid || buscando">
+                        Crear nuevo usuario
+                        <span *ngIf="buscando" class="loader"></span> 
+                    </button>
+                </div> 
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- Modal editar usuarios -->
+<div class="modal-contenedor-editar" [class.show]="modalVisibleEditar">
+
+    <div class="modal-contenido-editar-usuario">
+
+        <div class="div-i-icono-cerrar-editar-usuario">
+            <i (click)="cerrarModalEditar();" class="i-icono-cerrar-editar-usuario cursor">
+                <img src="./assets/img/xmark-solid.svg" width="10px" height="10px" alt="icono">
+            </i>
+        </div>
+
+        <div>
+            <h2 class="h2-titulo-editar-usuario">Editar el usuario {{ usuarioSeleccionado?.Nombre }} {{ usuarioSeleccionado?.Apellido }}</h2>
+        </div>
+
+        <form [formGroup]="formEditarUsuario" (ngSubmit)="editarUsuario(usuarioSeleccionado?.Correo)">
+
+            <div class="div-formulario-contenedor-editar">
+            
+                <div class="div-grupo-label-input-editar">
+                    <label class="label-datos-formulario-editar" [ngClass]="{'texto-error-rojo': nombreEditarUsuario?.invalid && (nombreEditarUsuario?.dirty || nombreEditarUsuario?.touched)}">Nombre</label>
+                    <input class="input-datos-formulario-editar" type="text" placeholder="Ingresa los nombres" formControlName="nombreEditarUsuario" [ngClass]="{'texto-error-rojo borde-error-rojo': nombreEditarUsuario?.invalid && (nombreEditarUsuario?.dirty || nombreEditarUsuario?.touched)}"/>
+                    <div class="mensaje-error-usuario" *ngIf="nombreEditarUsuario?.invalid && (nombreEditarUsuario?.dirty || nombreEditarUsuario?.touched || buscando)" >
+                        <div *ngIf="nombreEditarUsuario?.errors?.['required']" >El nombre es requerido</div>
+                        <div *ngIf="nombreEditarUsuario?.errors?.['pattern']" >Ingrese solo letras y espacios</div>
+                    </div>
+                </div>
+                <div class="div-grupo-label-input-editar">
+                    <label class="label-datos-formulario-editar" [ngClass]="{'texto-error-rojo': apellidoEditarUsuario?.invalid && (apellidoEditarUsuario?.dirty || apellidoEditarUsuario?.touched)}">Apellido</label>
+                    <input class="input-datos-formulario-editar" type="text" placeholder="Ingresa los apellidos" formControlName="apellidoEditarUsuario" [ngClass]="{'texto-error-rojo borde-error-rojo': apellidoEditarUsuario?.invalid && (apellidoEditarUsuario?.dirty || apellidoEditarUsuario?.touched)}" />
+                    <div class="mensaje-error-usuario" *ngIf="apellidoEditarUsuario?.invalid && (apellidoEditarUsuario?.dirty || apellidoEditarUsuario?.touched || buscando)" >
+                        <div *ngIf="apellidoEditarUsuario?.errors?.['required']" >El apellido es requerido</div>
+                        <div *ngIf="apellidoEditarUsuario?.errors?.['pattern']" >Ingrese solo letras y espacios</div>
+                    </div>
+                </div>
+                <div class="div-grupo-label-input-editar">
+                    <label class="label-datos-formulario-editar  label-correo-editar" [ngClass]="{'texto-error-rojo': correoEditarUsuario?.invalid && (correoEditarUsuario?.dirty || correoEditarUsuario?.touched)}">Correo</label>
+                    <input class="input-datos-formulario-editar" type="email" placeholder="Ingresa el correo electrónico" formControlName="correoEditarUsuario" [ngClass]="{'texto-error-rojo borde-error-rojo': correoEditarUsuario?.invalid && (correoEditarUsuario?.dirty || correoEditarUsuario?.touched)}"/>
+                    <!--
+                    <div class="mensaje-error-usuario" *ngIf="correoEditarUsuario?.invalid && (correoEditarUsuario?.dirty || correoEditarUsuario?.touched || buscando)" >
+                        <div *ngIf="correoEditarUsuario?.errors?.['required']" >El correo es requerido</div>
+                        <div *ngIf="correoEditarUsuario?.errors?.['email']" >Ingrese un correo válido</div>
+                    </div>
+                    -->
+                </div>
+                <div class="div-grupo-label-input-editar">
+                    <label class="label-datos-formulario-editar" [ngClass]="{'texto-error-rojo': rolEditarUsuario?.invalid && (rolEditarUsuario?.dirty || rolEditarUsuario?.touched)}">Rol</label>
+                    <select class="input-datos-formulario-editar" formControlName="rolEditarUsuario" [ngClass]="{'texto-error-rojo borde-error-rojo': rolEditarUsuario?.invalid && (rolEditarUsuario?.dirty || rolEditarUsuario?.touched)}">
+                        <option value="" disabled selected>Selecciona el rol</option>
+                        <!--<option value="Super Administrador">Super Administrador</option>-->
+                        <option value="ADMINISTRADOR">Administrador</option>
+                        <option value="USUARIO">Usuario</option>
+                    </select>
+                    <div class="mensaje-error-usuario" *ngIf="rolEditarUsuario?.invalid && (rolEditarUsuario?.dirty || rolEditarUsuario?.touched || buscando)" >
+                        <div *ngIf="rolEditarUsuario?.errors?.['required']" >El rol es requerido</div>
+                    </div>
+                </div>
+                <!--
+                <div class="div-grupo-label-input-editar">
+                    <label class="label-datos-formulario-editar" [ngClass]="{'texto-error-rojo': contrasenaEditarUsuario?.invalid && (contrasenaEditarUsuario?.dirty || contrasenaEditarUsuario?.touched)}">Contraseña</label>
+                    <input class="input-datos-formulario-editar" type="password" placeholder="Ingresa la nueva contraseña" formControlName="contrasenaEditarUsuario" [ngClass]="{'texto-error-rojo borde-error-rojo': contrasenaEditarUsuario?.invalid && (contrasenaEditarUsuario?.dirty || contrasenaEditarUsuario?.touched)}"/>
+                    <div class="mensaje-error-usuario" *ngIf="contrasenaEditarUsuario?.invalid && (contrasenaEditarUsuario?.dirty || contrasenaEditarUsuario?.touched || buscando)">
+                        <div *ngIf="contrasenaEditarUsuario?.errors?.['required']" >La contraseña es requerida</div>
+                        <div *ngIf="contrasenaEditarUsuario?.errors?.['pattern']" >La contraseña debe tener entre 8 y 16 caracteres que incluya al menos una letra mayúscula, una letra minúscula, un número y un carácter especial (por ejemplo: !&#64;#$%^&*()_+?¿'-/).</div>
+                    </div>
+                </div>
+                <div class="div-grupo-label-input-editar">
+                    <label class="label-datos-formulario-editar" [ngClass]="{'texto-error-rojo': contrasenaVerificarEditarUsuario?.invalid && (contrasenaVerificarEditarUsuario?.dirty || contrasenaVerificarEditarUsuario?.touched)}">Verifica la contraseña</label>
+                    <input class="input-datos-formulario-editar" type="password" placeholder="Ingresa nuevamente la nueva contraseña" formControlName="contrasenaVerificarEditarUsuario" [ngClass]="{'texto-error-rojo borde-error-rojo': contrasenaVerificarEditarUsuario?.invalid && (contrasenaVerificarEditarUsuario?.dirty || contrasenaVerificarEditarUsuario?.touched)}"/>
+                    <div class="mensaje-error-usuario" *ngIf="contrasenaVerificarEditarUsuario?.invalid && (contrasenaVerificarEditarUsuario?.dirty || contrasenaVerificarEditarUsuario?.touched || buscando)" >
+                        <div *ngIf="contrasenaVerificarEditarUsuario?.errors?.['required']" >La confirmación de la contraseña es requerida</div>
+                        <div *ngIf="contrasenaVerificarEditarUsuario?.errors?.['pattern']" >La confirmación de la contraseña debe tener entre 8 y 16 caracteres que incluya al menos una letra mayúscula, una letra minúscula, un número y un carácter especial (por ejemplo: !&#64;#$%^&*()_+?¿'-/).</div>
+                    </div>
+                </div>
+                <div class="mensaje-error-usuario" *ngIf="formEditarUsuario?.errors?.['notEqual'] && (contrasenaVerificarEditarUsuario?.dirty || contrasenaVerificarEditarUsuario?.touched || buscando)">
+                    <div>Las contraseñas no coinciden</div>
+                </div>
+                -->
+                
+                <div class="div-btn-editar-usuario">
+                    <button class="btn-editar-nuevo-usuario" type="submit" [disabled]="formEditarUsuario.invalid || buscando">
+                        Confirmar cambios
+                        <span *ngIf="buscando" class="loader"></span> 
+                    </button>
+                </div> 
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- Icon Cargar -->
+<div id="loaderModal" *ngIf="mostrarLoaderPagina">
+    <span class="loaderDosCirculos"></span>
+</div> 
+ <!-- Fin Icon Cargar -->

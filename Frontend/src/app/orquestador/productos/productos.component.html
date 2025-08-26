@@ -1,0 +1,245 @@
+<div class="div-titulo-linea">
+    <h2 class="h2-titulo">Bienvenido a WebViews</h2>
+    <div class="linea-titulo"></div>
+</div>
+
+<div class="div-form-all-productos">
+
+    <form [formGroup]="formEditarProducto" >
+
+        <div class="div-productos" formArrayName="items">
+
+            <!-- Se uso un contenedor logico para poder usar ngFor y ngIf correctamente -->
+            <ng-container *ngFor="let producto of productos; let i = index">
+
+                <div 
+                class="div-producto-n" 
+                [formGroupName]="i"
+                *ngIf="!(i === productos.length - 1 && !esAdministrador())"
+                >
+        
+                    <div class="div-editar-producto">
+                        <i class="i-icono-editar-producto" *ngIf="producto.Id == idEditProducto"> 
+                            <img src="./assets/img/pen-solid.svg" width="10px" height="10px" alt="icono">
+                        </i>
+                        <input 
+                            (input)="idCapture(producto.Id)"
+                            class="input-nombre-producto"
+                            type="text"
+                            placeholder="Ingresar un nombre"
+                            formControlName="nombreEditarProducto"
+                            [ngClass]="{
+                                'texto-error-rojo borde-error-rojo': items.at(i).get('nombreEditarProducto')?.invalid && (items.at(i).get('nombreEditarProducto')?.dirty || items.at(i).get('nombreEditarProducto')?.touched),
+                                'con-borde-inferior': producto.Id == idEditProducto
+                            }"
+                        >
+                        <div class="mensaje-error-usuario" *ngIf="getErrorMessage(i, 'nombreEditarProducto','')" >
+                            <div>{{ getErrorMessage(i, 'nombreEditarProducto', items.at(i).get('nombreEditarProducto')?.touched) }}</div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="div-editar-producto">
+                        <i class="i-icono-editar-nomenclatura" *ngIf="producto.Id == idEditProducto">
+                            <img src="./assets/img/pen-solid.svg" width="10px" height="10px" alt="icono">
+                        </i>
+                        <input 
+                            (input)="idCapture(producto.Id)"
+                            class="input-nomenclatura-producto"
+                            type="text"
+                            placeholder="Ingresar una nomenclatura"
+                            formControlName="nomenclaturaEditarProducto"
+                            [ngClass]="{
+                                'texto-error-rojo borde-error-rojo': items.at(i).get('nomenclaturaEditarProducto')?.invalid && (items.at(i).get('nomenclaturaEditarProducto')?.dirty || items.at(i).get('nomenclaturaEditarProducto')?.touched),
+                                'con-borde-inferior': producto.Id == idEditProducto
+                                }"
+                        >
+                        <div class="mensaje-error-usuario" *ngIf="getErrorMessage(i, 'nomenclaturaEditarProducto','')" >
+                            <div>{{ getErrorMessage(i, 'nomenclaturaEditarProducto',items.at(i).get('nomenclaturaEditarProducto')?.touched) }}</div>
+                        </div>
+                                
+                    </div>  
+
+                    <div class="div-btn-ingrear-producto-fondo">
+
+                        <div  class="div-btn-ingresar-producto" [ngClass]="{'div-btn-ingresar-producto-jc-derecha': !esAdministrador()}">
+
+                            <i (click)="abrirModalEliminar(producto);" 
+                                class="i-icono-link-producto"
+                                *ngIf="esAdministrador() && (!((i+1) == items.controls.length))"
+                                matTooltip="Eliminar {{producto.Nombre}}"
+                                matTooltipPosition="below" 
+                                aria-label="Botón para abrir modal eliminar">
+                                <!--img class="cursor" src="./assets/img/trash-can-regular.svg" width="20px" height="20px"  alt="icono"-->
+                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path  d="M170.5 51.6L151.5 80l145 0-19-28.4c-1.5-2.2-4-3.6-6.7-3.6l-93.7 0c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80 368 80l48 0 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-8 0 0 304c0 44.2-35.8 80-80 80l-224 0c-44.2 0-80-35.8-80-80l0-304-8 0c-13.3 0-24-10.7-24-24S10.7 80 24 80l8 0 48 0 13.8 0 36.7-55.1C140.9 9.4 158.4 0 177.1 0l93.7 0c18.7 0 36.2 9.4 46.6 24.9zM80 128l0 304c0 17.7 14.3 32 32 32l224 0c17.7 0 32-14.3 32-32l0-304L80 128zm80 64l0 208c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-208c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0l0 208c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-208c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0l0 208c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-208c0-8.8 7.2-16 16-16s16 7.2 16 16z"/>
+                                    </svg>
+                            </i>
+
+
+                            <i class="i-icono-link-producto"
+                                matTooltip="Copiar link"
+                                matTooltipPosition="below" 
+                                *ngIf="(!((i+1) == items.controls.length))"
+                                (click)="getURL('link', producto.Id)">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                    <path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>
+                                </svg>
+                            </i>
+
+
+
+                            <button class="btn-editar-producto" 
+                                matTooltip="Editar {{producto.Nombre}}"
+                                matTooltipPosition="below"
+                                type="button"
+                                (click)="editarProducto(producto.Id, i)"
+                                [disabled]="!esAdministrador() || items.at(i).invalid || buscando"
+                                *ngIf="(idEditProducto && producto.Id == idEditProducto) && (!((i+1) == items.controls.length))"
+                            >
+                                Editar
+                                <span *ngIf="buscando" class="loader"></span> 
+                            </button>
+
+                            <button 
+                                class="btn-ingresar-producto" 
+                                matTooltip="Listar Webviews de {{producto.Nombre}}"
+                                matTooltipPosition="below"
+                                (click)="ingresarWebview(producto.Id, producto.Nombre, producto.Nomenclatura)"
+                                *ngIf="(producto.Id != idEditProducto) && (!((i+1) == items.controls.length))"
+                                type="button"
+                                [disabled]="buscando"
+                            >
+                                Ingresar
+                            </button>
+                            
+                            <button 
+                                class="btn-crear-producto" 
+                                matTooltip="Agregar nuevo producto"
+                                matTooltipPosition="below"
+                                type="submit" 
+                                [disabled]="items.at(i).invalid || buscando"
+                                (click)="crearProducto(i)"
+                                *ngIf="(((i+1) == items.controls.length))"
+                                >
+                                Agregar producto
+                                <span *ngIf="buscando" class="loader"></span> 
+                            </button>
+                            
+                        </div> 
+
+                    </div> 
+                    
+                </div>
+
+            </ng-container>
+
+        </div>
+    </form> 
+</div>
+     
+<!-- Modal eliminar productos -->
+<div class="modal-contenedor-eliminar" [class.show]="modalVisibleEliminar">
+
+    <div class="modal-contenido-eliminar-producto">
+
+        <form [formGroup]="formEliminarProducto" (ngSubmit)="eliminarProducto( productoSeleccionado?.Id )">
+
+            <div class="div-i-icono-cerrar-eliminar-producto">
+                <i (click)="cerrarModalEliminar();" class="i-icono-cerrar-eliminar-producto cursor">
+                    <img src="./assets/img/xmark-solid.svg" width="10px" height="10px" alt="icono">
+                </i>
+            </div>
+
+            <div class="div-i-icono-advertencia-eliminar-producto">
+                <i class="i-icono-advertencia-eliminar-producto">
+                    <img src="./assets/img/triangle-exclamation-solid.svg" width="46px" height="40px" alt="icono">
+                </i>
+            </div>
+
+            <div>
+                <h2 class="h2-titulo-eliminar-producto">Eliminar el producto "{{ productoSeleccionado?.Nombre }}"</h2>
+                <p class="p-descripcion-eliminar-producto">Aviso Importante: La acción de eliminación afectará de manera recursiva a todos los elementos hijos asociados al producto. Esta operación no se puede deshacer.</p>
+                <input (paste)="onPaste($event)" class="input-nombre-producto-eliminar" type="text" placeholder="Ingrese el nombre para confirmar eliminación" formControlName="nombreEliminarProducto" [ngClass]="{'texto-error-rojo borde-error-rojo': nombreEliminarProducto?.invalid && (nombreEliminarProducto?.dirty || nombreEliminarProducto?.touched)}">
+                <div class="mensaje-error-usuario" *ngIf="nombreEliminarProducto?.invalid && (nombreEliminarProducto?.dirty || nombreEliminarProducto?.touched || buscando)" >
+                    <div *ngIf="nombreEliminarProducto?.errors?.['required']" >El nombre es requerido</div>
+                    <div *ngIf="nombreEliminarProducto?.errors?.['pattern']" >Ingrese solo letras y espacios</div>
+                    <div *ngIf="nombreEliminarProducto?.errors?.['maxLength']" >El nombre no puede tener más de 25 caracteres</div>
+                </div>
+                
+            </div>
+            
+            <div class="div-btn-eliminar-producto">
+                <button 
+                    class="btn-eliminar-producto" 
+                    type="submit" 
+                    [disabled]="formEliminarProducto.invalid || buscando">
+                    Eliminar permanentemente
+                    <span *ngIf="buscando" class="loader"></span> 
+                </button>
+            </div> 
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- Modal eliminar productos -->
+<div class="modal-contenedor-eliminar" [class.show]="modalVisibleLink">
+
+    <div class="modal-contenido-editar-producto">
+
+        <form  (ngSubmit)="getSubmitLink()">
+
+            <div class="div-i-icono-cerrar-eliminar-producto">
+                <i (click)="cerrarModalLink();" class="i-icono-cerrar-eliminar-producto cursor">
+                    <img src="./assets/img/xmark-solid.svg" width="10px" height="10px" alt="icono">
+                </i>
+            </div>
+
+            <div class="div-i-icono-advertencia-eliminar-producto">
+                <i class="i-icono-advertencia-eliminar-producto">
+                    <img src="./assets/img/triangle-exclamation-solid.svg" width="46px" height="40px" alt="icono">
+                </i>
+            </div>
+
+            <div>
+                <h2 class="h2-titulo-eliminar-producto">¡Advertencia!</h2>
+                <p class="p-descripcion-eliminar-producto">
+                    {{mensaje}}
+                </p>
+
+                <div class="copyLink" *ngIf="link && tipoPeticion == 'link'" (click)="copiarLink()"
+                        matTooltip="¡Copiar Link!"
+                        matTooltipPosition="below" >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                        <path  d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>
+                    </svg>
+                    {{ ( !linkCopiado ) ? 'Copiar Link' : '¡Link Copiado!' }}
+                </div>
+                
+            </div>
+
+           
+            
+            <div class="div-btn-eliminar-producto" *ngIf="!link">
+                <button 
+                    class="btn-eliminar-producto" 
+                    type="submit" 
+                    [disabled]="buscando">
+                    {{(tipoPeticion == 'link') ? 'Obtener link' : 'Generar credenciales'}}
+                    <span *ngIf="buscando" class="loader"></span> 
+                </button>
+            </div> 
+        </form>
+    </div>
+</div>
+
+
+<!-- Icon Cargar -->
+<div id="loaderModal" *ngIf="mostrarLoaderPagina">
+    <span class="loaderDosCirculos"></span>
+</div> 
+ <!-- Fin Icon Cargar -->
