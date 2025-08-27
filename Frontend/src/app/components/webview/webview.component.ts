@@ -132,7 +132,7 @@ redimensionar():void {
 
 
 //FUNCION PARA DETECTAR SI EL TIP FUE VISTO
-/* ngAfterViewInit(): void {
+ngAfterViewInit(): void {
 
     const mutationObserver = new MutationObserver((mutationList)=> {
       mutationList.forEach((mutation) => {
@@ -140,25 +140,32 @@ redimensionar():void {
           if(node.nodeType === 1 ){
             this.detectarElementos();
           }
+
         })
+
       })
     });
 
     const contWebview:any = document.querySelector('.cont-webviews');
     mutationObserver.observe(contWebview, { childList: true, subtree: true });
+
   //  this.detectarElementos(contWebview); //Detectar elementos iniciales si ya hay contenido
 
-  } */
-ngAfterViewInit(): void {
+  }
+
+/*ngAfterViewInit(): void {
   const contWebview: any = document.querySelector('.cont-webviews');
+
 
   const resizeObserver = new ResizeObserver(() => {
     this.detectarElementos();
-    this.redimensionar(); // 🔥 recalcula cada vez que cambia la altura real
+    this.redimensionar();
   });
 
+
   resizeObserver.observe(contWebview);
-}
+}*/
+
 
 
 
@@ -346,6 +353,7 @@ ngAfterViewInit(): void {
       window.parent.postMessage({ Altura : `${altura}px`, Type: "REDIMENSIONAR" }, '*');
 
     }, 200);
+
   }
 
 
